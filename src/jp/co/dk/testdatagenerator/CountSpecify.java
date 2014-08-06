@@ -1,5 +1,7 @@
 package jp.co.dk.testdatagenerator;
 
+import java.math.BigDecimal;
+
 
 abstract class CountSpecify {
 	
@@ -16,6 +18,8 @@ abstract class CountSpecify {
 	 * @return 件数指定タイプ
 	 */
 	abstract CountSpecifyType getCountSpecifyType();
+	
+	abstract long getCount(long maxCount);
 }
 
 class PacentageCountSpecify extends CountSpecify{
@@ -32,6 +36,11 @@ class PacentageCountSpecify extends CountSpecify{
 	@Override
 	CountSpecifyType getCountSpecifyType(){
 		return CountSpecifyType.PERCENTAGE_SPECIFIED;
+	}
+
+	@Override
+	long getCount(long maxCount) {
+		return new BigDecimal(count).multiply(new BigDecimal("0.01")).multiply(new BigDecimal(maxCount)).longValue();
 	}
 }
 
@@ -50,6 +59,11 @@ class AbsoluteCountSpecify extends CountSpecify{
 	CountSpecifyType getCountSpecifyType(){
 		return CountSpecifyType.ABSOLUTE_SPECIFIED;
 	}
+	
+	@Override
+	long getCount(long maxCount) {
+		return this.count;
+	}
 }
 
 class NothingCountSpecify extends CountSpecify{
@@ -61,6 +75,11 @@ class NothingCountSpecify extends CountSpecify{
 	@Override
 	CountSpecifyType getCountSpecifyType(){
 		return CountSpecifyType.NOTHING_SPECIFIED;
+	}
+
+	@Override
+	long getCount(long maxCount) {
+		return 0;
 	}
 }
 
