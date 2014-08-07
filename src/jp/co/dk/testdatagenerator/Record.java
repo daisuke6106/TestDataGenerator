@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 
-public class Record {
+class Record {
+	
+	/** 出力件数 */
+	protected long count;
 	
 	/** フォーマット */
 	protected String format;
@@ -17,39 +20,30 @@ public class Record {
 	/** カラム一覧 */
 	protected List<Column> columns = new ArrayList<Column>();
 	
-	Record(String format) throws IllegalAccessException {
+	/** 改行コード */
+	protected static String newLine = System.getProperty("line.separator");
+	
+	Record(long count, String format) throws IllegalAccessException {
 		if (format == null || format.equals("")) throw new IllegalAccessException("can't create Record instance. format is not set.");
+		this.count  = count;
 		this.format = format;
 		List<String> columnStrings = Arrays.asList(formatPattern.split(format, -1));
 		for (int index=0; index<columnStrings.size(); index++) {
-			this.columns.add(createColumn(index, columnStrings.get(index)));
+			this.columns.add(new Column(this.count, index, columnStrings.get(index)));
 		}
 	}
 	
-	protected Column createColumn(int index, String columnString) {
-		return new Column(index, columnString);
-	}
-	
-	String getCsvRecord() {
-		StringBuilder csvRecord = new StringBuilder();
+	String getValue(long nowIndex) {
+		StringBuilder value = new StringBuilder();
 		int size = columns.size();
 		for (int i=0; i<size; i++) {
-			csvRecord.append(columns.get(i).getCsvColumn());
-			if (i!=size-1) csvRecord.append(',');
+			value.append(columns.get(i).getValue(nowIndex));
+			if (i!=size-1) {
+				value.append(',');
+			} else {
+				value.append(Record.newLine);
+			}
 		}
-		return csvRecord.toString();
+		return value.toString();
 	}
-}
-
-class OrderRecord extends Record {
-	
-	protected long count;
-	
-	OrderRecord(long count, String format) throws IllegalAccessException {
-		super(format);
-		this.count = count;
-	}
-	
-	
-	
 }
