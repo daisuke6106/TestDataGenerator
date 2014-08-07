@@ -21,12 +21,6 @@ abstract class CountSpecify {
 		return this.value;
 	}
 	
-	/**
-	 * 件数指定タイプを取得します。
-	 * @return 件数指定タイプ
-	 */
-	abstract CountSpecifyType getCountSpecifyType();
-	
 }
 
 class PacentageCountSpecify extends CountSpecify{
@@ -55,11 +49,6 @@ class PacentageCountSpecify extends CountSpecify{
 		return super.getValue();
 	}
 	
-	@Override
-	CountSpecifyType getCountSpecifyType(){
-		return CountSpecifyType.PERCENTAGE_SPECIFIED;
-	}
-	
 }
 
 class AbsoluteCountSpecify extends CountSpecify{
@@ -84,11 +73,6 @@ class AbsoluteCountSpecify extends CountSpecify{
 		return super.getValue();
 	}
 	
-	@Override
-	CountSpecifyType getCountSpecifyType(){
-		return CountSpecifyType.ABSOLUTE_SPECIFIED;
-	}
-	
 }
 
 class NothingCountSpecify extends CountSpecify{
@@ -96,26 +80,4 @@ class NothingCountSpecify extends CountSpecify{
 	NothingCountSpecify(long outputCount, String value) throws IllegalArgumentException {
 		super(outputCount, value);
 	}
-	
-	@Override
-	CountSpecifyType getCountSpecifyType(){
-		return CountSpecifyType.NOTHING_SPECIFIED;
-	}
-}
-
-/**
- * CountSpecifyTypeは、件数の指定方式を定義する定数クラスです。
- * 
- * @version 1.0
- * @author D.Kanno
- */
-enum CountSpecifyType {
-	/** 件数指定 */
-	ABSOLUTE_SPECIFIED,
-	
-	/** パーセント指定 */
-	PERCENTAGE_SPECIFIED,
-	
-	/** 指定なし */
-	NOTHING_SPECIFIED,
 }
