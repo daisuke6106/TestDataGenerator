@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * TestDataGeneratorは、テストに使用するためのデータを作成するツールです。<p/>
@@ -64,11 +66,20 @@ public class TestDataGenerator {
 		}
 		
 		try {
-			BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(outputFile));			
+			BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream(outputFile, true));			
 			for (long i=0; i<count; i++) {
 				String value = format.getValue(i);
 				outputStream.write(value.getBytes(encode));
-				if (i==1000) outputStream.flush();
+				if (i%10000 == 0) {
+					outputStream.flush();
+					StringBuilder sb = new StringBuilder();
+					sb.append('[').append(new Date().toString()).append("]:");
+					sb.append(i).append('/').append(count).append("件:");
+					sb.append(new BigDecimal(i).divide(new BigDecimal(count)).multiply(new BigDecimal(100L)).setScale(0, BigDecimal.ROUND_UP).intValue());
+					sb.append("%");
+					System.out.println(sb.toString());
+					;
+				}
 			}
 			outputStream.flush();
 			outputStream.close();
