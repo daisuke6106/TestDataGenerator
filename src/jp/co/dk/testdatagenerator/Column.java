@@ -36,12 +36,13 @@ class Column {
 	 * ・複数のデータで件数指定=@a[a=50];@a[b=25]
 	 * ・複数のデータで割合指定=@p[a=50];@[b=25]
 	 * 
+	 * @param outputCount 出力件数
 	 * @param index このカラムのインデックス番号
 	 * @param datas このカラムのデータ内容
 	 * @throws IllegalArgumentException 引数が不正な場合
 	 */
 	Column(long outputCount, int index, String datas) throws IllegalArgumentException {
-		if (index < 0 || datas == null) throw new IllegalArgumentException("can't create Column instance.");
+		if (outputCount <0 || index < 0 || datas == null) throw new IllegalArgumentException("can't create Column instance.");
 		this.outputCount = outputCount;
 		this.index = index;
 		this.datas = datas;
@@ -112,7 +113,7 @@ enum CountSpecifyPattern {
 			String data        = matcher.group(1);
 			String countString = matcher.group(2);
 			long   count       = Long.parseLong(countString);
-			return new PacentageCountSpecify(outputCount, data, count);
+			return new PacentageCountSpecifyTest(outputCount, data, count);
 		}
 	}),
 	

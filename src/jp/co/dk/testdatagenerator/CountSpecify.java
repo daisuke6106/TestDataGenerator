@@ -12,7 +12,7 @@ abstract class CountSpecify {
 	protected String value;
 	
 	CountSpecify(long outputCount, String value) throws IllegalArgumentException {
-		if (value == null) throw new IllegalArgumentException("can't create CountSpecifyType instance.");
+		if (outputCount < 0 || value == null) throw new IllegalArgumentException("can't create CountSpecifyType instance.");
 		this.outputCount = outputCount;
 		this.value = value;
 	}
