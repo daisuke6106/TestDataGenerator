@@ -2,9 +2,12 @@ package jp.co.dk.testdatagenerator;
 
 import jp.co.dk.test.template.TestCaseTemplate;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
+
+
 
 @RunWith(Enclosed.class)
 public class ColumnTest{
@@ -42,174 +45,104 @@ public class ColumnTest{
 				assertThat(e.getMessage(), is("can't create Column instance."));
 			}
         }
+        
+        @Test
+        public void インスタンス生成に成功ーランダム指定あり() {
+			try {
+				Column sut = new Column(100L, 0, "@r[aaa;bbb;ccc]");
+				assertThat(sut.outputCount, is(100L));
+				assertThat(sut.index      , is(0));
+				assertThat(sut.datas      , is("@r[aaa;bbb;ccc]"));
+				assertThat(sut.isRandom   , is(true));
+				assertThat(sut.dataList.size(), is(3));
+				assertThat(sut.dataList.get(0).getValue(), is("aaa"));
+				assertThat(sut.dataList.get(1).getValue(), is("bbb"));
+				assertThat(sut.dataList.get(2).getValue(), is("ccc"));
+			} catch (IllegalArgumentException e) {
+				fail(e);
+			}
+        }
     }
 	
 	public static class ランダム設定なし extends TestCaseTemplate{
 		 
         protected Column sut ;
         
-        @Test
-        public void test() {
+        @Before
+        public void init() {
         	try {
-				Column sut = new Column(-1L, 0, "a");
-				fail();
+				this.sut = new Column(100L, 0, "aaa;bbb;ccc");
+				assertThat(this.sut.outputCount, is(100L));
+				assertThat(this.sut.index      , is(0));
+				assertThat(this.sut.datas      , is("aaa;bbb;ccc"));
+				assertThat(this.sut.isRandom   , is(false));
+				assertThat(this.sut.dataList.size(), is(3));
+				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
 			} catch (IllegalArgumentException e) {
-				assertThat(e.getMessage(), is("can't create Column instance."));
+				fail(e);
 			}
         }
- 
+        
+        @Test
+        public void getValue() {
+    		assertThat(this.sut.getValue(0), is("aaa"));
+    		assertThat(this.sut.getValue(1), is("aaa"));
+    		assertThat(this.sut.getValue(2), is("aaa"));
+        }
+        
+        @Test
+        public void testToString() {
+        	assertThat(this.sut.toString(), is("aaa;bbb;ccc"));
+        }
     }
 	
-//	@Test
-//	public void constractor() {
-//		
-//		
-//		try {
-//			Column sut = new Column(100, 0, null);
-//			fail();
-//		} catch (IllegalArgumentException e) {
-//			assertThat(e.getMessage(), is("can't create Column instance."));
-//		}
-//		
-//		
-//		try {
-//			Column sut = new Column(100, 0, "");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is(""));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "a");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is("a"));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "\"\"");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is("\"\""));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "\"a\"");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is("\"a\""));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "a;b");
-//			assertThat(sut.dataList.size(), is(2));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is("a"));
-//			assertThat(sut.dataList.get(1) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(1)).value , is("b"));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "a;");
-//			assertThat(sut.dataList.size(), is(2));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is("a"));
-//			assertThat(sut.dataList.get(1) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(1)).value , is(""));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "\"a\";\"\"");
-//			assertThat(sut.dataList.size(), is(2));
-//			assertThat(sut.dataList.get(0) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(0)).value , is("\"a\""));
-//			assertThat(sut.dataList.get(1) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(1)).value , is("\"\""));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "@a[aaaa=10]");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof AbsoluteCountSpecify, is(true));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).value , is("aaaa"));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).origin_count , is(10L));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "@a[\"aaaa\"=10]");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof AbsoluteCountSpecify, is(true));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).value , is("\"aaaa\""));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).origin_count , is(10L));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		try {
-//			Column sut = new Column(100, 0, "@a[\"aaaa\"=10];@a[\"bbbb\"=20]");
-//			assertThat(sut.dataList.size(), is(2));
-//			assertThat(sut.dataList.get(0) instanceof AbsoluteCountSpecify, is(true));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).value , is("\"aaaa\""));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).origin_count , is(10L));
-//			assertThat(sut.dataList.get(1) instanceof AbsoluteCountSpecify, is(true));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(1)).value , is("\"bbbb\""));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(1)).origin_count , is(20L));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "@p[\"aaaa\"=10]");
-//			assertThat(sut.dataList.size(), is(1));
-//			assertThat(sut.dataList.get(0) instanceof PacentageCountSpecify, is(true));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(0)).value , is("\"aaaa\""));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(0)).percentage , is(10L));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		try {
-//			Column sut = new Column(100, 0, "@p[\"aaaa\"=10];@p[\"bbbb\"=20]");
-//			assertThat(sut.dataList.size(), is(2));
-//			assertThat(sut.dataList.get(0) instanceof PacentageCountSpecify, is(true));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(0)).value , is("\"aaaa\""));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(0)).percentage , is(10L));
-//			assertThat(sut.dataList.get(1) instanceof PacentageCountSpecify, is(true));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(1)).value , is("\"bbbb\""));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(1)).percentage , is(20L));
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//		
-//		try {
-//			Column sut = new Column(100, 0, "@a[\"aaaa\"=10];@p[\"bbbb\"=20];cccc");
-//			assertThat(sut.dataList.size(), is(3));
-//			assertThat(sut.dataList.get(0) instanceof AbsoluteCountSpecify, is(true));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).value , is("\"aaaa\""));
-//			assertThat(((AbsoluteCountSpecify)sut.dataList.get(0)).origin_count , is(10L));
-//			assertThat(sut.dataList.get(1) instanceof PacentageCountSpecify, is(true));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(1)).value , is("\"bbbb\""));
-//			assertThat(((PacentageCountSpecify)sut.dataList.get(1)).percentage , is(20L));
-//			assertThat(sut.dataList.get(2) instanceof NothingCountSpecify, is(true));
-//			assertThat(((NothingCountSpecify)sut.dataList.get(2)).value , is("cccc"));
-//			
-//		} catch (IllegalArgumentException e) {
-//			fail(e);
-//		}
-//	}
+	public static class ランダム設定あり extends TestCaseTemplate{
+		 
+        protected Column sut ;
+        
+        @Before
+        public void init() {
+        	try {
+				this.sut = new Column(100L, 0, "@r[aaa;bbb;ccc]");
+				assertThat(this.sut.outputCount, is(100L));
+				assertThat(this.sut.index      , is(0));
+				assertThat(this.sut.datas      , is("@r[aaa;bbb;ccc]"));
+				assertThat(this.sut.isRandom   , is(true));
+				assertThat(this.sut.dataList.size(), is(3));
+				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
+			} catch (IllegalArgumentException e) {
+				fail(e);
+			}
+        }
+        
+        @Test
+        public void getValue() {
+    		assertThat(this.sut.getValue(0), anyOf(
+    			is("aaa"),
+    			is("bbb"),
+    			is("ccc")
+    		));
+    		assertThat(this.sut.getValue(1), anyOf(
+    			is("aaa"),
+    			is("bbb"),
+    			is("ccc")
+        	));
+    		assertThat(this.sut.getValue(2), anyOf(
+				is("aaa"),
+				is("bbb"),
+				is("ccc")
+	    	));
+        		
+        }
+        
+        @Test
+        public void testToString() {
+        	assertThat(this.sut.toString(), is("@r[aaa;bbb;ccc]"));
+        }
+    }
 
 }

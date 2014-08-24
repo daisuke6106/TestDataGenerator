@@ -1,6 +1,7 @@
-package jp.co.dk.testdatagenerator;
+package jp.co.dk.testdatagenerator.countspecify;
 
 import jp.co.dk.test.template.TestCaseTemplate;
+import jp.co.dk.testdatagenerator.countspecify.CountSpecify;
 
 import org.junit.Before;
 import org.junit.Test;

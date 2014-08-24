@@ -7,8 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ 
 	ColumnTest.class,
-	NothingCountSpecifyTest.class,
-	PacentageCountSpecifyTest.class,
+	Record.class,
 })
 public class AllTest {}
  

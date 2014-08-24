@@ -33,7 +33,7 @@
     </tr>
     <tr>
       <td class='line'>9</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected long outputCount;</pre></td>
+      <td><pre class='prettyprint'>	protected long <span class='instance uncovered' title='Reads: 0 Writes: 15'>outputCount</span>;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -42,27 +42,36 @@
     </tr>
     <tr>
       <td class='line'>12</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String value;</pre></td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 21 Writes: 15'>value</span>;</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>15</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#aa5500' onclick='hidePath()'>Path coverage: 1/3</span>
+        <span class='uncovered' onclick="showPath(this,'l14s0 l15s0 l15s2')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l14s0 l15s0 l15s1 l15s2')">B: 0</span>
+        <span class='covered' onclick="showPath(this,'l14s0 l15s0 l15s1 l16s0 l18s0')">C: 15</span>
+      </td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>14</td><td class='count'>107</td>
+      <td class='line'>14</td><td class='count'>15</td>
       <td><pre class='prettyprint covered' id='l14s0'>	CountSpecify(long outputCount, String value) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td class='line'>15</td><td class='count'>107</td>
-      <td><pre class='prettyprint jmp'>		<span id='l15s0' title='Executions: 107' class='covered'>if (outputCount &lt; 0</span> || <span id='l15s1' title='Executions: 107' class='covered'>value == null)</span> <span id='l15s2' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException("can't create CountSpecifyType instance.");</span></pre></td>
+      <td class='line'>15</td><td class='count'>15</td>
+      <td><pre class='prettyprint jmp'>		<span id='l15s0' title='Executions: 15' class='covered'>if (outputCount &lt; 0</span> || <span id='l15s1' title='Executions: 15' class='covered'>value == null)</span> <span id='l15s2' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException("can't create CountSpecifyType instance.");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>16</td><td class='count'>107</td>
+      <td class='line'>16</td><td class='count'>15</td>
       <td><pre class='prettyprint covered' id='l16s0'>		this.outputCount = outputCount;</pre></td>
     </tr>
     <tr>
-      <td class='line'>17</td><td class='count'>107</td>
+      <td class='line'>17</td><td class='count'>15</td>
       <td><pre class='prettyprint covered' id='l17s0'>		this.value = value;</pre></td>
     </tr>
     <tr>
-      <td class='line'>18</td><td class='count'>107</td>
+      <td class='line'>18</td><td class='count'>15</td>
       <td><pre class='prettyprint covered' id='l18s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
@@ -71,7 +80,7 @@
       <td><pre class='prettyprint'>	String getValue() {</pre></td>
     </tr>
     <tr>
-      <td class='line'>21</td><td class='count'>2</td>
+      <td class='line'>21</td><td class='count'>21</td>
       <td><pre class='prettyprint covered' id='l21s0'>		return this.value;</pre></td>
     </tr>
     <tr>
@@ -112,8 +121,8 @@
       <td><pre class='comment'>	/** 使用回数 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>35</td><td class='count'>107</td>
-      <td><pre class='prettyprint covered' id='l35s0'>	protected long use_count = 0L;</pre></td>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected long use_count = 0L;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -121,37 +130,28 @@
       <td><pre class='prettyprint'>	PacentageCountSpecify(long outputCount, String value, long percentage) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>107</td>
-      <td class='paths'>
-        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 3/3</span>
-        <span class='covered' onclick="showPath(this,'l38s0 l39s0 l39s1')">A: 2</span>
-        <span class='covered' onclick="showPath(this,'l38s0 l39s0 l40s0 l42s0 l42s1')">B: 1</span>
-        <span class='covered' onclick="showPath(this,'l38s0 l39s0 l40s0 l42s0 l43s0')">C: 104</span>
-      </td>
+      <td class='line'>38</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		super(outputCount, value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>38</td><td class='count'>107</td>
-      <td><pre class='prettyprint covered' id='l38s0'>		super(outputCount, value);</pre></td>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		if (percentage &lt; 1) throw new IllegalArgumentException("パーセンテージ指定に0以下が設定されています。:" + value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>39</td><td class='count'>107</td>
-      <td><pre class='prettyprint jmp'>		<span id='l39s0' title='Executions: 107' class='covered'>if (percentage &lt; 1)</span> <span id='l39s1' title='Executions: 2' class='covered'>throw new IllegalArgumentException("パーセンテージ指定に0以下が設定されています。:" + value);</span></pre></td>
+      <td class='line'>40</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		this.percentage = percentage;</pre></td>
     </tr>
     <tr>
-      <td class='line'>40</td><td class='count'>105</td>
-      <td><pre class='prettyprint covered' id='l40s0'>		this.percentage = percentage;</pre></td>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		this.usage_count = new BigDecimal(percentage).multiply(new BigDecimal("0.01")).multiply(new BigDecimal(outputCount)).setScale(0, BigDecimal.ROUND_UP).longValue();</pre></td>
     </tr>
     <tr>
-      <td class='line'>41</td><td class='count'>105</td>
-      <td><pre class='prettyprint covered' id='l41s0'>		this.usage_count = new BigDecimal(percentage).multiply(new BigDecimal("0.01")).multiply(new BigDecimal(outputCount)).setScale(0, BigDecimal.ROUND_UP).longValue();</pre></td>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		if (this.usage_count > this.outputCount) throw new IllegalArgumentException("件数指定に出力件数以上のパーセンテージが設定されています。:" + value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>42</td><td class='count'>105</td>
-      <td><pre class='prettyprint jmp'>		<span id='l42s0' title='Executions: 105' class='covered'>if (this.usage_count > this.outputCount)</span> <span id='l42s1' title='Executions: 1' class='covered'>throw new IllegalArgumentException("件数指定に出力件数以上のパーセンテージが設定されています。:" + value);</span></pre></td>
-    </tr>
-    <tr>
-      <td class='line'>43</td><td class='count'>104</td>
-      <td><pre class='prettyprint covered' id='l43s0'>	}</pre></td>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -163,24 +163,16 @@
       <td><pre class='prettyprint'>	String getValue() {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>3</td>
-      <td class='paths'>
-        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1')">A: 1</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l49s0')">B: 2</span>
-      </td>
+      <td class='line'>47</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		++use_count;</pre></td>
     </tr>
     <tr>
-      <td class='line'>47</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l47s0'>		++use_count;</pre></td>
+      <td class='line'>48</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		if (this.use_count>this.usage_count) return null;</pre></td>
     </tr>
     <tr>
-      <td class='line'>48</td><td class='count'>3</td>
-      <td><pre class='prettyprint jmp'>		<span id='l48s0' title='Executions: 3' class='covered'>if (this.use_count>this.usage_count)</span> <span id='l48s1' title='Executions: 1' class='covered'>return null;</span></pre></td>
-    </tr>
-    <tr>
-      <td class='line'>49</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l49s0'>		return super.getValue();</pre></td>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		return super.getValue();</pre></td>
     </tr>
     <tr>
       <td class='line'>50</td><td>&nbsp;</td>
@@ -211,8 +203,8 @@
       <td><pre class='comment'>	/** 使用回数 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>60</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected long use_count = 0L;</pre></td>
+      <td class='line'>60</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l60s0'>	protected long use_count = 0L;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -220,24 +212,33 @@
       <td><pre class='prettyprint'>	AbsoluteCountSpecify(long outputCount, String value, long count) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td class='line'>63</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		super(outputCount, value);</pre></td>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/3</span>
+        <span class='uncovered' onclick="showPath(this,'l63s0 l64s0 l64s1')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l63s0 l64s0 l65s0 l65s1')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l63s0 l64s0 l65s0 l66s0 l67s0')">C: 0</span>
+      </td>
     </tr>
     <tr>
-      <td class='line'>64</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		if (count &lt; 1) throw new IllegalArgumentException("件数指定に0以下が設定されています。:" + value);</pre></td>
+      <td class='line'>63</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l63s0'>		super(outputCount, value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>65</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		if (count > outputCount) throw new IllegalArgumentException("件数指定に出力件数以上の件数が設定されています。:" + value); </pre></td>
+      <td class='line'>64</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l64s0' title='Executions: 0' class='uncovered'>if (count &lt; 1)</span> <span id='l64s1' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException("件数指定に0以下が設定されています。:" + value);</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>66</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		this.origin_count = count;</pre></td>
+      <td class='line'>65</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l65s0' title='Executions: 0' class='uncovered'>if (count > outputCount)</span> <span id='l65s1' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException("件数指定に出力件数以上の件数が設定されています。:" + value);</span> </pre></td>
     </tr>
     <tr>
-      <td class='line'>67</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
+      <td class='line'>66</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l66s0'>		this.origin_count = count;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>67</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l67s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -249,16 +250,24 @@
       <td><pre class='prettyprint'>	String getValue() {</pre></td>
     </tr>
     <tr>
-      <td class='line'>71</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		++use_count;</pre></td>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
+        <span class='uncovered' onclick="showPath(this,'l71s0 l72s0 l72s1')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l71s0 l72s0 l73s0')">B: 0</span>
+      </td>
     </tr>
     <tr>
-      <td class='line'>72</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		if (this.use_count>this.origin_count) return null;</pre></td>
+      <td class='line'>71</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l71s0'>		++use_count;</pre></td>
     </tr>
     <tr>
-      <td class='line'>73</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		return super.getValue();</pre></td>
+      <td class='line'>72</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l72s0' title='Executions: 0' class='uncovered'>if (this.use_count>this.origin_count)</span> <span id='l72s1' title='Executions: 0' class='uncovered'>return null;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>73</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l73s0'>		return super.getValue();</pre></td>
     </tr>
     <tr>
       <td class='line'>74</td><td>&nbsp;</td>
@@ -280,12 +289,12 @@
       <td><pre class='prettyprint'>	NothingCountSpecify(long outputCount, String value) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td class='line'>81</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		super(outputCount, value);</pre></td>
+      <td class='line'>81</td><td class='count'>15</td>
+      <td><pre class='prettyprint covered' id='l81s0'>		super(outputCount, value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>82</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
+      <td class='line'>82</td><td class='count'>15</td>
+      <td><pre class='prettyprint covered' id='l82s0'>	}</pre></td>
     </tr>
     <tr>
       <td class='line'>83</td><td>&nbsp;</td>

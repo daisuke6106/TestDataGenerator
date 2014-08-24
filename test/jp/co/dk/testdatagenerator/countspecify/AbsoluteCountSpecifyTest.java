@@ -1,7 +1,8 @@
-package jp.co.dk.testdatagenerator;
+package jp.co.dk.testdatagenerator.countspecify;
 
 
 import jp.co.dk.test.template.TestCaseTemplate;
+import jp.co.dk.testdatagenerator.countspecify.AbsoluteCountSpecify;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,36 +17,30 @@ public class AbsoluteCountSpecifyTest {
 		@Test
         public void 引数の出力件数が不正な場合() {
         	try {
-        		new AbsoluteCountSpecify(1L, "a", -1L);
+        		new AbsoluteCountSpecify(100L, "a", -1L);
 				fail();
 			} catch (IllegalArgumentException e) {
-				assertThat(e.getMessage(), is("パーセンテージ指定に0以下が設定されています。:" + "a"));
+				assertThat(e.getMessage(), is("件数指定に0以下が設定されています。:" + "a"));
 			}
         	try {
-        		new AbsoluteCountSpecify(1L, "a", 0L);
+        		new AbsoluteCountSpecify(100L, "a", 0L);
 				fail();
 			} catch (IllegalArgumentException e) {
-				assertThat(e.getMessage(), is("パーセンテージ指定に0以下が設定されています。:" + "a"));
+				assertThat(e.getMessage(), is("件数指定に0以下が設定されています。:" + "a"));
 			}
-        }
-		
-		@Test
-        public void 引数のパーセンテージが100以上の場合() {
         	try {
         		new AbsoluteCountSpecify(100L, "a", 101L);
 				fail();
 			} catch (IllegalArgumentException e) {
-				assertThat(e.getMessage(), is("件数指定に出力件数以上のパーセンテージが設定されています。:" + "a"));
+				assertThat(e.getMessage(), is("件数指定に出力件数以上の件数が設定されています。:" + "a"));
 			}
         }
-		
 		@Test
         public void 正常にインスタンスが生成できた場合() {
 			for (long i=1; i<=100; i++) {
 	        	try {
 	        		AbsoluteCountSpecify sut = new AbsoluteCountSpecify(100L, "a", i);
-					assertThat(sut.percentage,  is(i));
-					assertThat(sut.usage_count, is(i));
+					assertThat(sut.origin_count,  is(i));
 					assertThat(sut.use_count,   is(0L));
 				} catch (IllegalArgumentException e) {
 					fail(e);
@@ -54,8 +49,7 @@ public class AbsoluteCountSpecifyTest {
 			
 			try {
         		AbsoluteCountSpecify sut = new AbsoluteCountSpecify(200L, "a", 50L);
-				assertThat(sut.percentage,  is(50L));
-				assertThat(sut.usage_count, is(100L));
+				assertThat(sut.origin_count,  is(50L));
 				assertThat(sut.use_count,   is(0L));
 			} catch (IllegalArgumentException e) {
 				fail(e);
@@ -63,8 +57,7 @@ public class AbsoluteCountSpecifyTest {
 			
 			try {
         		AbsoluteCountSpecify sut = new AbsoluteCountSpecify(50L, "a", 33L);
-				assertThat(sut.percentage,  is(33L));
-				assertThat(sut.usage_count, is(17L));
+				assertThat(sut.origin_count,  is(33L));
 				assertThat(sut.use_count,   is(0L));
 			} catch (IllegalArgumentException e) {
 				fail(e);
