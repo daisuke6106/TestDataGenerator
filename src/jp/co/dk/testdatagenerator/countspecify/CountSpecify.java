@@ -18,5 +18,9 @@ public abstract class CountSpecify {
 		return this.value;
 	}
 	
+	@Override
+	public String toString() {
+		return this.value;
+	}
 }
 

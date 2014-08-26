@@ -1,4 +1,4 @@
-package jp.co.dk.testdatagenerator;
+package jp.co.dk.testdatagenerator.countspecify;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -6,10 +6,10 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
-	ColumnTest.class,
-	RecordTest.class,
-	
-	jp.co.dk.testdatagenerator.countspecify.AllTest.class,
+	AbsoluteCountSpecifyTest.class,
+	CountSpecifyTest.class,
+	NothingCountSpecifyTest.class,
+	PacentageCountSpecifyTest.class
 })
 public class AllTest {}
  

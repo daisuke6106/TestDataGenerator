@@ -46,25 +46,9 @@ public class ColumnTest{
 			}
         }
         
-        @Test
-        public void インスタンス生成に成功ーランダム指定あり() {
-			try {
-				Column sut = new Column(100L, 0, "@r[aaa;bbb;ccc]");
-				assertThat(sut.outputCount, is(100L));
-				assertThat(sut.index      , is(0));
-				assertThat(sut.datas      , is("@r[aaa;bbb;ccc]"));
-				assertThat(sut.isRandom   , is(true));
-				assertThat(sut.dataList.size(), is(3));
-				assertThat(sut.dataList.get(0).getValue(), is("aaa"));
-				assertThat(sut.dataList.get(1).getValue(), is("bbb"));
-				assertThat(sut.dataList.get(2).getValue(), is("ccc"));
-			} catch (IllegalArgumentException e) {
-				fail(e);
-			}
-        }
     }
 	
-	public static class ランダム設定なし extends TestCaseTemplate{
+	public static class ランダム設定なしー値の末尾にセミコロンなし extends TestCaseTemplate{
 		 
         protected Column sut ;
         
@@ -74,7 +58,7 @@ public class ColumnTest{
 				this.sut = new Column(100L, 0, "aaa;bbb;ccc");
 				assertThat(this.sut.outputCount, is(100L));
 				assertThat(this.sut.index      , is(0));
-				assertThat(this.sut.datas      , is("aaa;bbb;ccc"));
+				assertThat(this.sut.origin_datas      , is("aaa;bbb;ccc"));
 				assertThat(this.sut.isRandom   , is(false));
 				assertThat(this.sut.dataList.size(), is(3));
 				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
@@ -98,7 +82,43 @@ public class ColumnTest{
         }
     }
 	
-	public static class ランダム設定あり extends TestCaseTemplate{
+	public static class ランダム設定なしー値の末尾にセミコロンあり extends TestCaseTemplate{
+		 
+        protected Column sut ;
+        
+        @Before
+        public void init() {
+        	try {
+				this.sut = new Column(100L, 0, "aaa;bbb;ccc;");
+				assertThat(this.sut.outputCount, is(100L));
+				assertThat(this.sut.index      , is(0));
+				assertThat(this.sut.origin_datas      , is("aaa;bbb;ccc;"));
+				assertThat(this.sut.isRandom   , is(false));
+				assertThat(this.sut.dataList.size(), is(4));
+				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
+				assertThat(this.sut.dataList.get(3).getValue(), is(""));
+			} catch (IllegalArgumentException e) {
+				fail(e);
+			}
+        }
+        
+        @Test
+        public void getValue() {
+    		assertThat(this.sut.getValue(0), is("aaa"));
+    		assertThat(this.sut.getValue(1), is("aaa"));
+    		assertThat(this.sut.getValue(2), is("aaa"));
+    		assertThat(this.sut.getValue(3), is("aaa"));
+        }
+        
+        @Test
+        public void testToString() {
+        	assertThat(this.sut.toString(), is("aaa;bbb;ccc;"));
+        }
+    }
+	
+	public static class ランダム設定ありー値の末尾にセミコロンなし extends TestCaseTemplate{
 		 
         protected Column sut ;
         
@@ -108,7 +128,7 @@ public class ColumnTest{
 				this.sut = new Column(100L, 0, "@r[aaa;bbb;ccc]");
 				assertThat(this.sut.outputCount, is(100L));
 				assertThat(this.sut.index      , is(0));
-				assertThat(this.sut.datas      , is("@r[aaa;bbb;ccc]"));
+				assertThat(this.sut.origin_datas      , is("@r[aaa;bbb;ccc]"));
 				assertThat(this.sut.isRandom   , is(true));
 				assertThat(this.sut.dataList.size(), is(3));
 				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
@@ -142,6 +162,62 @@ public class ColumnTest{
         @Test
         public void testToString() {
         	assertThat(this.sut.toString(), is("@r[aaa;bbb;ccc]"));
+        }
+    }
+	
+	public static class ランダム設定ありー値の末尾にセミコロンあり extends TestCaseTemplate{
+		 
+        protected Column sut ;
+        
+        @Before
+        public void init() {
+        	try {
+				this.sut = new Column(100L, 0, "@r[aaa;bbb;ccc;]");
+				assertThat(this.sut.outputCount, is(100L));
+				assertThat(this.sut.index      , is(0));
+				assertThat(this.sut.origin_datas      , is("@r[aaa;bbb;ccc;]"));
+				assertThat(this.sut.isRandom   , is(true));
+				assertThat(this.sut.dataList.size(), is(4));
+				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
+				assertThat(this.sut.dataList.get(3).getValue(), is(""));
+			} catch (IllegalArgumentException e) {
+				fail(e);
+			}
+        }
+        
+        @Test
+        public void getValue() {
+    		assertThat(this.sut.getValue(0), anyOf(
+    			is("aaa"),
+    			is("bbb"),
+    			is("ccc"),
+    			is("")
+    		));
+    		assertThat(this.sut.getValue(1), anyOf(
+    			is("aaa"),
+    			is("bbb"),
+    			is("ccc"),
+    			is("")
+        	));
+    		assertThat(this.sut.getValue(2), anyOf(
+				is("aaa"),
+				is("bbb"),
+				is("ccc"),
+				is("")
+	    	));
+    		assertThat(this.sut.getValue(3), anyOf(
+				is("aaa"),
+				is("bbb"),
+				is("ccc"),
+				is("")
+	    	));
+        }
+        
+        @Test
+        public void testToString() {
+        	assertThat(this.sut.toString(), is("@r[aaa;bbb;ccc;]"));
         }
     }
 

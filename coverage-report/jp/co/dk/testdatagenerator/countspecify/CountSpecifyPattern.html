@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - CountSpecifyPattern.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../../coverage.css'/>
+  <script type='text/javascript' src='../../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java</caption>
+    <tr>
+      <td class='line'>1</td><td class='count'>39</td>
+      <td><pre class='prettyprint covered' id='l1s0'>package jp.co.dk.testdatagenerator.countspecify;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public enum CountSpecifyPattern {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 件数指定 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>8</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l8s0'>	ABSOLUTE_SPECIFIED("^@a\\[(.*?)=([0-9]+)\\]$", new CountSpecifyFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered' id='l11s0'>			Matcher matcher = pattern.matcher(format);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered' id='l12s0'>			matcher.find();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered' id='l13s0'>			String data        = matcher.group(1);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered' id='l14s0'>			String countString = matcher.group(2);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered' id='l15s0'>			long   count       = Long.parseLong(countString);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered' id='l16s0'>			return new AbsoluteCountSpecify(outputCount, data, count);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** パーセント指定 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l21s0'>	PERCENTAGE_SPECIFIED("^@p\\[(.*?)=([0-9]+)\\]$", new CountSpecifyFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l24s0'>			Matcher matcher = pattern.matcher(format);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l25s0'>			matcher.find();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l26s0'>			String data        = matcher.group(1);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l27s0'>			String countString = matcher.group(2);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l28s0'>			long   count       = Long.parseLong(countString);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l29s0'>			return new PacentageCountSpecify(outputCount, data, count);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>33</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 指定なし */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l34s0'>	NOTHING_SPECIFIED("^.*$", new CountSpecifyFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td class='count'>17</td>
+      <td><pre class='prettyprint covered' id='l37s0'>			return new NothingCountSpecify(outputCount, format);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private Pattern pattern;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private CountSpecifyFactory countSpecifyFactory;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>46</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l46s0'>	CountSpecifyPattern(String pattern, CountSpecifyFactory countSpecifyFactory) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l47s0'>		this.pattern             = Pattern.compile(pattern);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l48s0'>		this.countSpecifyFactory = countSpecifyFactory;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l49s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public boolean match(String format) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>79</td>
+      <td><pre class='prettyprint covered' id='l52s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td class='count'>79</td>
+      <td><pre class='prettyprint covered' id='l53s0'>		return matcher.find();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>56</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public CountSpecify getCountSpecify(long outputCount, String format) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>36</td>
+      <td><pre class='prettyprint covered' id='l57s0'>		return this.countSpecifyFactory.createCountSpecify(outputCount, this.pattern, format);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

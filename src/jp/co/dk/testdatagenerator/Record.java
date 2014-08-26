@@ -23,9 +23,10 @@ class Record {
 	/** 改行コード */
 	protected static String newLine = System.getProperty("line.separator");
 	
-	Record(long count, String format) throws IllegalAccessException {
-		if (format == null || format.equals("")) throw new IllegalAccessException("can't create Record instance. format is not set.");
-		this.count  = count;
+	Record(long outputCount, String format) throws IllegalAccessException {
+		if (outputCount < 1) throw new IllegalAccessException("can't create Record instance. outputCount is invalid.");
+		if (format == null) throw new IllegalAccessException("can't create Record instance. format is not set.");
+		this.count  = outputCount;
 		this.format = format;
 		List<String> columnStrings = Arrays.asList(formatPattern.split(format, -1));
 		for (int index=0; index<columnStrings.size(); index++) {

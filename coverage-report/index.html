@@ -11,8 +11,8 @@
   <table id='packages'>
     <caption>All Packages and Files<div style='font-size: smaller'>TestDataGenerator/src</div></caption>
     <tr>
-      <th style='cursor: col-resize' onclick='showHideAllFiles()'>Packages: 3</th>
-      <th onclick='location.reload()' style='cursor: n-resize' title='Click on the title for each metric to sort by size (total number of line segments, paths, or fields).'>Files: 7</th>
+      <th style='cursor: col-resize' onclick='showHideAllFiles()'>Packages: 4</th>
+      <th onclick='location.reload()' style='cursor: n-resize' title='Click on the title for each metric to sort by size (total number of line segments, paths, or fields).'>Files: 13</th>
       <th onclick='sortTables(1)' style='cursor: n-resize' title='Measures how much of the executable production code was exercised by tests.
 An executable line of code contains one or more executable segments.
 The percentages are calculated as 100*NE/NS, where NS is the number of segments and NE the number of executed segments.'>Line</th>
@@ -73,53 +73,87 @@ The percentages are calculated as 100*NFE/NF, where NF is the number of non-fina
       <td class='nocode'>N/A</td>
     </tr>
     <tr>
+      <td class='file click' onclick='showHideFiles(this)'>jp.co.dk.testdatagenerator</td>
+      <td>
+        <table width='100%'>
+          <tr>
+            <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/Column.html'>Column.java</a>               </td>
+            <td style='background-color:#31ce00' title='Line segments: 34/42'>81%</td>
+            <td style='background-color:#996600' title='Paths: 4/10'>40%</td>
+            <td style='background-color:#55aa00' title='Fields: 4/6'>67%</td>
+          </tr>
+          <tr>
+            <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/Record.html'>Record.java</a>               </td>
+            <td style='background-color:#15ea00' title='Line segments: 22/24'>92%</td>
+            <td style='background-color:#cc3300' title='Paths: 1/5'>20%</td>
+            <td style='background-color:#40bf00' title='Fields: 3/4'>75%</td>
+          </tr>
+          <tr>
+            <td class='file'>TestDataGenerator.java    </td>
+            <td colspan='3' class='unknown'>?</td>
+          </tr>
+        </table>
+      </td>
+      <td class='pt' style='background-color:#27d800' title='Line segments: 56/66'>85%</td>
+      <td class='pt' style='background-color:#aa5500' title='Paths: 5/15'>33%</td>
+      <td class='pt' style='background-color:#4cb300' title='Fields: 7/10'>70%</td>
+    </tr>
+    <tr>
       <td class='file click' onclick='showHideFiles(this)'>jp.co.dk.testdatagenerator.countspecify</td>
       <td>
         <table width='100%'>
           <tr>
             <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.html'>AbsoluteCountSpecify.java</a> </td>
-            <td style='background-color:#15ea00' title='Line segments: 11/12'>92%</td>
-            <td style='background-color:#33cc00' title='Paths: 4/5'>80%</td>
+            <td style='background-color:#2ad500' title='Line segments: 10/12'>83%</td>
+            <td style='background-color:#669900' title='Paths: 3/5'>60%</td>
             <td style='background-color:#00ff00' title='Fields: 2/2'>100%</td>
           </tr>
           <tr>
             <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/countspecify/CountSpecify.html'>CountSpecify.java</a>         </td>
-            <td style='background-color:#20df00' title='Line segments: 7/8'>88%</td>
-            <td style='background-color:#7f8000' title='Paths: 2/4'>50%</td>
-            <td style='background-color:#7f8000' title='Fields: 1/2'>50%</td>
+            <td style='background-color:#39c600' title='Line segments: 7/9'>78%</td>
+            <td style='background-color:#996600' title='Paths: 2/5'>40%</td>
+            <td style='background-color:#ff0000' title='Fields: 0/2'>0%</td>
           </tr>
           <tr>
-            <td class='file'>CountSpecifyFactory.java  </td>
-            <td colspan='3' class='unknown'>?</td>
+            <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.html'>CountSpecifyFactory.java</a>  </td>
+            <td class='nocode'>N/A</td>
+            <td class='nocode'>N/A</td>
+            <td class='nocode'>N/A</td>
           </tr>
           <tr>
-            <td class='file'>CountSpecifyPattern.java  </td>
-            <td colspan='3' class='unknown'>?</td>
+            <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.html'>CountSpecifyPattern.java</a>  </td>
+            <td style='background-color:#00ff00' title='Line segments: 24/24'>100%</td>
+            <td style='background-color:#00ff00' title='Paths: 10/10'>100%</td>
+            <td style='background-color:#00ff00' title='Fields: 2/2'>100%</td>
           </tr>
           <tr>
-            <td class='file'>NothingCountSpecify.java  </td>
-            <td colspan='3' class='unknown'>?</td>
+            <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.html'>NothingCountSpecify.java</a>  </td>
+            <td style='background-color:#00ff00' title='Line segments: 2/2'>100%</td>
+            <td style='background-color:#00ff00' title='Paths: 1/1'>100%</td>
+            <td class='nocode'>N/A</td>
           </tr>
           <tr>
-            <td class='file'>PacentageCountSpecify.java</td>
-            <td colspan='3' class='unknown'>?</td>
+            <td class='file'><a target='_blank' href='jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.html'>PacentageCountSpecify.java</a></td>
+            <td style='background-color:#27d800' title='Line segments: 11/13'>85%</td>
+            <td style='background-color:#669900' title='Paths: 3/5'>60%</td>
+            <td style='background-color:#55aa00' title='Fields: 2/3'>67%</td>
           </tr>
         </table>
       </td>
-      <td class='pt' style='background-color:#19e600' title='Line segments: 18/20'>90%</td>
-      <td class='pt' style='background-color:#55aa00' title='Paths: 6/9'>67%</td>
-      <td class='pt' style='background-color:#40bf00' title='Fields: 3/4'>75%</td>
+      <td class='pt' style='background-color:#19e600' title='Line segments: 54/60'>90%</td>
+      <td class='pt' style='background-color:#45ba00' title='Paths: 19/26'>73%</td>
+      <td class='pt' style='background-color:#55aa00' title='Fields: 6/9'>67%</td>
     </tr>
     <tr class='total'>
       <td>Total</td><td>&nbsp;</td>
-      <td class='pt' style='background-color:#44bb00' title='Line segments: 79/108'>73%</td>
-      <td class='pt' style='background-color:#9a6500' title='Paths: 17/43'>40%</td>
-      <td class='pt' style='background-color:#4cb300' title='Fields: 19/27'>70%</td>
+      <td class='pt' style='background-color:#33cc00' title='Line segments: 171/214'>80%</td>
+      <td class='pt' style='background-color:#887700' title='Paths: 35/75'>47%</td>
+      <td class='pt' style='background-color:#4fb000' title='Fields: 29/42'>69%</td>
     </tr>
   </table>
   <p>
     <a href='http://code.google.com/p/jmockit'><img src='logo.png'></a>
-    Generated on Mon Aug 25 02:48:11 JST 2014
+    Generated on Wed Aug 27 02:46:10 JST 2014
   </p>
 </body>
 </html>

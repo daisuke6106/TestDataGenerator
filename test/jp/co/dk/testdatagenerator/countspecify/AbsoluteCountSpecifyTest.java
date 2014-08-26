@@ -35,6 +35,7 @@ public class AbsoluteCountSpecifyTest {
 				assertThat(e.getMessage(), is("件数指定に出力件数以上の件数が設定されています。:" + "a"));
 			}
         }
+		
 		@Test
         public void 正常にインスタンスが生成できた場合() {
 			for (long i=1; i<=100; i++) {
@@ -45,22 +46,6 @@ public class AbsoluteCountSpecifyTest {
 				} catch (IllegalArgumentException e) {
 					fail(e);
 				}
-			}
-			
-			try {
-        		AbsoluteCountSpecify sut = new AbsoluteCountSpecify(200L, "a", 50L);
-				assertThat(sut.origin_count,  is(50L));
-				assertThat(sut.use_count,   is(0L));
-			} catch (IllegalArgumentException e) {
-				fail(e);
-			}
-			
-			try {
-        		AbsoluteCountSpecify sut = new AbsoluteCountSpecify(50L, "a", 33L);
-				assertThat(sut.origin_count,  is(33L));
-				assertThat(sut.use_count,   is(0L));
-			} catch (IllegalArgumentException e) {
-				fail(e);
 			}
         }
 	}

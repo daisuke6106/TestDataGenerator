@@ -39,7 +39,7 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
     </tr>
     <tr>
       <td class='line'>15</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected long <span class='instance covered' title='Reads: 15 Writes: 5'>outputCount</span>;</pre></td>
+      <td><pre class='prettyprint'>	protected long <span class='instance covered' title='Reads: 36 Writes: 23'>outputCount</span>;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -48,7 +48,7 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
     </tr>
     <tr>
       <td class='line'>18</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected int <span class='instance uncovered' title='Reads: 0 Writes: 5'>index</span>; </pre></td>
+      <td><pre class='prettyprint'>	protected int <span class='instance uncovered' title='Reads: 0 Writes: 23'>index</span>; </pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -57,7 +57,7 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
     </tr>
     <tr>
       <td class='line'>21</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 12 Writes: 5'>datas</span>;</pre></td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 46 Writes: 23'>origin_datas</span>;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -65,8 +65,8 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
       <td><pre class='comment'>	/** 値取り出し時にランダムにするか */</pre></td>
     </tr>
     <tr>
-      <td class='line'>24</td><td class='count'>8</td>
-      <td><pre class='prettyprint covered' id='l24s0'>	protected boolean <span class='instance covered' title='Reads: 6 Writes: 11'>isRandom</span> = false;</pre></td>
+      <td class='line'>24</td><td class='count'>23</td>
+      <td><pre class='prettyprint covered' id='l24s0'>	protected boolean <span class='instance uncovered' title='Reads: 81 Writes: 24'>isRandom</span> = false;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -75,7 +75,7 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
     </tr>
     <tr>
       <td class='line'>27</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l27s0'>	protected static Pattern <span class='static covered' title='Reads: 5 Writes: 0'>randomPattern</span> = Pattern.compile("^@r\\[(.*?)\\]$");</pre></td>
+      <td><pre class='prettyprint covered' id='l27s0'>	protected static Pattern <span class='static covered' title='Reads: 23 Writes: 0'>randomPattern</span> = Pattern.compile("^@r\\[(.*?)\\]$");</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -83,8 +83,8 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
       <td><pre class='comment'>	/** 生成対象データの種類一覧 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>30</td><td class='count'>8</td>
-      <td><pre class='prettyprint covered' id='l30s0'>	protected List&lt;CountSpecify> <span class='instance covered' title='Reads: 24 Writes: 8'>dataList</span> = new ArrayList&lt;CountSpecify>();</pre></td>
+      <td class='line'>30</td><td class='count'>23</td>
+      <td><pre class='prettyprint covered' id='l30s0'>	protected List&lt;CountSpecify> <span class='instance covered' title='Reads: 117 Writes: 23'>dataList</span> = new ArrayList&lt;CountSpecify>();</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -104,60 +104,60 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
 	 * @param datas このカラムのデータ内容
 	 * @throws IllegalArgumentException 引数が不正な場合
 	 */    <tr>
-      <td></td><td class='count'>8</td>
+      <td></td><td class='count'>23</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#49b600' onclick='hidePath()'>Path coverage: 5/7</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s3')">A: 1</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s3')">B: 1</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l48s3')">C: 1</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l49s0 l56s0 l61s0 l62s0 l68s0 l68s1 l78s0')">D: 2</span>
+        <span style='cursor:default; background-color:#b64900' onclick='hidePath()'>Path coverage: 2/7</span>
+        <span class='uncovered' onclick="showPath(this,'l47s0 l48s0 l48s3')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s3')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l48s3')">C: 0</span>
+        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l49s0 l56s0 l61s0 l62s0 l68s0 l68s1 l78s0')">D: 22</span>
         <span class='uncovered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l49s0 l56s0 l61s0 l62s0 l63s0 l64s0 l68s0 l68s1 l78s0')">E: 0</span>
-        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l49s0 l56s0 l57s0 l61s0 l62s0 l68s0 l68s1 l78s0')">F: 3</span>
+        <span class='covered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l49s0 l56s0 l57s0 l61s0 l62s0 l68s0 l68s1 l78s0')">F: 1</span>
         <span class='uncovered' onclick="showPath(this,'l47s0 l48s0 l48s1 l48s2 l49s0 l56s0 l57s0 l61s0 l62s0 l63s0 l64s0 l68s0 l68s1 l78s0')">G: 0</span>
       </td>
     </tr>
 </div><span>	/*...*/</span></td>
     </tr>
     <tr>
-      <td class='line'>47</td><td class='count'>8</td>
+      <td class='line'>47</td><td class='count'>23</td>
       <td><pre class='prettyprint covered' id='l47s0'>	Column(long outputCount, int index, String datas) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td class='line'>48</td><td class='count'>8</td>
-      <td><pre class='prettyprint jmp'>		<span id='l48s0' title='Executions: 8' class='covered'>if (outputCount &lt;0</span> || <span id='l48s1' title='Executions: 7' class='covered'>index &lt; 0</span> || <span id='l48s2' title='Executions: 6' class='covered'>datas == null)</span> <span id='l48s3' title='Executions: 1' class='covered'>throw new IllegalArgumentException("can't create Column instance.");</span></pre></td>
+      <td class='line'>48</td><td class='count'>23</td>
+      <td><pre class='prettyprint jmp'>		<span id='l48s0' title='Executions: 23' class='covered'>if (outputCount &lt;0</span> || <span id='l48s1' title='Executions: 23' class='covered'>index &lt; 0</span> || <span id='l48s2' title='Executions: 23' class='covered'>datas == null)</span> <span id='l48s3' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException("can't create Column instance.");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>49</td><td class='count'>5</td>
+      <td class='line'>49</td><td class='count'>23</td>
       <td><pre class='prettyprint covered' id='l49s0'>		this.outputCount = outputCount;</pre></td>
     </tr>
     <tr>
-      <td class='line'>50</td><td class='count'>5</td>
+      <td class='line'>50</td><td class='count'>23</td>
       <td><pre class='prettyprint covered' id='l50s0'>		this.index = index;</pre></td>
     </tr>
     <tr>
-      <td class='line'>51</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l51s0'>		this.datas = datas;</pre></td>
+      <td class='line'>51</td><td class='count'>23</td>
+      <td><pre class='prettyprint covered' id='l51s0'>		this.origin_datas = datas;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>53</td><td class='count'>5</td>
+      <td class='line'>53</td><td class='count'>23</td>
       <td><pre class='prettyprint covered' id='l53s0'>		String copyData = datas;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>55</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l55s0'>		Matcher randomMatcher = randomPattern.matcher(this.datas);</pre></td>
+      <td class='line'>55</td><td class='count'>23</td>
+      <td><pre class='prettyprint covered' id='l55s0'>		Matcher randomMatcher = randomPattern.matcher(this.origin_datas);</pre></td>
     </tr>
     <tr>
-      <td class='line'>56</td><td class='count'>5</td>
-      <td><pre class='prettyprint jmp'>		<span id='l56s0' title='Executions: 5' class='covered'>if (randomMatcher.find()) {</span></pre></td>
+      <td class='line'>56</td><td class='count'>23</td>
+      <td><pre class='prettyprint jmp'>		<span id='l56s0' title='Executions: 23' class='covered'>if (randomMatcher.find()) {</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>57</td><td class='count'>3</td>
+      <td class='line'>57</td><td class='count'>1</td>
       <td><pre class='prettyprint covered' id='l57s0'>			this.isRandom = true;</pre></td>
     </tr>
     <tr>
-      <td class='line'>58</td><td class='count'>3</td>
+      <td class='line'>58</td><td class='count'>1</td>
       <td><pre class='prettyprint covered' id='l58s0'>			copyData = randomMatcher.group(1);</pre></td>
     </tr>
     <tr>
@@ -166,12 +166,12 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>61</td><td class='count'>5</td>
+      <td class='line'>61</td><td class='count'>23</td>
       <td><pre class='prettyprint covered' id='l61s0'>		String[] patterns = copyData.split(";");</pre></td>
     </tr>
     <tr>
-      <td class='line'>62</td><td class='count'>5</td>
-      <td><pre class='prettyprint jmp'>		<span id='l62s0' title='Executions: 5' class='covered'>if (this.datas.endsWith(";")) {</span></pre></td>
+      <td class='line'>62</td><td class='count'>23</td>
+      <td><pre class='prettyprint jmp'>		<span id='l62s0' title='Executions: 23' class='covered'>if (copyData.endsWith(";")) {</span></pre></td>
     </tr>
     <tr>
       <td class='line'>63</td><td class='count'>0</td>
@@ -194,31 +194,31 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>68</td><td class='count'>20</td>
+      <td class='line'>68</td><td class='count'>59</td>
       <td><pre class='prettyprint covered' id='l68s0'>		for (int i=0; i&lt;patterns.length; i++) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>69</td><td class='count'>15</td>
+      <td class='line'>69</td><td class='count'>36</td>
       <td><pre class='prettyprint covered' id='l69s0'>			String pattern = patterns[i];</pre></td>
     </tr>
     <tr>
-      <td class='line'>70</td><td class='count'>45</td>
+      <td class='line'>70</td><td class='count'>79</td>
       <td><pre class='prettyprint covered' id='l70s0'>			for (CountSpecifyPattern countSpecifyPattern : CountSpecifyPattern.values()) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>71</td><td class='count'>45</td>
-      <td><pre class='prettyprint jmp'>				<span id='l71s0' title='Executions: 45' class='covered'>if (countSpecifyPattern.match(pattern)) {</span></pre></td>
+      <td class='line'>71</td><td class='count'>79</td>
+      <td><pre class='prettyprint jmp'>				<span id='l71s0' title='Executions: 79' class='covered'>if (countSpecifyPattern.match(pattern)) {</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>72</td><td class='count'>15</td>
+      <td class='line'>72</td><td class='count'>36</td>
       <td><pre class='prettyprint covered' id='l72s0'>					CountSpecify countSpecify = countSpecifyPattern.getCountSpecify(this.outputCount, pattern);</pre></td>
     </tr>
     <tr>
-      <td class='line'>73</td><td class='count'>15</td>
+      <td class='line'>73</td><td class='count'>36</td>
       <td><pre class='prettyprint covered' id='l73s0'>					this.dataList.add(countSpecify);</pre></td>
     </tr>
     <tr>
-      <td class='line'>74</td><td class='count'>15</td>
+      <td class='line'>74</td><td class='count'>36</td>
       <td><pre class='prettyprint covered' id='l74s0'>					break;</pre></td>
     </tr>
     <tr>
@@ -234,7 +234,7 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>78</td><td class='count'>5</td>
+      <td class='line'>78</td><td class='count'>23</td>
       <td><pre class='prettyprint covered' id='l78s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
@@ -243,36 +243,36 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
       <td><pre class='prettyprint'>	String getValue(long nowIndex) {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>0</td>
+      <td></td><td class='count'>6</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
-        <span class='uncovered' onclick="showPath(this,'l81s0 l82s0 l86s0')">A: 0</span>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='covered' onclick="showPath(this,'l81s0 l82s0 l86s0')">A: 6</span>
         <span class='uncovered' onclick="showPath(this,'l81s0 l81s1 l82s0 l86s0')">B: 0</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>81</td><td class='count'>6</td>
-      <td><pre class='prettyprint jmp'>		<span id='l81s0' title='Executions: 6' class='covered'>if (this.isRandom)</span> <span id='l81s1' title='Executions: 3' class='covered'>Collections.shuffle(this.dataList);</span></pre></td>
+      <td class='line'>81</td><td class='count'>81</td>
+      <td><pre class='prettyprint jmp'>		<span id='l81s0' title='Executions: 81' class='covered'>if (this.isRandom)</span> <span id='l81s1' title='Executions: 0' class='uncovered'>Collections.shuffle(this.dataList);</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>82</td><td class='count'>12</td>
+      <td class='line'>82</td><td class='count'>224</td>
       <td><pre class='prettyprint covered' id='l82s0'>		for (CountSpecify countSpecify : this.dataList) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>83</td><td class='count'>6</td>
+      <td class='line'>83</td><td class='count'>137</td>
       <td><pre class='prettyprint covered' id='l83s0'>			String value = countSpecify.getValue();</pre></td>
     </tr>
     <tr>
-      <td class='line'>84</td><td class='count'>6</td>
-      <td><pre class='prettyprint jmp'>			<span id='l84s0' title='Executions: 6' class='covered'>if (value != null)</span> <span id='l84s1' title='Executions: 6' class='covered'>return value;</span></pre></td>
+      <td class='line'>84</td><td class='count'>137</td>
+      <td><pre class='prettyprint jmp'>			<span id='l84s0' title='Executions: 137' class='covered'>if (value != null)</span> <span id='l84s1' title='Executions: 75' class='covered'>return value;</span></pre></td>
     </tr>
     <tr>
       <td class='line'>85</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>86</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l86s0'>		return "";</pre></td>
+      <td class='line'>86</td><td class='count'>6</td>
+      <td><pre class='prettyprint covered' id='l86s0'>		return "";</pre></td>
     </tr>
     <tr>
       <td class='line'>87</td><td>&nbsp;</td>
@@ -288,8 +288,8 @@ import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
       <td><pre class='prettyprint'>	public String toString() {</pre></td>
     </tr>
     <tr>
-      <td class='line'>91</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l91s0'>		return this.datas;</pre></td>
+      <td class='line'>91</td><td class='count'>23</td>
+      <td><pre class='prettyprint covered' id='l91s0'>		return this.origin_datas;</pre></td>
     </tr>
     <tr>
       <td class='line'>92</td><td>&nbsp;</td>

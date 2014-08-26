@@ -18,7 +18,7 @@ class Column {
 	protected int index; 
 	
 	/** データ内容 */
-	protected String datas;
+	protected String origin_datas;
 	
 	/** 値取り出し時にランダムにするか */
 	protected boolean isRandom = false;
@@ -48,18 +48,18 @@ class Column {
 		if (outputCount <0 || index < 0 || datas == null) throw new IllegalArgumentException("can't create Column instance.");
 		this.outputCount = outputCount;
 		this.index = index;
-		this.datas = datas;
+		this.origin_datas = datas;
 		
 		String copyData = datas;
 		
-		Matcher randomMatcher = randomPattern.matcher(this.datas);
+		Matcher randomMatcher = randomPattern.matcher(this.origin_datas);
 		if (randomMatcher.find()) {
 			this.isRandom = true;
 			copyData = randomMatcher.group(1);
 		}
 		
 		String[] patterns = copyData.split(";");
-		if (this.datas.endsWith(";")) {
+		if (copyData.endsWith(";")) {
 			String[] patternN = new String[patterns.length+1];
 			for (int i=0; i<patterns.length; i++) patternN[i] = patterns[i];
 			patternN[patternN.length-1] = "";
@@ -88,6 +88,6 @@ class Column {
 	
 	@Override
 	public String toString() {
-		return this.datas;
+		return this.origin_datas;
 	}
 }
