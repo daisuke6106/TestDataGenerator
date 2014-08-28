@@ -25,7 +25,7 @@ class Record {
 	
 	Record(long outputCount, String format) throws IllegalAccessException {
 		if (outputCount < 1) throw new IllegalAccessException("can't create Record instance. outputCount is invalid.");
-		if (format == null) throw new IllegalAccessException("can't create Record instance. format is not set.");
+		if (format == null)  throw new IllegalAccessException("can't create Record instance. format is not set.");
 		this.count  = outputCount;
 		this.format = format;
 		List<String> columnStrings = Arrays.asList(formatPattern.split(format, -1));

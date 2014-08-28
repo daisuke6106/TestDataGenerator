@@ -4,7 +4,10 @@ import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.runner.RunWith;
 
+@RunWith(Enclosed.class)
 public class RecordTest extends TestCaseTemplate{
 	
 	protected static String newLine = System.getProperty("line.separator");
@@ -162,221 +165,204 @@ public class RecordTest extends TestCaseTemplate{
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	@Test
-	public void constractor() {
+	public static class フォーマットが複数カラム且つ複数文字 extends TestCaseTemplate {
 		
+		protected Record sut;
 		
-		try {
-			Record sut = new Record(1,"\"a\",\"b\"");
-			assertThat(sut.columns.size(), is(2));
-			assertThat(sut.columns.get(0).toString(), is("\"a\""));
-			assertThat(sut.columns.get(1).toString(), is("\"b\""));
-			
-			assertThat(sut.getValue(0), is("\"a\",\"b\"" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(1, "\"a\",\"b\"");
+				assertThat(this.sut.count, is(1L));
+				assertThat(this.sut.format, is("\"a\",\"b\""));
+				assertThat(this.sut.columns.size(), is(2));
+				assertThat(this.sut.columns.get(0).toString(), is("\"a\""));
+				assertThat(this.sut.columns.get(1).toString(), is("\"b\""));
+				assertThat(this.sut.newLine, is(RecordTest.newLine));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
 		}
 		
-		try {
-			Record sut = new Record(1,"\"a\",\"\"");
-			assertThat(sut.columns.size(), is(2));
-			assertThat(sut.columns.get(0).toString(), is("\"a\""));
-			assertThat(sut.columns.get(1).toString(), is("\"\""));
-			
-			assertThat(sut.getValue(0), is("\"a\",\"\"" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(1,"\"a\",");
-			assertThat(sut.columns.size(), is(2));
-			assertThat(sut.columns.get(0).toString(), is("\"a\""));
-			assertThat(sut.columns.get(1).toString(), is(""));
-			
-			assertThat(sut.getValue(0), is("\"a\"," + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(1,"[\"a\"]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("[\"a\"]"));
-			
-			assertThat(sut.getValue(0), is("[\"a\"]" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(1,"@a[\"a\"]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@a[\"a\"]"));
-			
-			assertThat(sut.getValue(0), is("@a[\"a\"]" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		try {
-			Record sut = new Record(10,"@a[a=3]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@a[a=3]"));
-			
-			assertThat(sut.getValue(0), is("a" + newLine));
-			assertThat(sut.getValue(1), is("a" + newLine));
-			assertThat(sut.getValue(2), is("a" + newLine));
-			assertThat(sut.getValue(3), is(""  + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@a[\"a\"=3]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=3]"));
-			
-			assertThat(sut.getValue(0), is("\"a\"" + newLine));
-			assertThat(sut.getValue(1), is("\"a\"" + newLine));
-			assertThat(sut.getValue(2), is("\"a\"" + newLine));
-			assertThat(sut.getValue(3), is(""  + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@a[\"a\"=2];@a[\"b\"=3]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=2];@a[\"b\"=3]"));
-			
-			assertThat(sut.getValue(0), is("\"a\"" + newLine));
-			assertThat(sut.getValue(1), is("\"a\"" + newLine));
-			assertThat(sut.getValue(2), is("\"b\"" + newLine));
-			assertThat(sut.getValue(3), is("\"b\"" + newLine));
-			assertThat(sut.getValue(4), is("\"b\"" + newLine));
-			assertThat(sut.getValue(5), is(""      + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@a[\"a\"=2];@a[\"b\"=3]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=2];@a[\"b\"=3]"));
-			
-			assertThat(sut.getValue(0), is("\"a\"" + newLine));
-			assertThat(sut.getValue(1), is("\"a\"" + newLine));
-			assertThat(sut.getValue(2), is("\"b\"" + newLine));
-			assertThat(sut.getValue(3), is("\"b\"" + newLine));
-			assertThat(sut.getValue(4), is("\"b\"" + newLine));
-			assertThat(sut.getValue(5), is(""      + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@a[\"a\"=2];@a[\"b\"=3];\"c\"");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=2];@a[\"b\"=3];\"c\""));
-			
-			assertThat(sut.getValue(0), is("\"a\"" + newLine));
-			assertThat(sut.getValue(1), is("\"a\"" + newLine));
-			assertThat(sut.getValue(2), is("\"b\"" + newLine));
-			assertThat(sut.getValue(3), is("\"b\"" + newLine));
-			assertThat(sut.getValue(4), is("\"b\"" + newLine));
-			assertThat(sut.getValue(5), is("\"c\"" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@p[\"a\"=20]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@p[\"a\"=20]"));
-			
-			assertThat(sut.getValue(0), is("\"a\"" + newLine));
-			assertThat(sut.getValue(1), is("\"a\"" + newLine));
-			assertThat(sut.getValue(2), is("" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@p[\"a\"=20];@p[\"b\"=30];@p[\"c\"=40]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@p[\"a\"=20];@p[\"b\"=30];@p[\"c\"=40]"));
-			
-			assertThat(sut.getValue(0),  is("\"a\"" + newLine));
-			assertThat(sut.getValue(1),  is("\"a\"" + newLine));
-			assertThat(sut.getValue(2),  is("\"b\"" + newLine));
-			assertThat(sut.getValue(3),  is("\"b\"" + newLine));
-			assertThat(sut.getValue(4),  is("\"b\"" + newLine));
-			assertThat(sut.getValue(5),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(6),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(7),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(8),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(9),  is("" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@p[\"a\"=20];@p[\"b\"=30];@p[\"c\"=40];\"d\"");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@p[\"a\"=20];@p[\"b\"=30];@p[\"c\"=40];\"d\""));
-			
-			assertThat(sut.getValue(0),  is("\"a\"" + newLine));
-			assertThat(sut.getValue(1),  is("\"a\"" + newLine));
-			assertThat(sut.getValue(2),  is("\"b\"" + newLine));
-			assertThat(sut.getValue(3),  is("\"b\"" + newLine));
-			assertThat(sut.getValue(4),  is("\"b\"" + newLine));
-			assertThat(sut.getValue(5),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(6),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(7),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(8),  is("\"c\"" + newLine));
-			assertThat(sut.getValue(9),  is("\"d\"" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@a[\"a\"=3];@a[\"b\"=3];\"c\",@p[1=50];@p[2=50]");
-			assertThat(sut.columns.size(), is(2));
-			assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=3];@a[\"b\"=3];\"c\""));
-			assertThat(sut.columns.get(1).toString(), is("@p[1=50];@p[2=50]"));
-			assertThat(sut.getValue(0),  is("\"a\",1" + newLine));
-			assertThat(sut.getValue(1),  is("\"a\",1" + newLine));
-			assertThat(sut.getValue(2),  is("\"a\",1" + newLine));
-			assertThat(sut.getValue(3),  is("\"b\",1" + newLine));
-			assertThat(sut.getValue(4),  is("\"b\",1" + newLine));
-			assertThat(sut.getValue(5),  is("\"b\",2" + newLine));
-			assertThat(sut.getValue(6),  is("\"c\",2" + newLine));
-			assertThat(sut.getValue(7),  is("\"c\",2" + newLine));
-			assertThat(sut.getValue(8),  is("\"c\",2" + newLine));
-			assertThat(sut.getValue(9),  is("\"c\",2" + newLine));
-		} catch (IllegalAccessException e) {
-			fail(e);
-		}
-		
-		try {
-			Record sut = new Record(10,"@r[\"a\";\"b\"]");
-			assertThat(sut.columns.size(), is(1));
-			assertThat(sut.columns.get(0).toString(), is("@r[\"a\";\"b\"]"));
-			
-			// ランダムアクセスするため、テスト失敗の場合が多い
-//			assertThat(sut.getValue(0),  is("\"a\"" + newLine));
-//			assertThat(sut.getValue(1),  is("\"b\"" + newLine));
-			
-		} catch (IllegalAccessException e) {
-			fail(e);
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("\"a\"" + "," + "\"b\"" + newLine));
 		}
 	}
-
+	
+	public static class フォーマットが単数カラム且つ件数固定関数指定 extends TestCaseTemplate {
+		
+		protected Record sut;
+		
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(10,"@a[a=3]");
+				assertThat(this.sut.count, is(10L));
+				assertThat(this.sut.format, is("@a[a=3]"));
+				assertThat(this.sut.columns.size(), is(1));
+				assertThat(this.sut.columns.get(0).toString(), is("@a[a=3]"));
+				assertThat(this.sut.newLine, is(RecordTest.newLine));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("a" + RecordTest.newLine));
+			assertThat(sut.getValue(1), is("a" + RecordTest.newLine));
+			assertThat(sut.getValue(2), is("a" + RecordTest.newLine));
+			assertThat(sut.getValue(3), is(""  + RecordTest.newLine));
+		}
+	}
+	
+	public static class フォーマットが複数カラム且つ件数固定関数指定 extends TestCaseTemplate {
+		
+		protected Record sut;
+		
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(10,"@a[\"a\"=3],@a[\"b\"=2]");
+				assertThat(this.sut.count, is(10L));
+				assertThat(this.sut.format, is("@a[\"a\"=3],@a[\"b\"=2]"));
+				assertThat(this.sut.columns.size(), is(2));
+				assertThat(this.sut.columns.get(0).toString(), is("@a[\"a\"=3]"));
+				assertThat(this.sut.columns.get(1).toString(), is("@a[\"b\"=2]"));
+				assertThat(this.sut.newLine, is(RecordTest.newLine));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("\"a\",\"b\"" + RecordTest.newLine));
+			assertThat(sut.getValue(1), is("\"a\",\"b\"" + RecordTest.newLine));
+			assertThat(sut.getValue(2), is("\"a\"," + RecordTest.newLine));
+			assertThat(sut.getValue(3), is(","  + RecordTest.newLine));
+		}
+	}
+	
+	public static class フォーマットが複数カラム且つ件数固定関数指定デフォルト指定あり extends TestCaseTemplate {
+		
+		protected Record sut;
+		
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(10,"@a[\"a\"=3],@a[\"b\"=2],\"c\"");
+				assertThat(this.sut.count, is(10L));
+				assertThat(this.sut.format, is("@a[\"a\"=3],@a[\"b\"=2],\"c\""));
+				assertThat(sut.columns.size(), is(3));
+				assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=3]"));
+				assertThat(sut.columns.get(1).toString(), is("@a[\"b\"=2]"));
+				assertThat(sut.columns.get(2).toString(), is("\"c\""));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("\"a\",\"b\",\"c\"" + RecordTest.newLine));
+			assertThat(sut.getValue(1), is("\"a\",\"b\",\"c\"" + RecordTest.newLine));
+			assertThat(sut.getValue(2), is("\"a\",,\"c\"" + RecordTest.newLine));
+			assertThat(sut.getValue(3), is(",,\"c\""  + RecordTest.newLine));
+		}
+	}
+	
+	public static class フォーマットが単数カラム且つ件数パーセンテージ関数指定 extends TestCaseTemplate {
+		
+		protected Record sut;
+		
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(5,"@p[a=20]");
+				assertThat(this.sut.count, is(5L));
+				assertThat(this.sut.format, is("@p[a=20]"));
+				assertThat(this.sut.columns.size(), is(1));
+				assertThat(this.sut.columns.get(0).toString(), is("@p[a=20]"));
+				assertThat(this.sut.newLine, is(RecordTest.newLine));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("a" + RecordTest.newLine));
+			assertThat(sut.getValue(1), is(""  + RecordTest.newLine));
+			assertThat(sut.getValue(2), is(""  + RecordTest.newLine));
+			assertThat(sut.getValue(3), is(""  + RecordTest.newLine));
+			assertThat(sut.getValue(4), is(""  + RecordTest.newLine));
+		}
+	}
+	
+	public static class フォーマットが複数カラム且つ件数パーセンテージ関数指定 extends TestCaseTemplate {
+		
+		protected Record sut;
+		
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(5,"@p[\"a\"=80],@p[\"b\"=50]");
+				assertThat(this.sut.count, is(5L));
+				assertThat(this.sut.format, is("@p[\"a\"=80],@p[\"b\"=50]"));
+				assertThat(this.sut.columns.size(), is(2));
+				assertThat(this.sut.columns.get(0).toString(), is("@p[\"a\"=80]"));
+				assertThat(this.sut.columns.get(1).toString(), is("@p[\"b\"=50]"));
+				assertThat(this.sut.newLine, is(RecordTest.newLine));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("\"a\",\"b\"" + RecordTest.newLine));
+			assertThat(sut.getValue(1), is("\"a\",\"b\"" + RecordTest.newLine));
+			assertThat(sut.getValue(2), is("\"a\",\"b\"" + RecordTest.newLine));
+			assertThat(sut.getValue(3), is("\"a\","  + RecordTest.newLine));
+			assertThat(sut.getValue(4), is(","  + RecordTest.newLine));
+		}
+	}
+	
+	public static class フォーマットが複数カラム且つ件数パーセンテージ関数指定デフォルト指定あり extends TestCaseTemplate {
+		
+		protected Record sut;
+		
+		@Before
+		public void init() {
+			try {
+				this.sut = new Record(5,"@p[\"a\"=80],@p[\"b\"=50],\"c\"");
+				assertThat(this.sut.count, is(5L));
+				assertThat(this.sut.format, is("@p[\"a\"=80],@p[\"b\"=50],\"c\""));
+				assertThat(sut.columns.size(), is(3));
+				assertThat(sut.columns.get(0).toString(), is("@p[\"a\"=80]"));
+				assertThat(sut.columns.get(1).toString(), is("@p[\"b\"=50]"));
+				assertThat(sut.columns.get(2).toString(), is("\"c\""));
+				
+			} catch (IllegalAccessException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(sut.getValue(0), is("\"a\",\"b\",\"c\"" + RecordTest.newLine));
+			assertThat(sut.getValue(1), is("\"a\",\"b\",\"c\"" + RecordTest.newLine));
+			assertThat(sut.getValue(2), is("\"a\",\"b\",\"c\"" + RecordTest.newLine));
+			assertThat(sut.getValue(3), is("\"a\",,\"c\""  + RecordTest.newLine));
+			assertThat(sut.getValue(3), is(",,\"c\""  + RecordTest.newLine));
+		}
+	}
 }
