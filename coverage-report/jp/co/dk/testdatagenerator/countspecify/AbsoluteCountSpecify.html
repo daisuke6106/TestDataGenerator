@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <td class='line'>6</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected long <span class='instance covered' title='Reads: 23 Writes: 107'>origin_count</span>;</pre></td>
+      <td><pre class='prettyprint'>	protected long <span class='instance covered' title='Reads: 3 Writes: 102'>origin_count</span>;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -34,8 +34,8 @@
       <td><pre class='comment'>	/** 使用回数 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>9</td><td class='count'>110</td>
-      <td><pre class='prettyprint covered' id='l9s0'>	protected long <span class='instance covered' title='Reads: 46 Writes: 133'>use_count</span> = 0L;</pre></td>
+      <td class='line'>9</td><td class='count'>105</td>
+      <td><pre class='prettyprint covered' id='l9s0'>	protected long <span class='instance covered' title='Reads: 6 Writes: 108'>use_count</span> = 0L;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -43,32 +43,32 @@
       <td><pre class='prettyprint'>	AbsoluteCountSpecify(long outputCount, String value, long count) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>110</td>
+      <td></td><td class='count'>105</td>
       <td class='paths'>
         <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 3/3</span>
         <span class='covered' onclick="showPath(this,'l12s0 l13s0 l13s1')">A: 2</span>
         <span class='covered' onclick="showPath(this,'l12s0 l13s0 l14s0 l14s1')">B: 1</span>
-        <span class='covered' onclick="showPath(this,'l12s0 l13s0 l14s0 l15s0 l16s0')">C: 107</span>
+        <span class='covered' onclick="showPath(this,'l12s0 l13s0 l14s0 l15s0 l16s0')">C: 102</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>12</td><td class='count'>110</td>
+      <td class='line'>12</td><td class='count'>105</td>
       <td><pre class='prettyprint covered' id='l12s0'>		super(outputCount, value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>13</td><td class='count'>110</td>
-      <td><pre class='prettyprint jmp'>		<span id='l13s0' title='Executions: 110' class='covered'>if (count &lt; 1)</span> <span id='l13s1' title='Executions: 2' class='covered'>throw new IllegalArgumentException("件数指定に0以下が設定されています。:" + value);</span></pre></td>
+      <td class='line'>13</td><td class='count'>105</td>
+      <td><pre class='prettyprint jmp'>		<span id='l13s0' title='Executions: 105' class='covered'>if (count &lt; 1)</span> <span id='l13s1' title='Executions: 2' class='covered'>throw new IllegalArgumentException("件数指定に0以下が設定されています。:" + value);</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>14</td><td class='count'>108</td>
-      <td><pre class='prettyprint jmp'>		<span id='l14s0' title='Executions: 108' class='covered'>if (count > outputCount)</span> <span id='l14s1' title='Executions: 1' class='covered'>throw new IllegalArgumentException("件数指定に出力件数以上の件数が設定されています。:" + value);</span> </pre></td>
+      <td class='line'>14</td><td class='count'>103</td>
+      <td><pre class='prettyprint jmp'>		<span id='l14s0' title='Executions: 103' class='covered'>if (count > outputCount)</span> <span id='l14s1' title='Executions: 1' class='covered'>throw new IllegalArgumentException("件数指定に出力件数以上の件数が設定されています。:" + value);</span> </pre></td>
     </tr>
     <tr>
-      <td class='line'>15</td><td class='count'>107</td>
+      <td class='line'>15</td><td class='count'>102</td>
       <td><pre class='prettyprint covered' id='l15s0'>		this.origin_count = count;</pre></td>
     </tr>
     <tr>
-      <td class='line'>16</td><td class='count'>107</td>
+      <td class='line'>16</td><td class='count'>102</td>
       <td><pre class='prettyprint covered' id='l16s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
@@ -81,23 +81,23 @@
       <td><pre class='prettyprint'>	public String getValue() {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>23</td>
+      <td></td><td class='count'>3</td>
       <td class='paths'>
         <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
-        <span class='covered' onclick="showPath(this,'l20s0 l21s0 l21s1')">A: 8</span>
-        <span class='covered' onclick="showPath(this,'l20s0 l21s0 l22s0')">B: 15</span>
+        <span class='covered' onclick="showPath(this,'l20s0 l21s0 l21s1')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l20s0 l21s0 l22s0')">B: 2</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>20</td><td class='count'>23</td>
+      <td class='line'>20</td><td class='count'>3</td>
       <td><pre class='prettyprint covered' id='l20s0'>		++use_count;</pre></td>
     </tr>
     <tr>
-      <td class='line'>21</td><td class='count'>23</td>
-      <td><pre class='prettyprint jmp'>		<span id='l21s0' title='Executions: 23' class='covered'>if (this.use_count>this.origin_count)</span> <span id='l21s1' title='Executions: 8' class='covered'>return null;</span></pre></td>
+      <td class='line'>21</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l21s0' title='Executions: 3' class='covered'>if (this.use_count>this.origin_count)</span> <span id='l21s1' title='Executions: 1' class='covered'>return null;</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>22</td><td class='count'>15</td>
+      <td class='line'>22</td><td class='count'>2</td>
       <td><pre class='prettyprint covered' id='l22s0'>		return super.getValue();</pre></td>
     </tr>
     <tr>

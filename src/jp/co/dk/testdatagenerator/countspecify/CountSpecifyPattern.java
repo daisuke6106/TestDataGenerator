@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public enum CountSpecifyPattern {
 	/** 件数指定 */
-	ABSOLUTE_SPECIFIED("^@a\\[(.*?)=([0-9]+)\\]$", new CountSpecifyFactory(){
+	ABSOLUTE_SPECIFIED("^(.*?)=([0-9]+)$", new CountSpecifyFactory(){
 		@Override
 		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {
 			Matcher matcher = pattern.matcher(format);
@@ -18,7 +18,7 @@ public enum CountSpecifyPattern {
 	}),
 	
 	/** パーセント指定 */
-	PERCENTAGE_SPECIFIED("^@p\\[(.*?)=([0-9]+)\\]$", new CountSpecifyFactory(){
+	PERCENTAGE_SPECIFIED("^(.*?)=([0-9]+)%$", new CountSpecifyFactory(){
 		@Override
 		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {
 			Matcher matcher = pattern.matcher(format);
