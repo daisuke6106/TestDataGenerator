@@ -1,6 +1,8 @@
 package jp.co.dk.testdatagenerator.countspecify;
 
-public abstract class CountSpecify {
+import jp.co.dk.testdatagenerator.HelpPrintable;
+
+public abstract class CountSpecify implements HelpPrintable {
 	
 	/** 出力件数 */
 	protected long outputCount;
@@ -22,5 +24,6 @@ public abstract class CountSpecify {
 	public String toString() {
 		return this.value;
 	}
+	
 }
 

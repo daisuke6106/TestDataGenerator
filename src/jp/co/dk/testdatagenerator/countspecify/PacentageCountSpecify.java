@@ -28,4 +28,24 @@ class PacentageCountSpecify extends CountSpecify{
 		return super.getValue();
 	}
 	
+	@Override
+	public String getName() {
+		return "パーセンテージ指定";
+	}
+
+	@Override
+	public String getManualMessage(String linesep) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("指定の値を指定の割合で出力する場合、値=数値%の形で指定してください。").append(linesep);
+		return sb.toString();
+	}
+
+	@Override
+	public String getExample(String linesep) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("aaa=10%").append(linesep);
+		sb.append("\"bbb\"=10%").append(linesep);
+		sb.append("aaa=10%;bbb=10%").append(linesep);
+		return sb.toString();
+	}
 }

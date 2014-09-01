@@ -16,7 +16,22 @@ public class CountSpecifyTest {
 		@Test
         public void 引数の出力件数が不正な場合() {
         	try {
-        		new CountSpecify(-1L, "a") {};
+        		new CountSpecify(-1L, "a") {
+
+					@Override
+					public String getName() {
+						return "DummyName";
+					}
+
+					@Override
+					public String getManualMessage(String linesep) {
+						return "DummyManualMessage";
+					}
+
+					@Override
+					public String getExample(String linesep) {
+						return "DummyExample";
+					}};
 				fail();
 			} catch (IllegalArgumentException e) {
 				assertThat(e.getMessage(), is("can't create CountSpecifyType instance."));
@@ -26,7 +41,22 @@ public class CountSpecifyTest {
 		@Test
         public void 引数の値がNULL() {
         	try {
-        		new CountSpecify(0L, null) {};
+        		new CountSpecify(0L, null) {
+
+					@Override
+					public String getName() {
+						return "DummyName";
+					}
+
+					@Override
+					public String getManualMessage(String linesep) {
+						return "DummyManualMessage";
+					}
+
+					@Override
+					public String getExample(String linesep) {
+						return "DummyExample";
+					}};
 				fail();
 			} catch (IllegalArgumentException e) {
 				assertThat(e.getMessage(), is("can't create CountSpecifyType instance."));
@@ -42,7 +72,22 @@ public class CountSpecifyTest {
 		
 		@Before
 		public void init() {
-			this.sut = new CountSpecify(10L, "") {};
+			this.sut = new CountSpecify(10L, "") {
+
+				@Override
+				public String getName() {
+					return "DummyName";
+				}
+
+				@Override
+				public String getManualMessage(String linesep) {
+					return "DummyManualMessage";
+				}
+
+				@Override
+				public String getExample(String linesep) {
+					return "DummyExample";
+				}};
 			assertThat(this.sut.outputCount, is(10L));
 			assertThat(this.sut.value      , is(""));
 		}
@@ -65,7 +110,22 @@ public class CountSpecifyTest {
 		
 		@Before
 		public void init() {
-			this.sut = new CountSpecify(10L, "a") {};
+			this.sut = new CountSpecify(10L, "a") {
+
+				@Override
+				public String getName() {
+					return "DummyName";
+				}
+
+				@Override
+				public String getManualMessage(String linesep) {
+					return "DummyManualMessage";
+				}
+
+				@Override
+				public String getExample(String linesep) {
+					return "DummyExample";
+				}};
 			assertThat(this.sut.outputCount, is(10L));
 			assertThat(this.sut.value      , is("a"));
 		}
