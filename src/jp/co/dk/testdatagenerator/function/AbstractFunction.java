@@ -21,6 +21,8 @@ public abstract class AbstractFunction implements HelpPrintable {
 	
 	protected abstract String getFunctionName();
 	
+	public abstract String getValue();
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder(this.getFunctionName());

@@ -4,7 +4,10 @@ public class Right extends AbstractFunction {
 	
 	Right(String... arguments) throws IllegalArgumentException {
 		super(arguments);
-		if (arguments == null || arguments.length == 0) throw new IllegalArgumentException("");
+		if (arguments == null || arguments.length != 2) {
+			throw new IllegalArgumentException(this.getFunctionName() + "の引数が不足です。");
+		}
+		
 	}
 	
 	@Override
