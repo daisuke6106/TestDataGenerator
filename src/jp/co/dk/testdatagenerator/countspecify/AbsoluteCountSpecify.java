@@ -16,10 +16,10 @@ class AbsoluteCountSpecify extends CountSpecify{
 	}
 	
 	@Override
-	public String getValue() {
+	public String getValue(long nowIndex) {
 		++use_count;
 		if (this.use_count>this.origin_count) return null;
-		return super.getValue();
+		return super.getValue(nowIndex);
 	}
 
 	@Override

@@ -2,12 +2,11 @@ package jp.co.dk.testdatagenerator.function;
 
 public class Right extends AbstractFunction {
 	
-	Right(String... arguments) throws IllegalArgumentException {
-		super(arguments);
-		if (arguments == null || arguments.length != 2) {
-			throw new IllegalArgumentException(this.getFunctionName() + "の引数が不足です。");
+	Right(String value, int count) throws IllegalArgumentException {
+		super(value);
+		if (value == null || count <= 0) {
+			throw new IllegalArgumentException(this.getFunctionName() + "の引数が不正です。");
 		}
-		
 	}
 	
 	@Override
@@ -28,6 +27,12 @@ public class Right extends AbstractFunction {
 
 	@Override
 	public String getExample(String linesep) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected String getValue(long nowCount) {
 		// TODO Auto-generated method stub
 		return null;
 	}

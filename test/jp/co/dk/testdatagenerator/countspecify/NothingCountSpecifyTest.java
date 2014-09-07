@@ -43,13 +43,13 @@ public class NothingCountSpecifyTest {
 		@Before
 		public void init() {
 			this.sut = new NothingCountSpecify(0L, "");
-			assertThat(this.sut.outputCount, is(0L));
-			assertThat(this.sut.value      , is(""));
+			assertThat(this.sut.outputCount     , is(0L));
+			assertThat(this.sut.value.toString(), is(""));
 		}
 		
 		@Test
         public void getValue() {
-			assertThat(this.sut.getValue(), is(""));
+			assertThat(this.sut.getValue(0L), is(""));
         }
 		
 		@Test
@@ -66,13 +66,13 @@ public class NothingCountSpecifyTest {
 		@Before
 		public void init() {
 			this.sut = new NothingCountSpecify(0L, "a");
-			assertThat(this.sut.outputCount, is(0L));
-			assertThat(this.sut.value      , is("a"));
+			assertThat(this.sut.outputCount     , is(0L));
+			assertThat(this.sut.value.toString(), is("a"));
 		}
 		
 		@Test
         public void getValue() {
-			assertThat(this.sut.getValue(), is("a"));
+			assertThat(this.sut.getValue(0L), is("a"));
         }
 		
 		@Test

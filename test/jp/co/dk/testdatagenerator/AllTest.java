@@ -8,7 +8,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ 
 	ColumnTest.class,
 	RecordTest.class,
-	
 	jp.co.dk.testdatagenerator.countspecify.AllTest.class,
 })
 public class AllTest {}

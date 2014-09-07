@@ -80,7 +80,7 @@ class Column {
 	String getValue(long nowIndex) {
 		if (this.isRandom) Collections.shuffle(this.dataList);
 		for (CountSpecify countSpecify : this.dataList) {
-			String value = countSpecify.getValue();
+			String value = countSpecify.getValue(nowIndex);
 			if (value != null) return value;
 		}
 		return "";

@@ -61,9 +61,9 @@ public class ColumnTest{
 				assertThat(this.sut.origin_datas      , is("aaa;bbb;ccc"));
 				assertThat(this.sut.isRandom   , is(false));
 				assertThat(this.sut.dataList.size(), is(3));
-				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
-				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
-				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
+				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(0L), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(0L), is("ccc"));
 			} catch (IllegalArgumentException e) {
 				fail(e);
 			}
@@ -95,10 +95,10 @@ public class ColumnTest{
 				assertThat(this.sut.origin_datas      , is("aaa;bbb;ccc;"));
 				assertThat(this.sut.isRandom   , is(false));
 				assertThat(this.sut.dataList.size(), is(4));
-				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
-				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
-				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
-				assertThat(this.sut.dataList.get(3).getValue(), is(""));
+				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(0L), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(0L), is("ccc"));
+				assertThat(this.sut.dataList.get(3).getValue(0L), is(""));
 			} catch (IllegalArgumentException e) {
 				fail(e);
 			}
@@ -131,9 +131,9 @@ public class ColumnTest{
 				assertThat(this.sut.origin_datas      , is("@r[aaa;bbb;ccc]"));
 				assertThat(this.sut.isRandom   , is(true));
 				assertThat(this.sut.dataList.size(), is(3));
-				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
-				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
-				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
+				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(0L), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(0L), is("ccc"));
 			} catch (IllegalArgumentException e) {
 				fail(e);
 			}
@@ -178,10 +178,10 @@ public class ColumnTest{
 				assertThat(this.sut.origin_datas      , is("@r[aaa;bbb;ccc;]"));
 				assertThat(this.sut.isRandom   , is(true));
 				assertThat(this.sut.dataList.size(), is(4));
-				assertThat(this.sut.dataList.get(0).getValue(), is("aaa"));
-				assertThat(this.sut.dataList.get(1).getValue(), is("bbb"));
-				assertThat(this.sut.dataList.get(2).getValue(), is("ccc"));
-				assertThat(this.sut.dataList.get(3).getValue(), is(""));
+				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
+				assertThat(this.sut.dataList.get(1).getValue(0L), is("bbb"));
+				assertThat(this.sut.dataList.get(2).getValue(0L), is("ccc"));
+				assertThat(this.sut.dataList.get(3).getValue(0L), is(""));
 			} catch (IllegalArgumentException e) {
 				fail(e);
 			}

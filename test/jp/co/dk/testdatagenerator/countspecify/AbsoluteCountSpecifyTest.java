@@ -62,7 +62,7 @@ public class AbsoluteCountSpecifyTest {
 		@Test
 		public void getValue() {
 			assertThat(sut.use_count,  is(0L));
-			assertThat(sut.getValue(), is("a"));
+			assertThat(sut.getValue(0L), is("a"));
 			assertThat(sut.use_count,  is(1L));
 		}
 	}
@@ -74,13 +74,13 @@ public class AbsoluteCountSpecifyTest {
 		@Before
 		public void init() {
 			sut = new AbsoluteCountSpecify(100L, "a", 1);
-			assertThat(sut.getValue(), is("a"));
+			assertThat(sut.getValue(0L), is("a"));
 		}
 		
 		@Test
 		public void getValue() {
 			assertThat(sut.use_count,  is(1L));
-			assertThat(sut.getValue(), nullValue());
+			assertThat(sut.getValue(0L), nullValue());
 			assertThat(sut.use_count,  is(2L));
 		}
 	}

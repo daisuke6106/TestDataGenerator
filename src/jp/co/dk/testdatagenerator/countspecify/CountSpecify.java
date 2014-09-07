@@ -1,6 +1,7 @@
 package jp.co.dk.testdatagenerator.countspecify;
 
 import jp.co.dk.testdatagenerator.HelpPrintable;
+import jp.co.dk.testdatagenerator.function.Value;
 
 public abstract class CountSpecify implements HelpPrintable {
 	
@@ -8,21 +9,21 @@ public abstract class CountSpecify implements HelpPrintable {
 	protected long outputCount;
 	
 	/** 値 */
-	protected String value;
+	protected Value value;
 	
 	CountSpecify(long outputCount, String value) throws IllegalArgumentException {
 		if (outputCount < 0 || value == null) throw new IllegalArgumentException("can't create CountSpecifyType instance.");
 		this.outputCount = outputCount;
-		this.value = value;
+		this.value = new Value(value);
 	}
 	
-	public String getValue() {
-		return this.value;
+	public String getValue(long nowIndex) {
+		return this.value.getValue(nowIndex);
 	}
 	
 	@Override
 	public String toString() {
-		return this.value;
+		return this.value.toString();
 	}
 	
 }

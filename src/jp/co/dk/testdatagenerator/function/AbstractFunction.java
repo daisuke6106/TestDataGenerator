@@ -13,15 +13,13 @@ public abstract class AbstractFunction implements HelpPrintable {
 	
 	protected AbstractFunction function;
 	
-	AbstractFunction(String... arguments) throws IllegalArgumentException {
-		this.arguments = arguments;
-		StringBuilder sb = new StringBuilder('^').append(this.getFunctionName()).append("\\(.*\\)").append('$');
-		this.functionPattern = Pattern.compile(sb.toString());
+	AbstractFunction() {
+		
 	}
 	
-	protected abstract String getFunctionName();
-	
-	public abstract String getValue();
+	AbstractFunction(String... arguments) throws IllegalArgumentException {
+		this.arguments = arguments;
+	}
 	
 	@Override
 	public String toString() {
@@ -33,4 +31,8 @@ public abstract class AbstractFunction implements HelpPrintable {
 		}
 		return sb.toString();
 	}
+	
+	protected abstract String getFunctionName();
+	
+	protected abstract String getValue(long nowCount);
 }
