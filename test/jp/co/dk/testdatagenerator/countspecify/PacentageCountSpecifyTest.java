@@ -88,6 +88,31 @@ public class PacentageCountSpecifyTest {
 			assertThat(sut.getValue(0L), is("a"));
 			assertThat(sut.use_count,  is(1L));
 		}
+		
+		@Test
+		public void getName() {
+			assertThat(this.sut.getName(), is("パーセンテージ指定"));
+		}
+		
+		@Test
+		public void getManualMessage() {
+			assertThat(
+				this.sut.getManualMessage(this.getLineSeparator()), 
+				is("指定の値を指定の割合で出力する場合、値=数値%の形で指定してください。" + this.getLineSeparator())
+			);
+		}
+		
+		@Test
+		public void getExample() {
+			assertThat(
+				this.sut.getExample(this.getLineSeparator()), 
+				is(
+					"aaa=10%" + this.getLineSeparator() +
+					"\"bbb\"=10%" + this.getLineSeparator() + 
+					"aaa=10%;bbb=10%" + this.getLineSeparator()
+				)
+			);
+		}
 	}
 	
 	public static class 使用回数が上限に達している場合 extends TestCaseTemplate{
@@ -105,6 +130,31 @@ public class PacentageCountSpecifyTest {
 			assertThat(sut.use_count,  is(1L));
 			assertThat(sut.getValue(0L), nullValue());
 			assertThat(sut.use_count,  is(2L));
+		}
+		
+		@Test
+		public void getName() {
+			assertThat(this.sut.getName(), is("パーセンテージ指定"));
+		}
+		
+		@Test
+		public void getManualMessage() {
+			assertThat(
+				this.sut.getManualMessage(this.getLineSeparator()), 
+				is("指定の値を指定の割合で出力する場合、値=数値%の形で指定してください。" + this.getLineSeparator())
+			);
+		}
+		
+		@Test
+		public void getExample() {
+			assertThat(
+				this.sut.getExample(this.getLineSeparator()), 
+				is(
+					"aaa=10%" + this.getLineSeparator() +
+					"\"bbb\"=10%" + this.getLineSeparator() + 
+					"aaa=10%;bbb=10%" + this.getLineSeparator()
+				)
+			);
 		}
 	}
 }

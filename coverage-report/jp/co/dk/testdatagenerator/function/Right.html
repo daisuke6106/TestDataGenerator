@@ -22,117 +22,168 @@
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Value <span class='instance covered' title='Reads: 3 Writes: 3'>value</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected int   <span class='instance covered' title='Reads: 6 Writes: 3'>count</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	Right(String... arguments) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>2</td>
+      <td></td><td class='count'>3</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#55aa00' onclick='hidePath()'>Path coverage: 2/3</span>
-        <span class='covered' onclick="showPath(this,'l6s0 l7s0 l8s0')">A: 1</span>
-        <span class='covered' onclick="showPath(this,'l6s0 l7s0 l7s1 l8s0')">B: 1</span>
-        <span class='uncovered' onclick="showPath(this,'l6s0 l7s0 l7s1 l11s0')">C: 0</span>
+        <span style='cursor:default; background-color:#bf4000' onclick='hidePath()'>Path coverage: 1/4</span>
+        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l11s1')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l12s0 l20s0 l20s2')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l10s0 l11s0 l12s0 l20s0 l20s1 l20s2')">C: 0</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l12s0 l20s0 l20s1 l21s0 l23s0')">D: 3</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>6</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l6s0'>		super(arguments);</pre></td>
+      <td class='line'>10</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l10s0'>		super(arguments);</pre></td>
     </tr>
     <tr>
-      <td class='line'>7</td><td class='count'>2</td>
-      <td><pre class='prettyprint jmp'>		<span id='l7s0' title='Executions: 2' class='covered'>if (arguments == null</span> || <span id='l7s1' title='Executions: 1' class='covered'>arguments.length != 2)</span> <span id='l7s2' title='Executions: 1' class='covered'>{</span></pre></td>
+      <td class='line'>11</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l11s0' title='Executions: 3' class='covered'>if (arguments.length != 2)</span> <span id='l11s1' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>8</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l8s0'>			throw new IllegalArgumentException(this.getFunctionName() + "の引数が不足です。");</pre></td>
+      <td class='line'>12</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l12s0'>		String value = arguments[0];</pre></td>
     </tr>
     <tr>
-      <td class='line'>9</td><td>&nbsp;</td>
+      <td class='line'>13</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l13s0'>		int count = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		try {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l15s0'>			count = Integer.parseInt(arguments[1]);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l16s0'>		} catch (NumberFormatException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l17s0'>			throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>11</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l11s0'>	}</pre></td>
+      <td class='line'>20</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l20s0' title='Executions: 3' class='covered'>if (value == null</span> || <span id='l20s1' title='Executions: 3' class='covered'>count &lt;= 0)</span> <span id='l20s2' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l21s0'>		this.value = new Value(value);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l22s0'>		this.count = count;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l23s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>13</td><td>&nbsp;</td>
+      <td class='line'>26</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>14</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String getFunctionName() {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>15</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l15s0'>		return "RIGHT";</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>16</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
-    </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>18</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	@Override</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>19</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public String getName() {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>20</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l20s0'>		return null;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>21</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
-    </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>23</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	@Override</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>24</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public String getManualMessage(String linesep) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>25</td><td>&nbsp;</td>
-      <td><pre class='comment'>		// TODO Auto-generated method stub</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>26</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l26s0'>		return null;</pre></td>
     </tr>
     <tr>
       <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l28s0'>		return "RIGHT";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>29</td><td>&nbsp;</td>
+      <td class='line'>31</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
     </tr>
     <tr>
-      <td class='line'>30</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public String getExample(String linesep) {</pre></td>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getManualMessage(String linesep) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>31</td><td>&nbsp;</td>
-      <td><pre class='comment'>		// TODO Auto-generated method stub</pre></td>
+      <td class='line'>33</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l33s0'>		return "指定の文字を右から指定の文字数だけ切り取ります。";</pre></td>
     </tr>
     <tr>
-      <td class='line'>32</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l32s0'>		return null;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>33</td><td>&nbsp;</td>
+      <td class='line'>34</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getExample(String linesep) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l38s0'>		return "RIGHT(ABCDE,3)";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String getValue(long nowIndex) {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>3</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='uncovered' onclick="showPath(this,'l43s0 l44s0 l44s1')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l43s0 l44s0 l45s0')">B: 3</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l43s0'>		String value = this.value.getValue(nowIndex);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l44s0' title='Executions: 3' class='covered'>if (value.length() &lt; this.count) return value;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l45s0'>		return value.substring(value.length() - this.count);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

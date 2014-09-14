@@ -45,6 +45,9 @@ public class TestDataGenerator {
 					break;
 				default:
 					System.out.println("usage : tdgen 件数 フォーマット 出力ファイル [文字コード]");
+					Record dummyRecord = new Record(1L,"nothing");
+					System.out.println(dummyRecord.getName());
+					System.out.println(dummyRecord.getManualMessage());
 					System.exit(1);
 			}
 		} catch (NumberFormatException e) {
@@ -94,5 +97,5 @@ public class TestDataGenerator {
 			System.exit(1);
 		}
 	}
-
+	
 }

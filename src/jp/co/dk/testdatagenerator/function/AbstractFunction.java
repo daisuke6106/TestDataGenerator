@@ -1,29 +1,19 @@
 package jp.co.dk.testdatagenerator.function;
 
 import java.util.Arrays;
-import java.util.regex.Pattern;
 
-import jp.co.dk.testdatagenerator.HelpPrintable;
-
-public abstract class AbstractFunction implements HelpPrintable {
+public abstract class AbstractFunction {
 	
 	protected String[] arguments;
 	
-	protected Pattern functionPattern;
-	
-	protected AbstractFunction function;
-	
-	AbstractFunction() {
-		
-	}
-	
 	AbstractFunction(String... arguments) throws IllegalArgumentException {
+		if (arguments == null || arguments.length == 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
 		this.arguments = arguments;
 	}
 	
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder(this.getFunctionName());
+		StringBuilder sb = new StringBuilder(this.getName());
 		if (this.arguments == null) {
 			sb.append("[]");
 		} else {
@@ -31,8 +21,6 @@ public abstract class AbstractFunction implements HelpPrintable {
 		}
 		return sb.toString();
 	}
-	
-	protected abstract String getFunctionName();
-	
+	protected abstract String getName();
 	protected abstract String getValue(long nowCount);
 }

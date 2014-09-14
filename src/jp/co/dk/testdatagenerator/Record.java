@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 
-class Record {
+class Record implements HelpPrintable {
 	
 	/** 出力件数 */
 	protected long count;
@@ -46,5 +46,29 @@ class Record {
 			}
 		}
 		return value.toString();
+	}
+
+	@Override
+	public String getName() {
+		return "レコードフォーマット";
+	}
+
+	@Override
+	public String getManualMessage(String linesep) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("出力するレコード１行あたりのフォーマットを指定する。").append(linesep);
+		sb.append("カラムごとにカンマ区切りで各カラムのフォーマットを定義する。").append(linesep);
+		sb.append(linesep);
+		sb.append("レコードフォーマットの指定方法は以下の通り。").append(linesep);
+		sb.append("カラムフォーマット,カラムフォーマット,カラムフォーマット,...").append(linesep);
+		return sb.toString();
+	}
+
+	@Override
+	public String getExample(String linesep) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\"aaa\",1234,2001/01/01").append(" と設定した場合、以下のようなレコードが出力される。").append(linesep);
+		sb.append("\"aaa\",1234,2001/01/01").append(linesep);
+		return null;
 	}
 }

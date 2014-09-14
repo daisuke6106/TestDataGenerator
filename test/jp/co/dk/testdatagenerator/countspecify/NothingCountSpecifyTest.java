@@ -56,6 +56,30 @@ public class NothingCountSpecifyTest {
 		public void testToString() {
 			assertThat(this.sut.toString(), is(""));
 		}
+		
+		@Test
+		public void getName() {
+			assertThat(this.sut.getName(), is("絶対値指定"));
+		}
+		
+		@Test
+		public void getManualMessage() {
+			assertThat(
+				this.sut.getManualMessage(this.getLineSeparator()), 
+				is("値を設定する場合、値のみ設定してください。" + this.getLineSeparator())
+			);
+		}
+		
+		@Test
+		public void getExample() {
+			assertThat(
+				this.sut.getExample(this.getLineSeparator()), 
+				is(
+					"aaa" + this.getLineSeparator() +
+					"\"bbb\"" + this.getLineSeparator()
+				)
+			);
+		}
 	}
 	
 	
@@ -78,6 +102,30 @@ public class NothingCountSpecifyTest {
 		@Test
 		public void testToString() {
 			assertThat(this.sut.toString(), is("a"));
+		}
+		
+		@Test
+		public void getName() {
+			assertThat(this.sut.getName(), is("絶対値指定"));
+		}
+		
+		@Test
+		public void getManualMessage() {
+			assertThat(
+				this.sut.getManualMessage(this.getLineSeparator()), 
+				is("値を設定する場合、値のみ設定してください。" + this.getLineSeparator())
+			);
+		}
+		
+		@Test
+		public void getExample() {
+			assertThat(
+				this.sut.getExample(this.getLineSeparator()), 
+				is(
+					"aaa" + this.getLineSeparator() +
+					"\"bbb\"" + this.getLineSeparator()
+				)
+			);
 		}
 	}
 }

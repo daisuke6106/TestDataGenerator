@@ -9,19 +9,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Enclosed.class)
 public class AbstractFunctionTest {
-
-	public static class 引数がnullな場合 extends TestCaseTemplate{
+	
+	public static class コンストラクタ extends TestCaseTemplate {
 		
 		protected AbstractFunction sut;
 		
-		@Before
-		public void 引数のデータがnullの場合例外が発生すること() {
+		@Test
+		public void 引数がnullの場合() {
 			try {
         		this.sut = new AbstractFunction(null){
-					@Override
-					protected String getFunctionName() {
-						return "DUMMYFUNCTION";
-					}
 					@Override
 					public String getName() {
 						return "DummyName";
@@ -33,10 +29,69 @@ public class AbstractFunctionTest {
 					@Override
 					public String getExample(String linesep) {
 						return "DummyExample";
+					}
+					@Override
+					protected String getValue(long nowCount) {
+						return "DummyValue";
 					}};
-				
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("DummyNameの引数が不正です。"));
+			}
+		}
+		
+		@Test
+		public void 引数の配列が空の場合() {
+			try {
+        		this.sut = new AbstractFunction(new String[0]){
+					@Override
+					public String getName() {
+						return "DummyName";
+					}
+					@Override
+					public String getManualMessage(String linesep) {
+						return "DummyManualMessage";
+					}
+					@Override
+					public String getExample(String linesep) {
+						return "DummyExample";
+					}
+					@Override
+					protected String getValue(long nowCount) {
+						return "DummyValue";
+					}};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("DummyNameの引数が不正です。"));
+			}
+		}
+	}
+	
+	public static class 引数が空な場合 extends TestCaseTemplate{
+		
+		protected AbstractFunction sut;
+		
+		@Before
+		public void 引数のデータがnullの場合例外が発生すること() {
+			try {
+        		this.sut = new AbstractFunction(){
+					@Override
+					public String getName() {
+						return "DummyName";
+					}
+					@Override
+					public String getManualMessage(String linesep) {
+						return "DummyManualMessage";
+					}
+					@Override
+					public String getExample(String linesep) {
+						return "DummyExample";
+					}
+					@Override
+					protected String getValue(long nowCount) {
+						return "DummyValue";
+					}};
 				assertThat(this.sut.arguments, nullValue());
-				
 			} catch (IllegalArgumentException e) {
 				fail(e);
 			}
@@ -44,7 +99,7 @@ public class AbstractFunctionTest {
 		
 		@Test
 		public void testToString() {
-			assertThat(this.sut.toString(), is("DUMMYFUNCTION[]"));
+			assertThat(this.sut.toString(), is("DummyName[]"));
 		}
 	}
 	
@@ -57,10 +112,6 @@ public class AbstractFunctionTest {
 			try {
         		this.sut = new AbstractFunction("aaa"){
 					@Override
-					protected String getFunctionName() {
-						return "DUMMYFUNCTION";
-					}
-					@Override
 					public String getName() {
 						return "DummyName";
 					}
@@ -71,8 +122,11 @@ public class AbstractFunctionTest {
 					@Override
 					public String getExample(String linesep) {
 						return "DummyExample";
+					}
+					@Override
+					protected String getValue(long nowCount) {
+						return "DummyValue";
 					}};
-				
 				assertThat(this.sut.arguments.length, is(1));
 				assertThat(this.sut.arguments[0]    , is("aaa"));
 				
@@ -83,7 +137,7 @@ public class AbstractFunctionTest {
 		
 		@Test
 		public void testToString() {
-			assertThat(this.sut.toString(), is("DUMMYFUNCTION[aaa]"));
+			assertThat(this.sut.toString(), is("DummyName[aaa]"));
 		}
 	}
 	
@@ -96,10 +150,6 @@ public class AbstractFunctionTest {
 			try {
         		this.sut = new AbstractFunction("aaa", "bbb", "ccc"){
 					@Override
-					protected String getFunctionName() {
-						return "DUMMYFUNCTION";
-					}
-					@Override
 					public String getName() {
 						return "DummyName";
 					}
@@ -110,6 +160,10 @@ public class AbstractFunctionTest {
 					@Override
 					public String getExample(String linesep) {
 						return "DummyExample";
+					}
+					@Override
+					protected String getValue(long nowCount) {
+						return "DummyValue";
 					}};
 				
 				assertThat(this.sut.arguments.length, is(3));
@@ -124,7 +178,7 @@ public class AbstractFunctionTest {
 		
 		@Test
 		public void testToString() {
-			assertThat(this.sut.toString(), is("DUMMYFUNCTION[aaa, bbb, ccc]"));
+			assertThat(this.sut.toString(), is("DummyName[aaa, bbb, ccc]"));
 		}
 	}
 }

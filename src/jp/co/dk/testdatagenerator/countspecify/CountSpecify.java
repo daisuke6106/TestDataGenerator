@@ -3,13 +3,17 @@ package jp.co.dk.testdatagenerator.countspecify;
 import jp.co.dk.testdatagenerator.HelpPrintable;
 import jp.co.dk.testdatagenerator.function.Value;
 
-public abstract class CountSpecify implements HelpPrintable {
+public abstract class CountSpecify {
 	
 	/** 出力件数 */
 	protected long outputCount;
 	
 	/** 値 */
 	protected Value value;
+	
+	CountSpecify(){
+		
+	}
 	
 	CountSpecify(long outputCount, String value) throws IllegalArgumentException {
 		if (outputCount < 0 || value == null) throw new IllegalArgumentException("can't create CountSpecifyType instance.");

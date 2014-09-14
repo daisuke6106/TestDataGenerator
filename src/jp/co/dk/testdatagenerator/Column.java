@@ -8,8 +8,9 @@ import java.util.regex.Pattern;
 
 import jp.co.dk.testdatagenerator.countspecify.CountSpecify;
 import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
+import jp.co.dk.testdatagenerator.function.FunctionPattern;
 
-class Column {
+class Column implements HelpPrintable {
 	
 	/** 出力件数 */
 	protected long outputCount;
@@ -89,5 +90,41 @@ class Column {
 	@Override
 	public String toString() {
 		return this.origin_datas;
+	}
+
+	@Override
+	public String getName() {
+		return "カラムフォーマット";
+	}
+
+	@Override
+	public String getManualMessage(String linesep) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("出力するカラム１つあたりの出力内容を指定する。").append(linesep);
+		sb.append("カラムの出力内容の指定は２種類存在する。").append(linesep);
+		sb.append(linesep);
+		sb.append("[件数指定]").append(linesep);
+		sb.append("このカラムを指定のレコード数だけに適用するといった「数」に対する指定をする場合使用する。").append(linesep);
+		for (CountSpecifyPattern countSpecify : CountSpecifyPattern.values()) {
+			sb.append(countSpecify.getName()).append(linesep);
+			sb.append(countSpecify.getManualMessage(linesep)).append(linesep);
+			sb.append(countSpecify.getExample(linesep)).append(linesep);
+		}
+		sb.append(linesep);
+		sb.append("[値指定]");
+		sb.append("このカラムの値を指定する場合使用する。値には通常どおり値を指定することもできるが、関数を使用しその処理結果を値として使用することができる。").append(linesep);
+		for (FunctionPattern function : FunctionPattern.values()) {
+			sb.append(function.getName()).append(linesep);
+			sb.append(function.getManualMessage(linesep)).append(linesep);
+			sb.append(function.getExample(linesep)).append(linesep);
+		}
+		sb.append(linesep);
+		return sb.toString();
+	}
+
+	@Override
+	public String getExample(String linesep) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

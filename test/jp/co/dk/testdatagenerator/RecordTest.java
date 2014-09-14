@@ -198,11 +198,11 @@ public class RecordTest extends TestCaseTemplate{
 		@Before
 		public void init() {
 			try {
-				this.sut = new Record(10,"@a[a=3]");
+				this.sut = new Record(10,"a=3");
 				assertThat(this.sut.count, is(10L));
-				assertThat(this.sut.format, is("@a[a=3]"));
+				assertThat(this.sut.format, is("a=3"));
 				assertThat(this.sut.columns.size(), is(1));
-				assertThat(this.sut.columns.get(0).toString(), is("@a[a=3]"));
+				assertThat(this.sut.columns.get(0).toString(), is("a=3"));
 				assertThat(this.sut.newLine, is(RecordTest.newLine));
 				
 			} catch (IllegalAccessException e) {
@@ -226,12 +226,12 @@ public class RecordTest extends TestCaseTemplate{
 		@Before
 		public void init() {
 			try {
-				this.sut = new Record(10,"@a[\"a\"=3],@a[\"b\"=2]");
+				this.sut = new Record(10,"\"a\"=3,\"b\"=2");
 				assertThat(this.sut.count, is(10L));
-				assertThat(this.sut.format, is("@a[\"a\"=3],@a[\"b\"=2]"));
+				assertThat(this.sut.format, is("\"a\"=3,\"b\"=2"));
 				assertThat(this.sut.columns.size(), is(2));
-				assertThat(this.sut.columns.get(0).toString(), is("@a[\"a\"=3]"));
-				assertThat(this.sut.columns.get(1).toString(), is("@a[\"b\"=2]"));
+				assertThat(this.sut.columns.get(0).toString(), is("\"a\"=3"));
+				assertThat(this.sut.columns.get(1).toString(), is("\"b\"=2"));
 				assertThat(this.sut.newLine, is(RecordTest.newLine));
 				
 			} catch (IllegalAccessException e) {
@@ -255,12 +255,12 @@ public class RecordTest extends TestCaseTemplate{
 		@Before
 		public void init() {
 			try {
-				this.sut = new Record(10,"@a[\"a\"=3],@a[\"b\"=2],\"c\"");
+				this.sut = new Record(10,"\"a\"=3,\"b\"=2,\"c\"");
 				assertThat(this.sut.count, is(10L));
-				assertThat(this.sut.format, is("@a[\"a\"=3],@a[\"b\"=2],\"c\""));
+				assertThat(this.sut.format, is("\"a\"=3,\"b\"=2,\"c\""));
 				assertThat(sut.columns.size(), is(3));
-				assertThat(sut.columns.get(0).toString(), is("@a[\"a\"=3]"));
-				assertThat(sut.columns.get(1).toString(), is("@a[\"b\"=2]"));
+				assertThat(sut.columns.get(0).toString(), is("\"a\"=3"));
+				assertThat(sut.columns.get(1).toString(), is("\"b\"=2"));
 				assertThat(sut.columns.get(2).toString(), is("\"c\""));
 				
 			} catch (IllegalAccessException e) {
@@ -284,11 +284,11 @@ public class RecordTest extends TestCaseTemplate{
 		@Before
 		public void init() {
 			try {
-				this.sut = new Record(5,"@p[a=20]");
+				this.sut = new Record(5,"a=20%");
 				assertThat(this.sut.count, is(5L));
-				assertThat(this.sut.format, is("@p[a=20]"));
+				assertThat(this.sut.format, is("a=20%"));
 				assertThat(this.sut.columns.size(), is(1));
-				assertThat(this.sut.columns.get(0).toString(), is("@p[a=20]"));
+				assertThat(this.sut.columns.get(0).toString(), is("a=20%"));
 				assertThat(this.sut.newLine, is(RecordTest.newLine));
 				
 			} catch (IllegalAccessException e) {
@@ -313,12 +313,12 @@ public class RecordTest extends TestCaseTemplate{
 		@Before
 		public void init() {
 			try {
-				this.sut = new Record(5,"@p[\"a\"=80],@p[\"b\"=50]");
+				this.sut = new Record(5,"\"a\"=80%,\"b\"=50%");
 				assertThat(this.sut.count, is(5L));
-				assertThat(this.sut.format, is("@p[\"a\"=80],@p[\"b\"=50]"));
+				assertThat(this.sut.format, is("\"a\"=80%,\"b\"=50%"));
 				assertThat(this.sut.columns.size(), is(2));
-				assertThat(this.sut.columns.get(0).toString(), is("@p[\"a\"=80]"));
-				assertThat(this.sut.columns.get(1).toString(), is("@p[\"b\"=50]"));
+				assertThat(this.sut.columns.get(0).toString(), is("\"a\"=80%"));
+				assertThat(this.sut.columns.get(1).toString(), is("\"b\"=50%"));
 				assertThat(this.sut.newLine, is(RecordTest.newLine));
 				
 			} catch (IllegalAccessException e) {
@@ -343,12 +343,12 @@ public class RecordTest extends TestCaseTemplate{
 		@Before
 		public void init() {
 			try {
-				this.sut = new Record(5,"@p[\"a\"=80],@p[\"b\"=50],\"c\"");
+				this.sut = new Record(5,"\"a\"=80%,\"b\"=50%,\"c\"");
 				assertThat(this.sut.count, is(5L));
-				assertThat(this.sut.format, is("@p[\"a\"=80],@p[\"b\"=50],\"c\""));
+				assertThat(this.sut.format, is("\"a\"=80%,\"b\"=50%,\"c\""));
 				assertThat(sut.columns.size(), is(3));
-				assertThat(sut.columns.get(0).toString(), is("@p[\"a\"=80]"));
-				assertThat(sut.columns.get(1).toString(), is("@p[\"b\"=50]"));
+				assertThat(sut.columns.get(0).toString(), is("\"a\"=80%"));
+				assertThat(sut.columns.get(1).toString(), is("\"b\"=50%"));
 				assertThat(sut.columns.get(2).toString(), is("\"c\""));
 				
 			} catch (IllegalAccessException e) {

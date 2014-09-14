@@ -10,6 +10,10 @@ public class Value {
 	public Value(String data) {
 		if (data == null) throw new IllegalArgumentException("can't create Value instance. data is not set.");
 		this.data = data;
+		for (FunctionPattern pattern : FunctionPattern.values()) {
+			AbstractFunction function = pattern.match(data);
+			if (function != null) this.function = function;
+		}
 	}
 	
 	public String getValue(long nowIndex) {

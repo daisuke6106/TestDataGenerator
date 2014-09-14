@@ -21,27 +21,5 @@ class AbsoluteCountSpecify extends CountSpecify{
 		if (this.use_count>this.origin_count) return null;
 		return super.getValue(nowIndex);
 	}
-
-	@Override
-	public String getName() {
-		return "件数指定";
-	}
-
-	@Override
-	public String getManualMessage(String linesep) {
-		StringBuilder sb = new StringBuilder();
-		sb.append("指定の件数だけ指定の値を出力する場合、値=件数の形で指定してください。").append(linesep);
-		return sb.toString();
-	}
-
-	@Override
-	public String getExample(String linesep) {
-		StringBuilder sb = new StringBuilder();
-		sb.append("aaa=10").append(linesep);
-		sb.append("\"bbb\"=10").append(linesep);
-		sb.append("aaa=10;bbb=10").append(linesep);
-		return sb.toString();
-	}
-	
 }
 

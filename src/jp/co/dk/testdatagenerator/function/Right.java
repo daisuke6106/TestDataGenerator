@@ -2,39 +2,37 @@ package jp.co.dk.testdatagenerator.function;
 
 public class Right extends AbstractFunction {
 	
-	Right(String value, int count) throws IllegalArgumentException {
-		super(value);
-		if (value == null || count <= 0) {
-			throw new IllegalArgumentException(this.getFunctionName() + "の引数が不正です。");
+	protected Value value;
+	
+	protected int   count;
+	
+	Right(String... arguments) throws IllegalArgumentException {
+		super(arguments);
+		if (arguments.length != 2) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
+		String value = arguments[0];
+		int count = 0;
+		try {
+			count = Integer.parseInt(arguments[1]);
+		} catch (NumberFormatException e) {
+			throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
 		}
+		
+		if (value == null || count <= 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
+		this.value = new Value(value);
+		this.count = count;
 	}
 	
-	@Override
-	protected String getFunctionName() {
-		return "RIGHT";
-	}
 	
 	@Override
 	public String getName() {
-		return null;
+		return "RIGHT";
 	}
 
 	@Override
-	public String getManualMessage(String linesep) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getExample(String linesep) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	protected String getValue(long nowCount) {
-		// TODO Auto-generated method stub
-		return null;
+	protected String getValue(long nowIndex) {
+		String value = this.value.getValue(nowIndex);
+		if (value.length() < this.count) return value;
+		return value.substring(value.length() - this.count);
 	}
 
 

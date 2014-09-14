@@ -66,4 +66,46 @@ public class ValueTest {
 			assertThat(this.sut.getValue(100L), is("value100"));
 		}
 	}
+	
+	public static class 関数を保持する且つ変数を保持しない値である場合 extends TestCaseTemplate {
+		
+		protected Value sut;
+		
+		@Before
+		public void コンストラクタ() {
+			try {
+				this.sut = new Value("RIGHT(abcde,1)");
+				assertThat(this.sut.data, is("RIGHT(abcde,1)"));
+				assertThat((this.sut.function instanceof Right), is(true));
+			} catch (IllegalArgumentException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(this.sut.getValue(100L), is("e"));
+		}
+	}
+	
+	public static class 関数をネストして保持する且つ変数を保持しない値である場合 extends TestCaseTemplate {
+		
+		protected Value sut;
+		
+		@Before
+		public void コンストラクタ() {
+			try {
+				this.sut = new Value("RIGHT(RIGHT(あいうえおかきくけこ,5),1)");
+				assertThat(this.sut.data, is("RIGHT(RIGHT(あいうえおかきくけこ,5),1)"));
+				assertThat((this.sut.function instanceof Right), is(true));
+			} catch (IllegalArgumentException e) {
+				fail(e);
+			}
+		}
+		
+		@Test
+		public void getValue() {
+			assertThat(this.sut.getValue(100L), is("こ"));
+		}
+	}
 }

@@ -63,7 +63,7 @@ import java.util.regex.Pattern;
     </tr>
     <tr>
       <td class='line'>21</td><td class='count'>14</td>
-      <td><pre class='prettyprint covered' id='l21s0'>	protected List&lt;Column> <span class='instance covered' title='Reads: 56 Writes: 14'>columns</span> = new ArrayList&lt;Column>();</pre></td>
+      <td><pre class='prettyprint covered' id='l21s0'>	protected List&lt;Column> <span class='instance covered' title='Reads: 119 Writes: 14'>columns</span> = new ArrayList&lt;Column>();</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
@@ -72,7 +72,7 @@ import java.util.regex.Pattern;
     </tr>
     <tr>
       <td class='line'>24</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l24s0'>	protected static String <span class='static covered' title='Reads: 12 Writes: 0'>newLine</span> = System.getProperty("line.separator");</pre></td>
+      <td><pre class='prettyprint covered' id='l24s0'>	protected static String <span class='static covered' title='Reads: 33 Writes: 0'>newLine</span> = System.getProperty("line.separator");</pre></td>
     </tr>
     <tr>
       <td></td><td class='count'>14</td>
@@ -138,35 +138,35 @@ import java.util.regex.Pattern;
       </td>
     </tr>
     <tr>
-      <td class='line'>38</td><td class='count'>12</td>
+      <td class='line'>38</td><td class='count'>33</td>
       <td><pre class='prettyprint covered' id='l38s0'>		StringBuilder value = new StringBuilder();</pre></td>
     </tr>
     <tr>
-      <td class='line'>39</td><td class='count'>12</td>
+      <td class='line'>39</td><td class='count'>33</td>
       <td><pre class='prettyprint covered' id='l39s0'>		int size = columns.size();</pre></td>
     </tr>
     <tr>
-      <td class='line'>40</td><td class='count'>34</td>
+      <td class='line'>40</td><td class='count'>97</td>
       <td><pre class='prettyprint covered' id='l40s0'>		for (int i=0; i&lt;size; i++) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>41</td><td class='count'>22</td>
+      <td class='line'>41</td><td class='count'>64</td>
       <td><pre class='prettyprint covered' id='l41s0'>			value.append(columns.get(i).getValue(nowIndex));</pre></td>
     </tr>
     <tr>
-      <td class='line'>42</td><td class='count'>22</td>
-      <td><pre class='prettyprint jmp'>			<span id='l42s0' title='Executions: 22' class='covered'>if (i!=size-1)</span> <span id='l42s1' title='Executions: 10' class='covered'>{</span></pre></td>
+      <td class='line'>42</td><td class='count'>64</td>
+      <td><pre class='prettyprint jmp'>			<span id='l42s0' title='Executions: 64' class='covered'>if (i!=size-1)</span> <span id='l42s1' title='Executions: 31' class='covered'>{</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>43</td><td class='count'>10</td>
+      <td class='line'>43</td><td class='count'>31</td>
       <td><pre class='prettyprint covered' id='l43s0'>				value.append(',');</pre></td>
     </tr>
     <tr>
-      <td class='line'>44</td><td class='count'>10</td>
+      <td class='line'>44</td><td class='count'>31</td>
       <td><pre class='prettyprint covered' id='l44s0'>			} else {</pre></td>
     </tr>
     <tr>
-      <td class='line'>45</td><td class='count'>12</td>
+      <td class='line'>45</td><td class='count'>33</td>
       <td><pre class='prettyprint covered' id='l45s0'>				value.append(Record.newLine);</pre></td>
     </tr>
     <tr>
@@ -178,7 +178,7 @@ import java.util.regex.Pattern;
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>48</td><td class='count'>12</td>
+      <td class='line'>48</td><td class='count'>33</td>
       <td><pre class='prettyprint covered' id='l48s0'>		return value.toString();</pre></td>
     </tr>
     <tr>

@@ -4,6 +4,6 @@ import java.util.regex.Pattern;
 
 public interface FunctionFactory {
 	
-	AbstractFunction createFunction(Pattern pattern, String format);
+	AbstractFunction createFunction(String[] arguments);
 	
 }

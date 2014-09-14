@@ -9,6 +9,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	ColumnTest.class,
 	RecordTest.class,
 	jp.co.dk.testdatagenerator.countspecify.AllTest.class,
+	jp.co.dk.testdatagenerator.function.AllTest.class,
 })
 public class AllTest {}
  

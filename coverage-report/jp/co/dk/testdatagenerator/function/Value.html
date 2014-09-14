@@ -16,42 +16,116 @@
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>3</td><td>&nbsp;</td>
+      <td class='line'>4</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>public class Value {</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>5</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String <span class='instance uncovered' title='Reads: 0 Writes: 1'>data</span>;</pre></td>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 4 Writes: 7'>data</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected AbstractFunction <span class='instance covered' title='Reads: 10 Writes: 3'>function</span>;</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>2</td>
+      <td></td><td class='count'>8</td>
       <td class='paths'>
         <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
-        <span class='covered' onclick="showPath(this,'l7s0 l8s0 l8s1')">A: 1</span>
-        <span class='covered' onclick="showPath(this,'l7s0 l8s0 l9s0 l11s0')">B: 1</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l11s1')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l12s0 l13s1 l17s0')">B: 7</span>
       </td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>7</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l7s0'>	public Value(String data) {</pre></td>
+      <td class='line'>10</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l10s0'>	public Value(String data) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>8</td><td class='count'>2</td>
-      <td><pre class='prettyprint jmp'>		<span id='l8s0' title='Executions: 2' class='covered'>if (data == null)</span> <span id='l8s1' title='Executions: 1' class='covered'>throw new IllegalArgumentException("can't create Value instance. data is not set.");</span></pre></td>
+      <td class='line'>11</td><td class='count'>8</td>
+      <td><pre class='prettyprint jmp'>		<span id='l11s0' title='Executions: 8' class='covered'>if (data == null)</span> <span id='l11s1' title='Executions: 1' class='covered'>throw new IllegalArgumentException("can't create Value instance. data is not set.");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>9</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l9s0'>		this.data = data;</pre></td>
+      <td class='line'>12</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l12s0'>		this.data = data;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td class='count'>14</td>
+      <td><pre class='prettyprint covered' id='l13s0'>		for (FunctionPattern pattern : FunctionPattern.values()) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l14s0'>			AbstractFunction function = pattern.match(data);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>7</td>
+      <td><pre class='prettyprint jmp'>			<span id='l15s0' title='Executions: 7' class='covered'>if (function != null)</span> <span id='l15s1' title='Executions: 3' class='covered'>this.function = function;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l17s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>11</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l11s0'>	}</pre></td>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getValue(long nowIndex) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>12</td><td>&nbsp;</td>
+      <td></td><td class='count'>4</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='uncovered' onclick="showPath(this,'l20s0 l21s0')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l20s0 l23s0')">B: 4</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>7</td>
+      <td><pre class='prettyprint jmp'>		<span id='l20s0' title='Executions: 7' class='covered'>if (this.function != null)</span> <span id='l20s1' title='Executions: 3' class='covered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l21s0'>			return this.function.getValue(nowIndex);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		} else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l23s0'>			return this.data.replace("@{count}", Long.toString(nowIndex));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String toString() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l29s0'>		return this.data;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>
