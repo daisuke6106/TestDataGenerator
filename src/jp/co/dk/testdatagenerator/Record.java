@@ -48,24 +48,4 @@ class Record {
 		return value.toString();
 	}
 	
-	public static String getName(String padding) {
-		return padding + "レコードフォーマット";
-	}
-	
-	public static String getManualMessage(String padding, String linesep) {
-		StringBuilder sb = new StringBuilder();
-		sb.append(padding).append("出力するレコード１行あたりのフォーマットを指定する。").append(linesep);
-		sb.append(padding).append("カラムごとにカンマ区切りで各カラムのフォーマットを定義する。").append(linesep);
-		sb.append(padding).append(linesep);
-		sb.append(padding).append("レコードフォーマットの指定方法は以下の通り。").append(linesep);
-		sb.append(padding).append("カラムフォーマット,カラムフォーマット,カラムフォーマット,...").append(linesep);
-		return sb.toString();
-	}
-	
-	public static String getExample(String padding, String linesep) {
-		StringBuilder sb = new StringBuilder();
-		sb.append(padding).append("\"aaa\",1234,2001/01/01").append(" と設定した場合、以下のようなレコードが出力される。").append(linesep);
-		sb.append(padding).append("\"aaa\",1234,2001/01/01").append(linesep);
-		return sb.toString();
-	}
 }

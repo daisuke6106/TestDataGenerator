@@ -11,7 +11,7 @@
   <table cellpadding='0' cellspacing='1'>
     <caption>TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java</caption>
     <tr>
-      <td class='line'>1</td><td class='count'>8</td>
+      <td class='line'>1</td><td class='count'>285</td>
       <td><pre class='prettyprint covered' id='l1s0'>package jp.co.dk.testdatagenerator.function;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
@@ -32,113 +32,195 @@ import java.util.regex.Pattern;
       <td><pre class='comment'>	/** 右から指定文字数を切り出す。 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>9</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l9s0'>	RIGHT("^RIGHT\\((.*?),([0-9]+)\\)$", new FunctionFactory(){</pre></td>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	RIGHT("^RIGHT\\((.*?),([0-9]+)\\)$",</pre></td>
     </tr>
     <tr>
       <td class='line'>10</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		@Override</pre></td>
+      <td><pre class='prettyprint'>		"RIGHT",</pre></td>
     </tr>
     <tr>
       <td class='line'>11</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+      <td><pre class='prettyprint'>		"指定の文字を右から指定の文字数だけ切り取ります。",</pre></td>
     </tr>
     <tr>
-      <td class='line'>12</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l12s0'>			return new Right(arguments);</pre></td>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"RIGHT(ABCDE,3)",</pre></td>
     </tr>
     <tr>
-      <td class='line'>13</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td class='line'>13</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l13s0'>		new FunctionFactory(){</pre></td>
     </tr>
     <tr>
       <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l16s0'>			return new Right(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}),</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>16</td><td>&nbsp;</td>
+      <td class='line'>20</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	;</pre></td>
     </tr>
     <tr>
-      <td class='line'>17</td><td>&nbsp;</td>
+      <td class='line'>21</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected Pattern pattern;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>19</td><td>&nbsp;</td>
+      <td class='line'>23</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected FunctionFactory functionFactory;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>21</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l21s0'>	FunctionPattern(String pattern, FunctionFactory functionFactory) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>22</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l22s0'>		this.pattern         = Pattern.compile(pattern);</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>23</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l23s0'>		this.functionFactory = functionFactory;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>24</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l24s0'>	}</pre></td>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String name;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>26</td><td>&nbsp;</td>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String manualMessage;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String example;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>31</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l31s0'>	FunctionPattern(String pattern, String name, String manualMessage, String example, FunctionFactory functionFactory) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l32s0'>		this.pattern         = Pattern.compile(pattern);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l33s0'>		this.name            = name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l34s0'>		this.manualMessage   = manualMessage;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l35s0'>		this.example         = example;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l36s0'>		this.functionFactory = functionFactory;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l37s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public AbstractFunction match(String format) {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>4</td>
+      <td></td><td class='count'>288</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#aa5500' onclick='hidePath()'>Path coverage: 1/3</span>
-        <span class='uncovered' onclick="showPath(this,'l27s0 l27s1')">A: 0</span>
-        <span class='covered' onclick="showPath(this,'l27s0 l28s0 l29s0 l29s1')">B: 4</span>
-        <span class='uncovered' onclick="showPath(this,'l27s0 l28s0 l29s0 l30s0 l31s0 l34s0')">C: 0</span>
+        <span style='cursor:default; background-color:#55aa00' onclick='hidePath()'>Path coverage: 2/3</span>
+        <span class='covered' onclick="showPath(this,'l40s0 l40s1')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l40s0 l41s0 l42s0 l42s1')">B: 287</span>
+        <span class='uncovered' onclick="showPath(this,'l40s0 l41s0 l42s0 l43s0 l44s0 l47s0')">C: 0</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>27</td><td class='count'>7</td>
-      <td><pre class='prettyprint jmp'>		<span id='l27s0' title='Executions: 7' class='covered'>if (format == null)</span> <span id='l27s1' title='Executions: 0' class='uncovered'>return null;</span></pre></td>
+      <td class='line'>40</td><td class='count'>292</td>
+      <td><pre class='prettyprint jmp'>		<span id='l40s0' title='Executions: 292' class='covered'>if (format == null)</span> <span id='l40s1' title='Executions: 1' class='covered'>return null;</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>28</td><td class='count'>7</td>
-      <td><pre class='prettyprint covered' id='l28s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
+      <td class='line'>41</td><td class='count'>291</td>
+      <td><pre class='prettyprint covered' id='l41s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
     </tr>
     <tr>
-      <td class='line'>29</td><td class='count'>7</td>
-      <td><pre class='prettyprint jmp'>		<span id='l29s0' title='Executions: 7' class='covered'>if (!matcher.find()) return null;</span></pre></td>
+      <td class='line'>42</td><td class='count'>291</td>
+      <td><pre class='prettyprint jmp'>		<span id='l42s0' title='Executions: 291' class='covered'>if (!matcher.find()) return null;</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>30</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l30s0'>		String[] arguments = new String[matcher.groupCount()];</pre></td>
+      <td class='line'>43</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l43s0'>		String[] arguments = new String[matcher.groupCount()];</pre></td>
     </tr>
     <tr>
-      <td class='line'>31</td><td class='count'>9</td>
-      <td><pre class='prettyprint covered' id='l31s0'>		for (int i=0; i&lt;arguments.length; i++) {</pre></td>
+      <td class='line'>44</td><td class='count'>12</td>
+      <td><pre class='prettyprint covered' id='l44s0'>		for (int i=0; i&lt;arguments.length; i++) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>32</td><td class='count'>6</td>
-      <td><pre class='prettyprint covered' id='l32s0'>			arguments[i] = matcher.group(i+1);</pre></td>
+      <td class='line'>45</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l45s0'>			arguments[i] = matcher.group(i+1);</pre></td>
     </tr>
     <tr>
-      <td class='line'>33</td><td>&nbsp;</td>
+      <td class='line'>46</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>34</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l34s0'>		return this.functionFactory.createFunction(arguments);</pre></td>
+      <td class='line'>47</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l47s0'>		return this.functionFactory.createFunction(arguments);</pre></td>
     </tr>
     <tr>
-      <td class='line'>35</td><td>&nbsp;</td>
+      <td class='line'>48</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>37</td><td>&nbsp;</td>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l51s0'>		return this.name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getManualMessage(String linesep) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l55s0'>		return this.manualMessage;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getExample(String linesep) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l59s0'>		return this.example;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>62</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

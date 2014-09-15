@@ -108,16 +108,6 @@ public class RightTest {
 		}
 		
 		@Test
-		public void getManualMessage() {
-			assertThat(this.sut.getManualMessage(this.getLineSeparator()), is("指定の文字を右から指定の文字数だけ切り取ります。"));
-		}
-		
-		@Test
-		public void getExample() {
-			assertThat(this.sut.getExample(this.getLineSeparator()), is("RIGHT(ABCDE,3)"));
-		}
-		
-		@Test
 		public void getValue() {
 			assertThat(this.sut.getValue(100L), is("E"));
 		}
@@ -140,16 +130,6 @@ public class RightTest {
 		}
 		
 		@Test
-		public void getManualMessage() {
-			assertThat(this.sut.getManualMessage(this.getLineSeparator()), is("指定の文字を右から指定の文字数だけ切り取ります。"));
-		}
-		
-		@Test
-		public void getExample() {
-			assertThat(this.sut.getExample(this.getLineSeparator()), is("RIGHT(ABCDE,3)"));
-		}
-		
-		@Test
 		public void getValue() {
 			assertThat(this.sut.getValue(100L), is("ABCDE"));
 		}
@@ -169,16 +149,6 @@ public class RightTest {
 		@Test
 		public void getName() {
 			assertThat(this.sut.getName(), is("RIGHT"));
-		}
-		
-		@Test
-		public void getManualMessage() {
-			assertThat(this.sut.getManualMessage(this.getLineSeparator()), is("指定の文字を右から指定の文字数だけ切り取ります。"));
-		}
-		
-		@Test
-		public void getExample() {
-			assertThat(this.sut.getExample(this.getLineSeparator()), is("RIGHT(ABCDE,3)"));
 		}
 		
 		@Test

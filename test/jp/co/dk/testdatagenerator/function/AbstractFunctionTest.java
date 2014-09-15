@@ -23,14 +23,6 @@ public class AbstractFunctionTest {
 						return "DummyName";
 					}
 					@Override
-					public String getManualMessage(String linesep) {
-						return "DummyManualMessage";
-					}
-					@Override
-					public String getExample(String linesep) {
-						return "DummyExample";
-					}
-					@Override
 					protected String getValue(long nowCount) {
 						return "DummyValue";
 					}};
@@ -47,14 +39,6 @@ public class AbstractFunctionTest {
 					@Override
 					public String getName() {
 						return "DummyName";
-					}
-					@Override
-					public String getManualMessage(String linesep) {
-						return "DummyManualMessage";
-					}
-					@Override
-					public String getExample(String linesep) {
-						return "DummyExample";
 					}
 					@Override
 					protected String getValue(long nowCount) {
@@ -78,14 +62,6 @@ public class AbstractFunctionTest {
 					@Override
 					public String getName() {
 						return "DummyName";
-					}
-					@Override
-					public String getManualMessage(String linesep) {
-						return "DummyManualMessage";
-					}
-					@Override
-					public String getExample(String linesep) {
-						return "DummyExample";
 					}
 					@Override
 					protected String getValue(long nowCount) {
@@ -116,14 +92,6 @@ public class AbstractFunctionTest {
 						return "DummyName";
 					}
 					@Override
-					public String getManualMessage(String linesep) {
-						return "DummyManualMessage";
-					}
-					@Override
-					public String getExample(String linesep) {
-						return "DummyExample";
-					}
-					@Override
 					protected String getValue(long nowCount) {
 						return "DummyValue";
 					}};
@@ -152,14 +120,6 @@ public class AbstractFunctionTest {
 					@Override
 					public String getName() {
 						return "DummyName";
-					}
-					@Override
-					public String getManualMessage(String linesep) {
-						return "DummyManualMessage";
-					}
-					@Override
-					public String getExample(String linesep) {
-						return "DummyExample";
 					}
 					@Override
 					protected String getValue(long nowCount) {

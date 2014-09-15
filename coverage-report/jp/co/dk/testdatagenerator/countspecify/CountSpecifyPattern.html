@@ -31,190 +31,320 @@ import java.util.regex.Pattern;
       <td><pre class='comment'>	/** 件数指定 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>8</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l8s0'>	ABSOLUTE_SPECIFIED("^(.*?)=([0-9]+)$", new CountSpecifyFactory(){</pre></td>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	ABSOLUTE_SPECIFIED(</pre></td>
     </tr>
     <tr>
       <td class='line'>9</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		@Override</pre></td>
+      <td><pre class='prettyprint'>		"^(.*?)=([0-9]+)$", </pre></td>
     </tr>
     <tr>
       <td class='line'>10</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
+      <td><pre class='prettyprint'>		"件数指定",</pre></td>
     </tr>
     <tr>
-      <td class='line'>11</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l11s0'>			Matcher matcher = pattern.matcher(format);</pre></td>
+      <td class='line'>11</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"指定の件数だけ指定の値を出力する場合、値=件数の形で指定してください。",</pre></td>
     </tr>
     <tr>
-      <td class='line'>12</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l12s0'>			matcher.find();</pre></td>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"aaa=10,\"bbb\"=10,aaa=10;bbb=10",</pre></td>
     </tr>
     <tr>
-      <td class='line'>13</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l13s0'>			String data        = matcher.group(1);</pre></td>
+      <td class='line'>13</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l13s0'>		new CountSpecifyFactory(){</pre></td>
     </tr>
     <tr>
-      <td class='line'>14</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l14s0'>			String countString = matcher.group(2);</pre></td>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			@Override</pre></td>
     </tr>
     <tr>
-      <td class='line'>15</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l15s0'>			long   count       = Long.parseLong(countString);</pre></td>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
     </tr>
     <tr>
       <td class='line'>16</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l16s0'>			return new AbsoluteCountSpecify(outputCount, data, count);</pre></td>
+      <td><pre class='prettyprint covered' id='l16s0'>				Matcher matcher = pattern.matcher(format);</pre></td>
     </tr>
     <tr>
-      <td class='line'>17</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td class='line'>17</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l17s0'>				matcher.find();</pre></td>
     </tr>
     <tr>
-      <td class='line'>18</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}),</pre></td>
-    </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>20</td><td>&nbsp;</td>
-      <td><pre class='comment'>	/** パーセント指定 */</pre></td>
+      <td class='line'>18</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l18s0'>				String data        = matcher.group(1);</pre></td>
     </tr>
     <tr>
-      <td class='line'>21</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l21s0'>	PERCENTAGE_SPECIFIED("^(.*?)=([0-9]+)%$", new CountSpecifyFactory(){</pre></td>
+      <td class='line'>19</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l19s0'>				String countString = matcher.group(2);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l20s0'>				long   count       = Long.parseLong(countString);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l21s0'>				return new AbsoluteCountSpecify(outputCount, data, count);</pre></td>
     </tr>
     <tr>
       <td class='line'>22</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		@Override</pre></td>
+      <td><pre class='prettyprint'>			}</pre></td>
     </tr>
     <tr>
       <td class='line'>23</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
+      <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>24</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l24s0'>			Matcher matcher = pattern.matcher(format);</pre></td>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** パーセント指定 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>25</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l25s0'>			matcher.find();</pre></td>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	PERCENTAGE_SPECIFIED("^(.*?)=([0-9]+)%$", </pre></td>
     </tr>
     <tr>
-      <td class='line'>26</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l26s0'>			String data        = matcher.group(1);</pre></td>
+      <td class='line'>28</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"パーセンテージ指定",</pre></td>
     </tr>
     <tr>
-      <td class='line'>27</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l27s0'>			String countString = matcher.group(2);</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>28</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l28s0'>			long   count       = Long.parseLong(countString);</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>29</td><td class='count'>5</td>
-      <td><pre class='prettyprint covered' id='l29s0'>			return new PacentageCountSpecify(outputCount, data, count);</pre></td>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"指定の値を指定の割合で出力する場合、値=数値%の形で指定してください。",</pre></td>
     </tr>
     <tr>
       <td class='line'>30</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td><pre class='prettyprint'>		"aaa=10%,\"bbb\"=10%,aaa=10%;bbb=10%",</pre></td>
     </tr>
     <tr>
-      <td class='line'>31</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}),</pre></td>
+      <td class='line'>31</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l31s0'>		new CountSpecifyFactory(){</pre></td>
     </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			@Override</pre></td>
+    </tr>
     <tr>
       <td class='line'>33</td><td>&nbsp;</td>
-      <td><pre class='comment'>	/** 指定なし */</pre></td>
+      <td><pre class='prettyprint'>			public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>34</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l34s0'>	NOTHING_SPECIFIED("^.*$", new CountSpecifyFactory(){</pre></td>
+      <td class='line'>34</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l34s0'>				Matcher matcher = pattern.matcher(format);</pre></td>
     </tr>
     <tr>
-      <td class='line'>35</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		@Override</pre></td>
+      <td class='line'>35</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l35s0'>				matcher.find();</pre></td>
     </tr>
     <tr>
-      <td class='line'>36</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
+      <td class='line'>36</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l36s0'>				String data        = matcher.group(1);</pre></td>
     </tr>
     <tr>
-      <td class='line'>37</td><td class='count'>40</td>
-      <td><pre class='prettyprint covered' id='l37s0'>			return new NothingCountSpecify(outputCount, format);</pre></td>
+      <td class='line'>37</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l37s0'>				String countString = matcher.group(2);</pre></td>
     </tr>
     <tr>
-      <td class='line'>38</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>		}</pre></td>
+      <td class='line'>38</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l38s0'>				long   count       = Long.parseLong(countString);</pre></td>
     </tr>
     <tr>
-      <td class='line'>39</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}),</pre></td>
+      <td class='line'>39</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered' id='l39s0'>				return new PacentageCountSpecify(outputCount, data, count);</pre></td>
     </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>40</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			}</pre></td>
+    </tr>
     <tr>
       <td class='line'>41</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	;</pre></td>
+      <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
       <td class='line'>42</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	private Pattern pattern;</pre></td>
+      <td><pre class='prettyprint'>	),</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'>44</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	private CountSpecifyFactory countSpecifyFactory;</pre></td>
-    </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>46</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l46s0'>	CountSpecifyPattern(String pattern, CountSpecifyFactory countSpecifyFactory) {</pre></td>
+      <td><pre class='comment'>	/** 指定なし */</pre></td>
     </tr>
     <tr>
-      <td class='line'>47</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l47s0'>		this.pattern             = Pattern.compile(pattern);</pre></td>
+      <td class='line'>45</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	NOTHING_SPECIFIED("^.*$", </pre></td>
     </tr>
     <tr>
-      <td class='line'>48</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l48s0'>		this.countSpecifyFactory = countSpecifyFactory;</pre></td>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"件数指定なし",</pre></td>
     </tr>
     <tr>
-      <td class='line'>49</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l49s0'>	}</pre></td>
+      <td class='line'>47</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"件数を何も指定しない場合、その値のみを記述する形式で指定してください",</pre></td>
     </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>48</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"aaa,\"bbb\",aaa;bbb",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l49s0'>		new CountSpecifyFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			@Override</pre></td>
+    </tr>
     <tr>
       <td class='line'>51</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public boolean match(String format) {</pre></td>
+      <td><pre class='prettyprint'>			public CountSpecify createCountSpecify(long outputCount, Pattern pattern, String format) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>52</td><td class='count'>135</td>
-      <td><pre class='prettyprint covered' id='l52s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
+      <td class='line'>52</td><td class='count'>40</td>
+      <td><pre class='prettyprint covered' id='l52s0'>				return new NothingCountSpecify(outputCount, format);</pre></td>
     </tr>
     <tr>
-      <td class='line'>53</td><td class='count'>135</td>
-      <td><pre class='prettyprint covered' id='l53s0'>		return matcher.find();</pre></td>
+      <td class='line'>53</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			}</pre></td>
     </tr>
     <tr>
       <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>57</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Pattern pattern;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>60</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected CountSpecifyFactory countSpecifyFactory;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>62</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String name;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>64</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String manualMessage;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>66</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String example;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>68</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l68s0'>	CountSpecifyPattern(String pattern, String name, String manualMessage, String example, CountSpecifyFactory countSpecifyFactory) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>69</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l69s0'>		this.pattern             = Pattern.compile(pattern);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l70s0'>		this.name                = name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l71s0'>		this.manualMessage       = manualMessage;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l72s0'>		this.example             = example;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>73</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l73s0'>		this.countSpecifyFactory = countSpecifyFactory;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>74</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l74s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>76</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public boolean match(String format) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>77</td><td class='count'>135</td>
+      <td><pre class='prettyprint covered' id='l77s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>135</td>
+      <td><pre class='prettyprint covered' id='l78s0'>		return matcher.find();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>56</td><td>&nbsp;</td>
+      <td class='line'>81</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public CountSpecify getCountSpecify(long outputCount, String format) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>57</td><td class='count'>50</td>
-      <td><pre class='prettyprint covered' id='l57s0'>		return this.countSpecifyFactory.createCountSpecify(outputCount, this.pattern, format);</pre></td>
+      <td class='line'>82</td><td class='count'>50</td>
+      <td><pre class='prettyprint covered' id='l82s0'>		return this.countSpecifyFactory.createCountSpecify(outputCount, this.pattern, format);</pre></td>
     </tr>
     <tr>
-      <td class='line'>58</td><td>&nbsp;</td>
+      <td class='line'>83</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>85</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l86s0'>		return this.name;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>89</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getManualMessage(String linesep) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>90</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l90s0'>		return this.manualMessage;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>91</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>93</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getExample(String linesep) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>94</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l94s0'>		return this.example;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>95</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr>
-      <td class='line'>59</td><td>&nbsp;</td>
+      <td class='line'>96</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

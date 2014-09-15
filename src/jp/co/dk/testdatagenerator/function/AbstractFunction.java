@@ -6,6 +6,10 @@ public abstract class AbstractFunction {
 	
 	protected String[] arguments;
 	
+	AbstractFunction() {
+		
+	}
+	
 	AbstractFunction(String... arguments) throws IllegalArgumentException {
 		if (arguments == null || arguments.length == 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
 		this.arguments = arguments;
