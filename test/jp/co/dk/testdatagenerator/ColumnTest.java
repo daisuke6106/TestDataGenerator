@@ -48,17 +48,17 @@ public class ColumnTest{
         
     }
 	
-	public static class ランダム設定なしー値の末尾にセミコロンなし extends TestCaseTemplate{
+	public static class ランダム設定なしー値の末尾にパイプなし extends TestCaseTemplate{
 		 
         protected Column sut ;
         
         @Before
         public void init() {
         	try {
-				this.sut = new Column(100L, 0, "aaa;bbb;ccc");
+				this.sut = new Column(100L, 0, "aaa|bbb|ccc");
 				assertThat(this.sut.outputCount, is(100L));
 				assertThat(this.sut.index      , is(0));
-				assertThat(this.sut.origin_datas      , is("aaa;bbb;ccc"));
+				assertThat(this.sut.origin_datas      , is("aaa|bbb|ccc"));
 				assertThat(this.sut.isRandom   , is(false));
 				assertThat(this.sut.dataList.size(), is(3));
 				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
@@ -78,21 +78,21 @@ public class ColumnTest{
         
         @Test
         public void testToString() {
-        	assertThat(this.sut.toString(), is("aaa;bbb;ccc"));
+        	assertThat(this.sut.toString(), is("aaa|bbb|ccc"));
         }
     }
 	
-	public static class ランダム設定なしー値の末尾にセミコロンあり extends TestCaseTemplate{
+	public static class ランダム設定なしー値の末尾にパイプあり extends TestCaseTemplate{
 		 
         protected Column sut ;
         
         @Before
         public void init() {
         	try {
-				this.sut = new Column(100L, 0, "aaa;bbb;ccc;");
+				this.sut = new Column(100L, 0, "aaa|bbb|ccc|");
 				assertThat(this.sut.outputCount, is(100L));
 				assertThat(this.sut.index      , is(0));
-				assertThat(this.sut.origin_datas      , is("aaa;bbb;ccc;"));
+				assertThat(this.sut.origin_datas      , is("aaa|bbb|ccc|"));
 				assertThat(this.sut.isRandom   , is(false));
 				assertThat(this.sut.dataList.size(), is(4));
 				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
@@ -114,21 +114,21 @@ public class ColumnTest{
         
         @Test
         public void testToString() {
-        	assertThat(this.sut.toString(), is("aaa;bbb;ccc;"));
+        	assertThat(this.sut.toString(), is("aaa|bbb|ccc|"));
         }
     }
 	
-	public static class ランダム設定ありー値の末尾にセミコロンなし extends TestCaseTemplate{
+	public static class ランダム設定ありー値の末尾にパイプなし extends TestCaseTemplate{
 		 
         protected Column sut ;
         
         @Before
         public void init() {
         	try {
-				this.sut = new Column(100L, 0, "@r[aaa;bbb;ccc]");
+				this.sut = new Column(100L, 0, "@r[aaa|bbb|ccc]");
 				assertThat(this.sut.outputCount, is(100L));
 				assertThat(this.sut.index      , is(0));
-				assertThat(this.sut.origin_datas      , is("@r[aaa;bbb;ccc]"));
+				assertThat(this.sut.origin_datas      , is("@r[aaa|bbb|ccc]"));
 				assertThat(this.sut.isRandom   , is(true));
 				assertThat(this.sut.dataList.size(), is(3));
 				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
@@ -161,21 +161,21 @@ public class ColumnTest{
         
         @Test
         public void testToString() {
-        	assertThat(this.sut.toString(), is("@r[aaa;bbb;ccc]"));
+        	assertThat(this.sut.toString(), is("@r[aaa|bbb|ccc]"));
         }
     }
 	
-	public static class ランダム設定ありー値の末尾にセミコロンあり extends TestCaseTemplate{
+	public static class ランダム設定ありー値の末尾にパイプあり extends TestCaseTemplate{
 		 
         protected Column sut ;
         
         @Before
         public void init() {
         	try {
-				this.sut = new Column(100L, 0, "@r[aaa;bbb;ccc;]");
+				this.sut = new Column(100L, 0, "@r[aaa|bbb|ccc|]");
 				assertThat(this.sut.outputCount, is(100L));
 				assertThat(this.sut.index      , is(0));
-				assertThat(this.sut.origin_datas      , is("@r[aaa;bbb;ccc;]"));
+				assertThat(this.sut.origin_datas      , is("@r[aaa|bbb|ccc|]"));
 				assertThat(this.sut.isRandom   , is(true));
 				assertThat(this.sut.dataList.size(), is(4));
 				assertThat(this.sut.dataList.get(0).getValue(0L), is("aaa"));
@@ -217,7 +217,7 @@ public class ColumnTest{
         
         @Test
         public void testToString() {
-        	assertThat(this.sut.toString(), is("@r[aaa;bbb;ccc;]"));
+        	assertThat(this.sut.toString(), is("@r[aaa|bbb|ccc|]"));
         }
     }
 

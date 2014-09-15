@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 
 import jp.co.dk.testdatagenerator.countspecify.CountSpecify;
 import jp.co.dk.testdatagenerator.countspecify.CountSpecifyPattern;
-import jp.co.dk.testdatagenerator.function.FunctionPattern;
 
 class Column {
 	
@@ -59,8 +58,8 @@ class Column {
 			copyData = randomMatcher.group(1);
 		}
 		
-		String[] patterns = copyData.split(";");
-		if (copyData.endsWith(";")) {
+		String[] patterns = copyData.split("\\|");
+		if (copyData.endsWith("|")) {
 			String[] patternN = new String[patterns.length+1];
 			for (int i=0; i<patterns.length; i++) patternN[i] = patterns[i];
 			patternN[patternN.length-1] = "";

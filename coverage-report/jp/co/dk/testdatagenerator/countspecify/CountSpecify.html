@@ -43,79 +43,69 @@
       <td class='line'>11</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected Value <span class='instance covered' title='Reads: 101 Writes: 270'>value</span>;</pre></td>
     </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>13</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l13s0'>	CountSpecify(){</pre></td>
-    </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>15</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l15s0'>	}</pre></td>
-    </tr>
     <tr>
       <td></td><td class='count'>274</td>
       <td class='paths'>
         <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 3/3</span>
-        <span class='covered' onclick="showPath(this,'l17s0 l18s0 l18s2')">A: 2</span>
-        <span class='covered' onclick="showPath(this,'l17s0 l18s0 l18s1 l18s2')">B: 2</span>
-        <span class='covered' onclick="showPath(this,'l17s0 l18s0 l18s1 l19s0 l21s0')">C: 270</span>
+        <span class='covered' onclick="showPath(this,'l13s0 l14s0 l14s2')">A: 2</span>
+        <span class='covered' onclick="showPath(this,'l13s0 l14s0 l14s1 l14s2')">B: 2</span>
+        <span class='covered' onclick="showPath(this,'l13s0 l14s0 l14s1 l15s0 l17s0')">C: 270</span>
       </td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>17</td><td class='count'>274</td>
-      <td><pre class='prettyprint covered' id='l17s0'>	CountSpecify(long outputCount, String value) throws IllegalArgumentException {</pre></td>
+      <td class='line'>13</td><td class='count'>274</td>
+      <td><pre class='prettyprint covered' id='l13s0'>	CountSpecify(long outputCount, String value) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td class='line'>18</td><td class='count'>274</td>
-      <td><pre class='prettyprint jmp'>		<span id='l18s0' title='Executions: 274' class='covered'>if (outputCount &lt; 0</span> || <span id='l18s1' title='Executions: 272' class='covered'>value == null)</span> <span id='l18s2' title='Executions: 2' class='covered'>throw new IllegalArgumentException("can't create CountSpecifyType instance.");</span></pre></td>
+      <td class='line'>14</td><td class='count'>274</td>
+      <td><pre class='prettyprint jmp'>		<span id='l14s0' title='Executions: 274' class='covered'>if (outputCount &lt; 0</span> || <span id='l14s1' title='Executions: 272' class='covered'>value == null)</span> <span id='l14s2' title='Executions: 2' class='covered'>throw new IllegalArgumentException("can't create CountSpecifyType instance.");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>19</td><td class='count'>270</td>
-      <td><pre class='prettyprint covered' id='l19s0'>		this.outputCount = outputCount;</pre></td>
+      <td class='line'>15</td><td class='count'>270</td>
+      <td><pre class='prettyprint covered' id='l15s0'>		this.outputCount = outputCount;</pre></td>
     </tr>
     <tr>
-      <td class='line'>20</td><td class='count'>270</td>
-      <td><pre class='prettyprint covered' id='l20s0'>		this.value = new Value(value);</pre></td>
+      <td class='line'>16</td><td class='count'>270</td>
+      <td><pre class='prettyprint covered' id='l16s0'>		this.value = new Value(value);</pre></td>
     </tr>
     <tr>
-      <td class='line'>21</td><td class='count'>270</td>
-      <td><pre class='prettyprint covered' id='l21s0'>	}</pre></td>
+      <td class='line'>17</td><td class='count'>270</td>
+      <td><pre class='prettyprint covered' id='l17s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getValue(long nowIndex) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>97</td>
+      <td><pre class='prettyprint covered' id='l20s0'>		return this.value.getValue(nowIndex);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'>23</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public String getValue(long nowIndex) {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>24</td><td class='count'>97</td>
-      <td><pre class='prettyprint covered' id='l24s0'>		return this.value.getValue(nowIndex);</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>25</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
-    </tr>
-    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
-    <tr>
-      <td class='line'>27</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
     </tr>
     <tr>
-      <td class='line'>28</td><td>&nbsp;</td>
+      <td class='line'>24</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public String toString() {</pre></td>
     </tr>
     <tr>
-      <td class='line'>29</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l29s0'>		return this.value.toString();</pre></td>
+      <td class='line'>25</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l25s0'>		return this.value.toString();</pre></td>
     </tr>
     <tr>
-      <td class='line'>30</td><td>&nbsp;</td>
+      <td class='line'>26</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>32</td><td>&nbsp;</td>
+      <td class='line'>28</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

@@ -10,10 +10,6 @@ public abstract class CountSpecify {
 	/** 値 */
 	protected Value value;
 	
-	CountSpecify(){
-		
-	}
-	
 	CountSpecify(long outputCount, String value) throws IllegalArgumentException {
 		if (outputCount < 0 || value == null) throw new IllegalArgumentException("can't create CountSpecifyType instance.");
 		this.outputCount = outputCount;
