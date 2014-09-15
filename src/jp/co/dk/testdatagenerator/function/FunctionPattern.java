@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 public enum FunctionPattern {
 	
 	/** 右から指定文字数を切り出す。 */
-	RIGHT("^RIGHT\\((.*?),([0-9]+)\\)$",
+	RIGHT("^RIGHT\\((.*?);([0-9]+)\\)$",
 		"RIGHT",
 		"指定の文字を右から指定の文字数だけ切り取ります。",
-		"RIGHT(ABCDE,3)",
+		"RIGHT(ABCDE;3)",
 		new FunctionFactory(){
 		@Override
 		public AbstractFunction createFunction(String[] arguments) {
