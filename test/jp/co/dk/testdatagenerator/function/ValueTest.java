@@ -74,8 +74,8 @@ public class ValueTest {
 		@Before
 		public void コンストラクタ() {
 			try {
-				this.sut = new Value("RIGHT(abcde,1)");
-				assertThat(this.sut.data, is("RIGHT(abcde,1)"));
+				this.sut = new Value("RIGHT(abcde;1)");
+				assertThat(this.sut.data, is("RIGHT(abcde;1)"));
 				assertThat((this.sut.function instanceof Right), is(true));
 			} catch (IllegalArgumentException e) {
 				fail(e);
@@ -95,8 +95,8 @@ public class ValueTest {
 		@Before
 		public void コンストラクタ() {
 			try {
-				this.sut = new Value("RIGHT(RIGHT(あいうえおかきくけこ,5),1)");
-				assertThat(this.sut.data, is("RIGHT(RIGHT(あいうえおかきくけこ,5),1)"));
+				this.sut = new Value("RIGHT(RIGHT(あいうえおかきくけこ;5);1)");
+				assertThat(this.sut.data, is("RIGHT(RIGHT(あいうえおかきくけこ;5);1)"));
 				assertThat((this.sut.function instanceof Right), is(true));
 			} catch (IllegalArgumentException e) {
 				fail(e);

@@ -9,6 +9,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	AbstractFunctionTest.class,
 	FunctionPatternTest.class,
 	RightTest.class,
+	LeftTest.class,
+	RowTest.class,
 	ValueTest.class,
 })
 public class AllTest {}

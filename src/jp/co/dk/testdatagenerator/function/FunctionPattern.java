@@ -17,6 +17,30 @@ public enum FunctionPattern {
 		}
 	}),
 	
+	/** 左から指定文字数を切り出す。 */
+	LEFT("^LEFT\\((.*?);([0-9]+)\\)$",
+		"LEFT",
+		"指定の文字を左から指定の文字数だけ切り取ります。",
+		"LEFT(ABCDE;3)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Left(arguments);
+		}
+	}),
+	
+	/** 現在の行番号を返します。 */
+	ROW("^ROW\\(\\)$",
+		"ROW",
+		"現在の行番号を返します。",
+		"ROW()",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Row();
+		}
+	}),
+	
 	;
 	protected Pattern pattern;
 	

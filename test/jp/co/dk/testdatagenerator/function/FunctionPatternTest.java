@@ -26,12 +26,56 @@ public class FunctionPatternTest {
 			assertThat(this.sut.match("aaa")  , nullValue());
 			assertThat(this.sut.match("RIGHT()")  , nullValue());
 			assertThat(this.sut.match("RIGHT(aaa)")  , nullValue());
-			assertThat(this.sut.match("RIGHT(aaa,bbb)")  , nullValue());
-			assertThat(this.sut.match("RIGHT(aaa,bbb,ccc)")  , nullValue());
-			assertThat((this.sut.match("RIGHT(aaa,123)") instanceof Right) , is(true));
+			assertThat(this.sut.match("RIGHT(aaa;bbb)")  , nullValue());
+			assertThat(this.sut.match("RIGHT(aaa;bbb,ccc)")  , nullValue());
+			assertThat((this.sut.match("RIGHT(aaa;123)") instanceof Right) , is(true));
 		}
 	}
 	
+	public static class LEFT extends TestCaseTemplate {
+		
+		protected FunctionPattern sut = FunctionPattern.LEFT;
+		
+		@Test
+		public void コンストラクタ() {
+			assertThat(this.sut.pattern        , notNullValue());
+			assertThat(this.sut.functionFactory, notNullValue());
+		}
+		
+		@Test
+		public void match() {
+			assertThat(this.sut.match(null), nullValue());
+			assertThat(this.sut.match("")  , nullValue());
+			assertThat(this.sut.match("aaa")  , nullValue());
+			assertThat(this.sut.match("LEFT()")  , nullValue());
+			assertThat(this.sut.match("LEFT(aaa)")  , nullValue());
+			assertThat(this.sut.match("LEFT(aaa;bbb)")  , nullValue());
+			assertThat(this.sut.match("LEFT(aaa;bbb,ccc)")  , nullValue());
+			assertThat((this.sut.match("LEFT(aaa;123)") instanceof Left) , is(true));
+		}
+	}
+
+	public static class ROW extends TestCaseTemplate {
 	
+		protected FunctionPattern sut = FunctionPattern.ROW;
+		
+		@Test
+		public void コンストラクタ() {
+			assertThat(this.sut.pattern        , notNullValue());
+			assertThat(this.sut.functionFactory, notNullValue());
+		}
+		
+		@Test
+		public void match() {
+			assertThat(this.sut.match(null), nullValue());
+			assertThat(this.sut.match("")  , nullValue());
+			assertThat(this.sut.match("aaa")  , nullValue());
+			assertThat((this.sut.match("ROW()") instanceof Row) , is(true));
+			assertThat(this.sut.match("ROW(aaa)")  , nullValue());
+			assertThat(this.sut.match("ROW(aaa;bbb)")  , nullValue());
+			assertThat(this.sut.match("ROW(aaa;bbb,ccc)")  , nullValue());
+			assertThat(this.sut.match("ROW(aaa;123)") , nullValue());
+		}
+	}
 
 }
