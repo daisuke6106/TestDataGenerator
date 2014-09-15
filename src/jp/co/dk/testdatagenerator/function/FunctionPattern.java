@@ -3,9 +3,7 @@ package jp.co.dk.testdatagenerator.function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import jp.co.dk.testdatagenerator.HelpPrintable;
-
-public enum FunctionPattern implements HelpPrintable {
+public enum FunctionPattern {
 	
 	/** 右から指定文字数を切り出す。 */
 	RIGHT("^RIGHT\\((.*?),([0-9]+)\\)$",
@@ -49,17 +47,14 @@ public enum FunctionPattern implements HelpPrintable {
 		return this.functionFactory.createFunction(arguments);
 	}
 	
-	@Override
 	public String getName() {
 		return this.name;
 	}
 
-	@Override
 	public String getManualMessage(String linesep) {
 		return this.manualMessage;
 	}
 
-	@Override
 	public String getExample(String linesep) {
 		return this.example;
 	}

@@ -3,9 +3,7 @@ package jp.co.dk.testdatagenerator.countspecify;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import jp.co.dk.testdatagenerator.HelpPrintable;
-
-public enum CountSpecifyPattern implements HelpPrintable {
+public enum CountSpecifyPattern {
 	/** 件数指定 */
 	ABSOLUTE_SPECIFIED(
 		"^(.*?)=([0-9]+)$", 
@@ -84,18 +82,15 @@ public enum CountSpecifyPattern implements HelpPrintable {
 		return this.countSpecifyFactory.createCountSpecify(outputCount, this.pattern, format);
 	}
 
-	@Override
 	public String getName() {
 		return this.name;
 	}
 
-	@Override
-	public String getManualMessage(String linesep) {
-		return this.manualMessage;
+	public String getManualMessage(String padding, String linesep) {
+		return padding + this.manualMessage.replace("${NL}", linesep);
 	}
 
-	@Override
-	public String getExample(String linesep) {
-		return this.example;
+	public String getExample(String padding, String linesep) {
+		return padding + this.example.replace("${NL}", linesep + padding );
 	}
 }

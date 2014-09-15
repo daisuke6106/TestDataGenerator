@@ -1,6 +1,5 @@
 package jp.co.dk.testdatagenerator.countspecify;
 
-import jp.co.dk.testdatagenerator.HelpPrintable;
 import jp.co.dk.testdatagenerator.function.Value;
 
 public abstract class CountSpecify {

@@ -18,6 +18,7 @@ import java.util.Date;
  */
 public class TestDataGenerator {
 	
+	protected static String lineseparator = System.getProperty("line.separator");
 	
 	public static void main(final String[] args) {
 		// 生成数
@@ -44,10 +45,20 @@ public class TestDataGenerator {
 					encode     = args[3];
 					break;
 				default:
-					System.out.println("usage : tdgen 件数 フォーマット 出力ファイル [文字コード]");
-					Record dummyRecord = new Record(1L,"nothing");
-					System.out.println(dummyRecord.getName());
-					System.out.println(dummyRecord.getManualMessage());
+					StringBuilder sb = new StringBuilder();
+					sb.append("usage : tdgen 件数 レコードフォーマット 出力ファイル [文字コード]").append(lineseparator);
+					sb.append(lineseparator);
+					sb.append("[" + Record.getName("") + "]").append(lineseparator);
+					sb.append(Record.getManualMessage("", lineseparator)).append(lineseparator);
+					sb.append("[例]").append(lineseparator);
+					sb.append(Record.getExample("", lineseparator)).append(lineseparator);
+					
+					sb.append("[" + Column.getName() + "]").append(lineseparator);
+					sb.append(Column.getManualMessage("  ", lineseparator)).append(lineseparator);
+					sb.append("[例]").append(lineseparator);
+					sb.append(Column.getExample("  ", lineseparator)).append(lineseparator);
+					
+					System.out.print(sb.toString());
 					System.exit(1);
 			}
 		} catch (NumberFormatException e) {
