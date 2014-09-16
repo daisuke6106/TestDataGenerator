@@ -1,5 +1,7 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -41,6 +43,18 @@ public enum FunctionPattern {
 		}
 	}),
 	
+	/** 文字列を結合する。 */
+	CONCATENATE("^CONCATENATE\\((.*?);(.*?)\\)$",
+		"CONCATENATE",
+		"文字列を結合する。",
+		"CONCATENATE(aaa;bbb)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Concatenate(arguments);
+		}
+	}),
+	
 	;
 	protected Pattern pattern;
 	
@@ -68,6 +82,7 @@ public enum FunctionPattern {
 		for (int i=0; i<arguments.length; i++) {
 			arguments[i] = matcher.group(i+1);
 		}
+//		String[] arguments = pattern.split(format, -1);
 		return this.functionFactory.createFunction(arguments);
 	}
 	

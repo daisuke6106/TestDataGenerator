@@ -8,6 +8,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ 
 	AbstractFunctionTest.class,
 	FunctionPatternTest.class,
+	ConcatenateTest.class,
 	RightTest.class,
 	LeftTest.class,
 	RowTest.class,
