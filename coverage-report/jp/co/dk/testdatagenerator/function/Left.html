@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - Left.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../../coverage.css'/>
+  <script type='text/javascript' src='../../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package jp.co.dk.testdatagenerator.function;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>3</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Left extends AbstractFunction {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Value <span class='instance covered' title='Reads: 3 Writes: 7'>value</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected int   <span class='instance covered' title='Reads: 5 Writes: 7'>count</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	Left(String... arguments) throws IllegalArgumentException {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>11</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 4/4</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l11s1')">A: 2</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l12s0 l20s0 l20s2')">B: 1</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l12s0 l20s0 l20s1 l20s2')">C: 1</span>
+        <span class='covered' onclick="showPath(this,'l10s0 l11s0 l12s0 l20s0 l20s1 l21s0 l23s0')">D: 7</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>15</td>
+      <td><pre class='prettyprint covered' id='l10s0'>		super(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>13</td>
+      <td><pre class='prettyprint jmp'>		<span id='l11s0' title='Executions: 13' class='covered'>if (arguments.length != 2)</span> <span id='l11s1' title='Executions: 2' class='covered'>throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l12s0'>		String value = arguments[0];</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l13s0'>		int count = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		try {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l15s0'>			count = Integer.parseInt(arguments[1]);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l16s0'>		} catch (NumberFormatException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l17s0'>			throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>9</td>
+      <td><pre class='prettyprint jmp'>		<span id='l20s0' title='Executions: 9' class='covered'>if (value == null</span> || <span id='l20s1' title='Executions: 8' class='covered'>count &lt;= 0)</span> <span id='l20s2' title='Executions: 1' class='covered'>throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l21s0'>		this.value = new Value(value);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l22s0'>		this.count = count;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l23s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>11</td>
+      <td><pre class='prettyprint covered' id='l28s0'>		return "LEFT";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String getValue(long nowIndex) {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>3</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l33s0 l34s0 l34s1')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l33s0 l34s0 l35s0')">B: 2</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l33s0'>		String value = this.value.getValue(nowIndex);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l34s0' title='Executions: 3' class='covered'>if (value.length() &lt; this.count) return value;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l35s0'>		return value.substring(0, this.count);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

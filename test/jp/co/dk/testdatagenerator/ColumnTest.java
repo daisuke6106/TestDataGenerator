@@ -1,5 +1,8 @@
 package jp.co.dk.testdatagenerator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Before;
@@ -7,6 +10,7 @@ import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
+import static org.hamcrest.core.AnyOf.*;
 
 
 @RunWith(Enclosed.class)
@@ -141,22 +145,13 @@ public class ColumnTest{
         
         @Test
         public void getValue() {
-    		assertThat(this.sut.getValue(0), anyOf(
-    			is("aaa"),
-    			is("bbb"),
-    			is("ccc")
-    		));
-    		assertThat(this.sut.getValue(1), anyOf(
-    			is("aaa"),
-    			is("bbb"),
-    			is("ccc")
-        	));
-    		assertThat(this.sut.getValue(2), anyOf(
-				is("aaa"),
-				is("bbb"),
-				is("ccc")
-	    	));
-        		
+        	List<String> resultList = new ArrayList<String>();
+        	resultList.add("aaa");
+        	resultList.add("bbb");
+        	resultList.add("ccc");
+    		assertThat(resultList.contains(this.sut.getValue(0)), is(true));
+    		assertThat(resultList.contains(this.sut.getValue(1)), is(true));
+    		assertThat(resultList.contains(this.sut.getValue(2)), is(true));
         }
         
         @Test
@@ -189,30 +184,16 @@ public class ColumnTest{
         
         @Test
         public void getValue() {
-    		assertThat(this.sut.getValue(0), anyOf(
-    			is("aaa"),
-    			is("bbb"),
-    			is("ccc"),
-    			is("")
-    		));
-    		assertThat(this.sut.getValue(1), anyOf(
-    			is("aaa"),
-    			is("bbb"),
-    			is("ccc"),
-    			is("")
-        	));
-    		assertThat(this.sut.getValue(2), anyOf(
-				is("aaa"),
-				is("bbb"),
-				is("ccc"),
-				is("")
-	    	));
-    		assertThat(this.sut.getValue(3), anyOf(
-				is("aaa"),
-				is("bbb"),
-				is("ccc"),
-				is("")
-	    	));
+        	List<String> resultList = new ArrayList<String>();
+        	resultList.add("aaa");
+        	resultList.add("bbb");
+        	resultList.add("ccc");
+        	resultList.add("");
+        	
+    		assertThat(resultList.contains(this.sut.getValue(0L)), is(true));
+    		assertThat(resultList.contains(this.sut.getValue(1L)), is(true));
+    		assertThat(resultList.contains(this.sut.getValue(2L)), is(true));
+    		assertThat(resultList.contains(this.sut.getValue(3L)), is(true));
         }
         
         @Test

@@ -1,0 +1,560 @@
+Starting audit...
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:0: Missing package-info.java file.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:0: ファイルが新しい行で終了していません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:12: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:13: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:13:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:14: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:15:24: 変数 'outputCount' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:16: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:17: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:18: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:18:23: 変数 'index' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:19: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:21:26: 名前 'origin_datas' はパターン '^[a-z][a-zA-Z0-9]*$' に一致しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:21:26: 変数 'origin_datas' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:22: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:23: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:24:27: 変数 'isRandom' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:25: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:26: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:27: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:27:34: 変数 'randomPattern' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:28: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:29: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:30:38: 変数 'dataList' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:31: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:32: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:36: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:41: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47:16: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47:21: 'outputCount' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47:34: Parameter index should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47:38: 'index' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47:45: Parameter datas should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:47:66: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:48: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:48: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:48:34: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:52: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:54: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:55: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:60: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:63:71: '+' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:63:72: '+' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:64: 'for' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:64: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:64:35: '=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:64:36: '=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:64:40: '<' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:64:41: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:65:49: '-' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:65:50: '-' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:68:27: '=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:68:28: '=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:68:32: '<' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:68:33: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:70: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:72: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:79: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:80:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:80:25: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:81: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:84: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Column.java:88: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:10: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:10:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:11: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:12:24: 変数 'count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:13: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:14: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:15:26: 変数 'format' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:16: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:17: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:18: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:18: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:18:33: 変数 'formatPattern' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:19: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:21:32: 変数 'columns' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:22: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:23: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:24:33: 変数 'newLine' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:25: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:26:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:26:16: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:26:34: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:26:41: 'format' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:27: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:27: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:28: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:28: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:31: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:32:31: '=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:32:32: '=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:32:40: '<' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:32:41: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:33: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:36: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:37:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:37:25: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:40:27: '=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:40:28: '=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:40:32: '<' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:40:33: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:42:30: '!=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:42:32: '!=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:42:36: '-' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:42:37: '-' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/Record.java:50: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:15: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:18: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:22:1: Utility classes should not have a public or default constructor.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:23: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:23:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:24: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:24:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:24:33: 変数 'lineseparator' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:25: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:26:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:35: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:38:38: '3' はマジックナンバーです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:44:38: '4' はマジックナンバーです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:48:59: '3' はマジックナンバーです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:52: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:54: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:56: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:57: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:58: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:60: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:61: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:63: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:65: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:66: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:68: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:69: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:70: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:72: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:73: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:74: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:75: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:76: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:77: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:80: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:81: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:82: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:84: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:85: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:86: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:87: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:88: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:91: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:92: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:93: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:96: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:97: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:98: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:99: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:100: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:101: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:102: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:103: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:104: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:105: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:106: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:107: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:109: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:110: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:111: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:112: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:113: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:114: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:115: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:116: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:117: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:118: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:119: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:120: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:122: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:130: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:133: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:135: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:136: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:140: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:143: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:145: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:145: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:146:36: '=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:146:37: '=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:146:41: '<' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:146:42: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:149:38: '>=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:149:40: '10000' はマジックナンバーです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:149:40: '>=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:149:50: '%' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:149:51: '%' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:149:51: '10000' はマジックナンバーです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:152: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:153: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:154: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:154:123: '100L' はマジックナンバーです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:157:41: 空の文です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:163: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:166: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:169: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/TestDataGenerator.java:173: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:0: Missing package-info.java file.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:3: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:3:48: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:4: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:5: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:6:24: 名前 'origin_count' はパターン '^[a-z][a-zA-Z0-9]*$' に一致しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:6:24: 変数 'origin_count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:7: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:8: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:9:24: 名前 'use_count' はパターン '^[a-z][a-zA-Z0-9]*$' に一致しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:9:24: 変数 'use_count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:10: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:11: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:11:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:11:30: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:11:48: Parameter value should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:11:62: Parameter count should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:11:81: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:13: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:13: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:14: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:14: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:14: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:17: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:19:32: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:21: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:21:35: '>' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/AbsoluteCountSpecify.java:21:36: '>' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:5: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:6:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:7: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:8:24: 変数 'outputCount' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:9: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:10: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:11:25: 変数 'value' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:12: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13:22: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13:27: 'outputCount' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13:40: Parameter value should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13:47: 'value' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:13:61: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:14: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:14: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:18: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:19:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:19:9: メソッド 'getValue' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:19:32: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:22: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:23:9: メソッド 'toString' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecify.java:27: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:0: ファイルが新しい行で終了していません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:5: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:6:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:7: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:7:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyFactory.java:8: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:6: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:7: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:7:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:9: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:13:42: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:15: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:15:64: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:15:82: Parameter pattern should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:15:90: 'pattern' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:15:99: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:20: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:21: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:25: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:26: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:27: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:31:42: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:33: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:33:64: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:33:82: Parameter pattern should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:33:90: 'pattern' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:33:99: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:38: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:39: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:43: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:44: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:45: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:49:42: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:51: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:51:64: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:51:82: Parameter pattern should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:51:90: 'pattern' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:51:99: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:52: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:56: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:57:1: ';' の前にホワイトスペースがあります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:58:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:58:27: 変数 'pattern' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:59: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:60:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:60:39: 変数 'countSpecifyFactory' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:61: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:62:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:62:26: 変数 'name' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:63: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:64:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:64:26: 変数 'manualMessage' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:65: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:66:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:66:26: 変数 'example' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:67: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:29: Parameter pattern should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:36: 'pattern' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:45: Parameter name should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:52: 'name' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:58: Parameter manualMessage should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:65: 'manualMessage' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:80: Parameter example should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:87: 'example' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:96: Parameter countSpecifyFactory should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:68:116: 'countSpecifyFactory' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:75: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:76:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:76:30: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:80: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:81:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:81:45: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:81:63: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:82: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:85:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:89:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:89:40: Parameter linesep should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:93:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/CountSpecifyPattern.java:93:34: Parameter linesep should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:0: ファイルが新しい行で終了していません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:3: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:3:47: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:4: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:5: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:5:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:5:29: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:5:47: Parameter value should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/NothingCountSpecify.java:5:68: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:0: ファイルが新しい行で終了していません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:5: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:5:49: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:6:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:7: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:8:24: 変数 'percentage' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:9: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:10: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:11:24: 名前 'usage_count' はパターン '^[a-z][a-zA-Z0-9]*$' に一致しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:11:24: 変数 'usage_count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:12: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:13: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:14:24: 名前 'use_count' はパターン '^[a-z][a-zA-Z0-9]*$' に一致しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:14:24: 変数 'use_count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:15: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16:31: Parameter outputCount should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16:49: Parameter value should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16:63: Parameter percentage should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16:68: 'percentage' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:16:87: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:18: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:18: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:20: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:21: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:21: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:23: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:25:32: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:27: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:27:35: '>' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/countspecify/PacentageCountSpecify.java:27:36: '>' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:0: Missing package-info.java file.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:5: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:6:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:7:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:7:28: 変数 'arguments' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:8: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:9:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:10: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:12: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:13:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:13:26: Parameter arguments should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:13:36: 'arguments' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:13:54: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:14: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:14: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:17: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:18:9: メソッド 'toString' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:28:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/AbstractFunction.java:29:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionFactory.java:0: ファイルが新しい行で終了していません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionFactory.java:3: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionFactory.java:4: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionFactory.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionFactory.java:5:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionFactory.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:6: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:7: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:7:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:8: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:13:38: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:15:56: Parameter arguments should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:19: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:25:38: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:27:56: Parameter arguments should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:31: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:32: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:37:38: '{' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:39:56: Parameter arguments should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:43: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:44:1: ';' の前にホワイトスペースがあります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:45:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:45:27: 変数 'pattern' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:46: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:47:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:47:35: 変数 'functionFactory' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:48: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:49:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:49:26: 変数 'name' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:50: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:51:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:51:26: 変数 'manualMessage' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:52: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:53:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:53:26: 変数 'example' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:54: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:25: Parameter pattern should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:32: 'pattern' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:41: Parameter name should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:48: 'name' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:54: Parameter manualMessage should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:61: 'manualMessage' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:76: Parameter example should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:83: 'example' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:92: Parameter functionFactory should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:55:108: 'functionFactory' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:62: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:63:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:63:39: Parameter format should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:64: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:66: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:68:27: '=' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:68:28: '=' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:68:32: '<' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:68:33: '<' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:69:55: '+' の前にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:69:56: '+' の後にホワイトスペースがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:73: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:74:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:78:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:78:40: Parameter linesep should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:82:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:82:34: Parameter linesep should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java:85: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:3: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:4: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:5:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:5:25: 変数 'value' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:7:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:7:25: 変数 'count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:8: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:9:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:9:14: Parameter arguments should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:9:42: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:11: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:11: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:12:24: 'value' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:13:21: 'count' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:17: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:19: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:20: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:20: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:24: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:25: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:26:9: メソッド 'getName' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:31:9: メソッド 'getValue' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:32:35: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:33:24: 'value' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Left.java:34: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:3: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:4: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:5:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:5:25: 変数 'value' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:6: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:7:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:7:25: 変数 'count' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:8: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:9:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:9:15: Parameter arguments should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:9:43: 冗長な throws: 'IllegalArgumentException' はチェックされない例外です。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:11: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:11: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:12:24: 'value' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:13:21: 'count' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:17: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:19: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:20: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:20: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:24: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:25: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:26:9: メソッド 'getName' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:31:9: メソッド 'getValue' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:32:35: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:33:24: 'value' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Right.java:34: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Row.java:3: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Row.java:4: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Row.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Row.java:5:9: メソッド 'getName' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Row.java:10:9: メソッド 'getValue' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Row.java:11:35: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:4: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:5: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:5:1: File contains tab characters (this is the first instance).
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:6:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:6:26: 変数 'data' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:7: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:8:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:8:36: 変数 'function' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:9: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:10:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:10:22: Parameter data should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:10:29: 'data' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:11: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:11: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:14:42: 'function' がフィールドを隠しています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:15: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:18: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:19:9: Javadoc コメントがありません。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:19:9: メソッド 'getValue' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:19:32: Parameter nowIndex should be final.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:23: 行が 80 文字を超えています。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:26: Line has trailing spaces.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/function/Value.java:27:9: メソッド 'toString' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/range/DRange.java:0: Missing package-info.java file.
+/home/dk/svn_workspace/TestDataGenerator/src/jp/co/dk/testdatagenerator/range/DRange.java:3: Javadoc コメントがありません。
+Audit done.

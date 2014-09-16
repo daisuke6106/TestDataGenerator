@@ -17,7 +17,7 @@ public class AbstractFunctionTest {
 		@Test
 		public void 引数がnullの場合() {
 			try {
-        		this.sut = new AbstractFunction(null){
+        		this.sut = new AbstractFunction((String[])null){
 					@Override
 					public String getName() {
 						return "DummyName";

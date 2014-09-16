@@ -14,7 +14,7 @@ public class LeftTest {
 		@Test
 		public void 引数がNULLの場合() {
 			try {
-				new Left(null);
+				new Left((String[])null);
 				fail();
 			} catch(IllegalArgumentException e) {
 				assertThat(e.getMessage(), is("LEFTの引数が不正です。"));

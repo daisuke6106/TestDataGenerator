@@ -14,7 +14,7 @@ public class RightTest {
 		@Test
 		public void 引数がNULLの場合() {
 			try {
-				new Right(null);
+				new Right((String[])null);
 				fail();
 			} catch(IllegalArgumentException e) {
 				assertThat(e.getMessage(), is("RIGHTの引数が不正です。"));
