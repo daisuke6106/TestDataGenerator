@@ -65,7 +65,7 @@ public class TestDataGenerator {
 					sb.append("  [カラムフォーマット]").append(lineseparator);
 					sb.append("  出力するカラム１つあたりの出力内容を指定する。").append(lineseparator);
 					sb.append(lineseparator);
-					sb.append("  出力する内容は複数定義することができ、カラムフォーマット１|カラムフォーマット２のように定義できる。").append(lineseparator);
+					sb.append("  出力する内容は複数定義することができ、カラムフォーマット１|カラムフォーマット２のようにパイプ区切りで定義できる。").append(lineseparator);
 					sb.append("  例えば、aaaを90件、bbbを10件という方式で指定する場合、aaa=90|bbb=10 と入力する。").append(lineseparator);
 					sb.append("  その他の件数指定は以下を参照。").append(lineseparator);
 					sb.append(lineseparator);
@@ -78,7 +78,7 @@ public class TestDataGenerator {
 						sb.append(lineseparator);
 					}
 					sb.append("  また、aaa等の値は上記のように固定値で指定することもできるが、関数を使用し、その処理結果の値を出力することもできる。").append(lineseparator);
-					sb.append("  関数を使用する場合、RIGHT(abcde,3)のように関数名(引数)と入力する。RIGHT(ROW(),3)の関数をネストさせることも可能。").append(lineseparator);
+					sb.append("  関数を使用する場合、RIGHT(abcde;3)のように関数名(引数)と入力する。RIGHT(ROW();3)の関数をネストさせることも可能。").append(lineseparator);
 					sb.append("  その他の関数指定は以下を参照。").append(lineseparator);
 					sb.append(lineseparator);
 					sb.append("    [値指定]").append(lineseparator);
@@ -106,7 +106,7 @@ public class TestDataGenerator {
 					sb.append("\"aaa\",1234,2001/01/01").append(lineseparator);
 					sb.append("\"aaa\",1234,2001/01/01").append(lineseparator);
 					sb.append(lineseparator);
-					sb.append("\"aaa\"=5;\"bbb\"=5,1234=50%|5678=50%,2001/01/01=5|2001/01/02=30%|2001/01/03").append(" と設定、出力件数を10件と指定した場合").append(lineseparator);
+					sb.append("\"aaa\"=5|\"bbb\"=5,1234=50%|5678=50%,2001/01/01=5|2001/01/02=30%|2001/01/03").append(" と設定、出力件数を10件と指定した場合").append(lineseparator);
 					sb.append("以下のようなレコードが出力される。").append(lineseparator);
 					sb.append("\"aaa\",1234,2001/01/01").append(lineseparator);
 					sb.append("\"aaa\",1234,2001/01/01").append(lineseparator);
@@ -160,13 +160,16 @@ public class TestDataGenerator {
 			outputStream.flush();
 			outputStream.close();
 		} catch (FileNotFoundException e) {
-			System.out.println("ファイル出力処理に失敗しました。。:" + e.getMessage());
+			System.out.println("ファイル出力処理に失敗しました。:" + e.getMessage());
 			System.exit(1);
 		} catch (UnsupportedEncodingException e) {
-			System.out.println("ファイル出力処理に失敗しました。。:" + e.getMessage());
+			System.out.println("ファイル出力処理に失敗しました。:" + e.getMessage());
 			System.exit(1);
 		} catch (IOException e) {
-			System.out.println("ファイル出力処理に失敗しました。。:" + e.getMessage());
+			System.out.println("ファイル出力処理に失敗しました。:" + e.getMessage());
+			System.exit(1);
+		} catch (IllegalArgumentException e) {
+			System.out.println("ファイル出力処理に失敗しました。:" + e.getMessage());
 			System.exit(1);
 		}
 	}

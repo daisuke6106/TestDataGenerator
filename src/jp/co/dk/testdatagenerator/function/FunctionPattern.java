@@ -55,6 +55,66 @@ public enum FunctionPattern {
 		}
 	}),
 	
+	/** 加算した結果を返します。 */
+	ADD("^ADD\\((.*?);(.*?)\\)$",
+		"ADD",
+		"加算した結果を返します。",
+		"ADD(10;20)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Addition(arguments);
+		}
+	}),
+	
+	/** 減算した結果を返します。 */
+	SUBTRACT("^SUBTRACT\\((.*?);(.*?)\\)$",
+		"SUBTRACT",
+		"減算した結果を返します。",
+		"SUBTRACT(10;20)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Subtraction(arguments);
+		}
+	}),
+	
+	/** 乗算した結果を返します。 */
+	MULTIPLY("^MULTIPLY\\((.*?);(.*?)\\)$",
+		"MULTIPLY",
+		"乗算した結果を返します。",
+		"MULTIPLY(10;20)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Multiplication(arguments);
+		}
+	}),
+	
+	/** 除算した結果を返します。 */
+	DIVIDE("^DIVIDE\\((.*?);(.*?)\\)$",
+		"DIVIDE",
+		"除算した結果を返します。",
+		"DIVIDE(10;20)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Division(arguments);
+		}
+	}),
+	
+	/** 剰余した結果を返します。 */
+	REMAIND("^REMAIND\\((.*?);(.*?)\\)$",
+		"REMAIND",
+		"剰余した結果を返します。",
+		"REMAIND(10;20)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(String[] arguments) {
+			return new Remainder(arguments);
+		}
+	}),
+	
 	;
 	protected Pattern pattern;
 	

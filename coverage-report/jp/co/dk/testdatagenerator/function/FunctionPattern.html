@@ -11,7 +11,7 @@
   <table cellpadding='0' cellspacing='1'>
     <caption>TestDataGenerator/src/jp/co/dk/testdatagenerator/function/FunctionPattern.java</caption>
     <tr>
-      <td class='line'>1</td><td class='count'>295</td>
+      <td class='line'>1</td><td class='count'>300</td>
       <td><pre class='prettyprint covered' id='l1s0'>package jp.co.dk.testdatagenerator.function;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
@@ -211,157 +211,382 @@ import java.util.regex.Pattern;
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'>58</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	;</pre></td>
+      <td><pre class='comment'>	/** 加算した結果を返します。 */</pre></td>
     </tr>
     <tr>
       <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	ADD("^ADD\\((.*?);(.*?)\\)$",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"ADD",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"加算した結果を返します。",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"ADD(10;20)",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l63s0'>		new FunctionFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>64</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>65</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>66</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l66s0'>			return new Addition(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>67</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>68</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>70</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 減算した結果を返します。 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	SUBTRACT("^SUBTRACT\\((.*?);(.*?)\\)$",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"SUBTRACT",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>73</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"減算した結果を返します。",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>74</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"SUBTRACT(10;20)",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>75</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l75s0'>		new FunctionFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>76</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>77</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l78s0'>			return new Subtraction(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>80</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>82</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 乗算した結果を返します。 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>83</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	MULTIPLY("^MULTIPLY\\((.*?);(.*?)\\)$",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"MULTIPLY",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>85</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"乗算した結果を返します。",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"MULTIPLY(10;20)",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l87s0'>		new FunctionFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>88</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>89</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>90</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l90s0'>			return new Multiplication(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>91</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>92</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>94</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 除算した結果を返します。 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>95</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	DIVIDE("^DIVIDE\\((.*?);(.*?)\\)$",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>96</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"DIVIDE",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>97</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"除算した結果を返します。",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>98</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"DIVIDE(10;20)",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>99</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l99s0'>		new FunctionFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>100</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>101</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>102</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l102s0'>			return new Division(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>103</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>104</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>106</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 剰余した結果を返します。 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>107</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	REMAIND("^REMAIND\\((.*?);(.*?)\\)$",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>108</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"REMAIND",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>109</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"剰余した結果を返します。",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>110</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		"REMAIND(10;20)",</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>111</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l111s0'>		new FunctionFactory(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>112</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>113</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		public AbstractFunction createFunction(String[] arguments) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>114</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l114s0'>			return new Remainder(arguments);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>115</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>116</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>118</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected Pattern pattern;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>61</td><td>&nbsp;</td>
+      <td class='line'>121</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected FunctionFactory functionFactory;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>63</td><td>&nbsp;</td>
+      <td class='line'>123</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected String name;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>65</td><td>&nbsp;</td>
+      <td class='line'>125</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected String manualMessage;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>67</td><td>&nbsp;</td>
+      <td class='line'>127</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected String example;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>69</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l69s0'>	FunctionPattern(String pattern, String name, String manualMessage, String example, FunctionFactory functionFactory) {</pre></td>
+      <td class='line'>129</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l129s0'>	FunctionPattern(String pattern, String name, String manualMessage, String example, FunctionFactory functionFactory) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>70</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l70s0'>		this.pattern         = Pattern.compile(pattern);</pre></td>
+      <td class='line'>130</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l130s0'>		this.pattern         = Pattern.compile(pattern);</pre></td>
     </tr>
     <tr>
-      <td class='line'>71</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l71s0'>		this.name            = name;</pre></td>
+      <td class='line'>131</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l131s0'>		this.name            = name;</pre></td>
     </tr>
     <tr>
-      <td class='line'>72</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l72s0'>		this.manualMessage   = manualMessage;</pre></td>
+      <td class='line'>132</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l132s0'>		this.manualMessage   = manualMessage;</pre></td>
     </tr>
     <tr>
-      <td class='line'>73</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l73s0'>		this.example         = example;</pre></td>
+      <td class='line'>133</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l133s0'>		this.example         = example;</pre></td>
     </tr>
     <tr>
-      <td class='line'>74</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l74s0'>		this.functionFactory = functionFactory;</pre></td>
+      <td class='line'>134</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l134s0'>		this.functionFactory = functionFactory;</pre></td>
     </tr>
     <tr>
-      <td class='line'>75</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l75s0'>	}</pre></td>
+      <td class='line'>135</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l135s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>77</td><td>&nbsp;</td>
+      <td class='line'>137</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public AbstractFunction match(String format) {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>1191</td>
+      <td></td><td class='count'>2646</td>
       <td class='paths'>
         <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 3/3</span>
-        <span class='covered' onclick="showPath(this,'l78s0 l78s1')">A: 4</span>
-        <span class='covered' onclick="showPath(this,'l78s0 l79s0 l80s0 l80s1')">B: 1183</span>
-        <span class='covered' onclick="showPath(this,'l78s0 l79s0 l80s0 l81s0 l82s0 l86s0')">C: 4</span>
+        <span class='covered' onclick="showPath(this,'l138s0 l138s1')">A: 4</span>
+        <span class='covered' onclick="showPath(this,'l138s0 l139s0 l140s0 l140s1')">B: 2638</span>
+        <span class='covered' onclick="showPath(this,'l138s0 l139s0 l140s0 l141s0 l142s0 l146s0')">C: 4</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>78</td><td class='count'>1196</td>
-      <td><pre class='prettyprint jmp'>		<span id='l78s0' title='Executions: 1196' class='covered'>if (format == null)</span> <span id='l78s1' title='Executions: 4' class='covered'>return null;</span></pre></td>
+      <td class='line'>138</td><td class='count'>2651</td>
+      <td><pre class='prettyprint jmp'>		<span id='l138s0' title='Executions: 2651' class='covered'>if (format == null)</span> <span id='l138s1' title='Executions: 4' class='covered'>return null;</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>79</td><td class='count'>1192</td>
-      <td><pre class='prettyprint covered' id='l79s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
+      <td class='line'>139</td><td class='count'>2647</td>
+      <td><pre class='prettyprint covered' id='l139s0'>		Matcher matcher = this.pattern.matcher(format);</pre></td>
     </tr>
     <tr>
-      <td class='line'>80</td><td class='count'>1192</td>
-      <td><pre class='prettyprint jmp'>		<span id='l80s0' title='Executions: 1192' class='covered'>if (!matcher.find()) return null;</span></pre></td>
+      <td class='line'>140</td><td class='count'>2647</td>
+      <td><pre class='prettyprint jmp'>		<span id='l140s0' title='Executions: 2647' class='covered'>if (!matcher.find()) return null;</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>81</td><td class='count'>9</td>
-      <td><pre class='prettyprint covered' id='l81s0'>		String[] arguments = new String[matcher.groupCount()];</pre></td>
+      <td class='line'>141</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l141s0'>		String[] arguments = new String[matcher.groupCount()];</pre></td>
     </tr>
     <tr>
-      <td class='line'>82</td><td class='count'>25</td>
-      <td><pre class='prettyprint covered' id='l82s0'>		for (int i=0; i&lt;arguments.length; i++) {</pre></td>
+      <td class='line'>142</td><td class='count'>25</td>
+      <td><pre class='prettyprint covered' id='l142s0'>		for (int i=0; i&lt;arguments.length; i++) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>83</td><td class='count'>16</td>
-      <td><pre class='prettyprint covered' id='l83s0'>			arguments[i] = matcher.group(i+1);</pre></td>
+      <td class='line'>143</td><td class='count'>16</td>
+      <td><pre class='prettyprint covered' id='l143s0'>			arguments[i] = matcher.group(i+1);</pre></td>
     </tr>
     <tr>
-      <td class='line'>84</td><td>&nbsp;</td>
+      <td class='line'>144</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>85</td><td>&nbsp;</td>
+      <td class='line'>145</td><td>&nbsp;</td>
       <td><pre class='comment'>//		String[] arguments = pattern.split(format, -1);</pre></td>
     </tr>
     <tr>
-      <td class='line'>86</td><td class='count'>9</td>
-      <td><pre class='prettyprint covered' id='l86s0'>		return this.functionFactory.createFunction(arguments);</pre></td>
+      <td class='line'>146</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l146s0'>		return this.functionFactory.createFunction(arguments);</pre></td>
     </tr>
     <tr>
-      <td class='line'>87</td><td>&nbsp;</td>
+      <td class='line'>147</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>89</td><td>&nbsp;</td>
+      <td class='line'>149</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public String getName() {</pre></td>
     </tr>
     <tr>
-      <td class='line'>90</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l90s0'>		return this.name;</pre></td>
+      <td class='line'>150</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l150s0'>		return this.name;</pre></td>
     </tr>
     <tr>
-      <td class='line'>91</td><td>&nbsp;</td>
+      <td class='line'>151</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>93</td><td>&nbsp;</td>
+      <td class='line'>153</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public String getManualMessage(String linesep) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>94</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l94s0'>		return this.manualMessage;</pre></td>
+      <td class='line'>154</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l154s0'>		return this.manualMessage;</pre></td>
     </tr>
     <tr>
-      <td class='line'>95</td><td>&nbsp;</td>
+      <td class='line'>155</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>97</td><td>&nbsp;</td>
+      <td class='line'>157</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public String getExample(String linesep) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>98</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l98s0'>		return this.example;</pre></td>
+      <td class='line'>158</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l158s0'>		return this.example;</pre></td>
     </tr>
     <tr>
-      <td class='line'>99</td><td>&nbsp;</td>
+      <td class='line'>159</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>101</td><td>&nbsp;</td>
+      <td class='line'>161</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>
