@@ -7,5 +7,5 @@
 	<classpathentry kind="lib" path="lib/test/jmockit.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TestTemplate"/>
 	<classpathentry kind="lib" path="lib/test/testtemplate_all.jar"/>
-	<classpathentry kind="output" path="e_classes"/>
+	<classpathentry kind="output" path="classes"/>
 </classpath>
