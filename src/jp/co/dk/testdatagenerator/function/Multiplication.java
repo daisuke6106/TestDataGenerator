@@ -1,8 +1,10 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.List;
+
 public class Multiplication extends Calculation {
 	
-	Multiplication(String... arguments) throws IllegalArgumentException {
+	Multiplication(List<Value> arguments) throws IllegalArgumentException {
 		super(arguments);
 	}
 	

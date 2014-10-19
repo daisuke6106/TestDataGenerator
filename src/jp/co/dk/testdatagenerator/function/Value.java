@@ -1,27 +1,16 @@
 package jp.co.dk.testdatagenerator.function;
 
-
 public class Value {
 	
 	protected String data;
 	
-	protected AbstractFunction function;
-	
-	public Value(String data) {
+	public Value(String data) throws IllegalArgumentException {
 		if (data == null) throw new IllegalArgumentException("can't create Value instance. data is not set.");
 		this.data = data;
-		for (FunctionPattern pattern : FunctionPattern.values()) {
-			AbstractFunction function = pattern.match(data);
-			if (function != null) this.function = function;
-		}
 	}
 	
 	public String getValue(long nowIndex) {
-		if (this.function != null) {
-			return this.function.getValue(nowIndex);
-		} else {
-			return this.data.replace("@{count}", Long.toString(nowIndex));
-		}
+		return this.data;
 	}
 	
 	@Override

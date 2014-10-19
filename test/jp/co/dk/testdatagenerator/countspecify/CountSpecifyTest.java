@@ -80,4 +80,48 @@ public class CountSpecifyTest {
 			assertThat(this.sut.toString(), is("a"));
 		}
 	}
+	
+	public static class 関数がひとつ定義されている場合＿引数なし extends TestCaseTemplate{
+		
+		protected CountSpecify sut ;
+		
+		@Before
+		public void init() {
+			this.sut = new CountSpecify(10L, "ROW()") {};
+			assertThat(this.sut.outputCount     , is(10L));
+			assertThat(this.sut.value.toString(), is("ROW"));
+		}
+		
+		@Test
+        public void getValue() {
+			assertThat(this.sut.getValue(10L), is("10"));
+        }
+		
+		@Test
+		public void testToString() {
+			assertThat(this.sut.toString(), is("ROW"));
+		}
+	}
+
+	public static class 関数がひとつ定義されている場合＿引数あり extends TestCaseTemplate{
+		
+		protected CountSpecify sut ;
+		
+		@Before
+		public void init() {
+			this.sut = new CountSpecify(10L, "ADD(1;1)") {};
+			assertThat(this.sut.outputCount     , is(10L));
+			assertThat(this.sut.value.toString(), is("ADD"));
+		}
+		
+		@Test
+        public void getValue() {
+			assertThat(this.sut.getValue(0L), is("2"));
+        }
+		
+		@Test
+		public void testToString() {
+			assertThat(this.sut.toString(), is("ADD"));
+		}
+	}
 }

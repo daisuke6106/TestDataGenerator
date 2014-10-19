@@ -1,19 +1,18 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.List;
+
 public abstract class Calculation extends AbstractFunction {
 	
 	protected Value value1;
 	
 	protected Value value2;
 	
-	Calculation(String... arguments) throws IllegalArgumentException {
+	Calculation(List<Value> arguments) throws IllegalArgumentException {
 		super(arguments);
-		if (arguments.length != 2) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
-		String value1 = arguments[0];
-		String value2 = arguments[1];
-		if (value1 == null || value2 == null) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
-		this.value1 = new Value(value1);
-		this.value2 = new Value(value2);
+		if (arguments.size() != 2) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
+		this.value1 = arguments.get(0);
+		this.value2 = arguments.get(1);
 	}
 	
 	@Override

@@ -1,8 +1,10 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.List;
+
 public class Remainder extends Calculation {
 	
-	Remainder(String... arguments) throws IllegalArgumentException {
+	Remainder(List<Value> arguments) throws IllegalArgumentException {
 		super(arguments);
 	}
 	

@@ -1,8 +1,10 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.List;
+
 public class Division extends Calculation {
 	
-	Division(String... arguments) throws IllegalArgumentException {
+	Division(List<Value> arguments) throws IllegalArgumentException {
 		super(arguments);
 	}
 	

@@ -1,8 +1,10 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.List;
+
 public class Subtraction extends Calculation {
 	
-	Subtraction(String... arguments) throws IllegalArgumentException {
+	Subtraction(List<Value> arguments) throws IllegalArgumentException {
 		super(arguments);
 	}
 	

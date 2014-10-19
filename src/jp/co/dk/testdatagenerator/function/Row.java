@@ -11,6 +11,4 @@ public class Row extends AbstractFunction {
 	protected String getValue(long nowIndex) {
 		return Long.toString(nowIndex);
 	}
-
-
 }

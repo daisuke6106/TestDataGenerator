@@ -1,7 +1,9 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.List;
+
 public interface FunctionFactory {
 	
-	AbstractFunction createFunction(String[] arguments);
+	AbstractFunction createFunction(List<Value> arguments);
 	
 }

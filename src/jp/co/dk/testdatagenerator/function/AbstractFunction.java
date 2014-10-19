@@ -1,17 +1,18 @@
 package jp.co.dk.testdatagenerator.function;
 
 import java.util.Arrays;
+import java.util.List;
 
 public abstract class AbstractFunction {
 	
-	protected String[] arguments;
+	protected List<Value> arguments;
 	
 	AbstractFunction() {
 		
 	}
 	
-	AbstractFunction(String... arguments) throws IllegalArgumentException {
-		if (arguments == null || arguments.length == 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
+	AbstractFunction(List<Value> arguments) throws IllegalArgumentException {
+		if (arguments == null || arguments.size() == 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");
 		this.arguments = arguments;
 	}
 	
