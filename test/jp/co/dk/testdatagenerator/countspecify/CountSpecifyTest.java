@@ -102,8 +102,30 @@ public class CountSpecifyTest {
 			assertThat(this.sut.toString(), is("ROW"));
 		}
 	}
+	
+	public static class 関数がひとつ定義されている場合_引数あり_単数 extends TestCaseTemplate{
+		
+		protected CountSpecify sut ;
+		
+		@Before
+		public void init() {
+			this.sut = new CountSpecify(10L, "ADD(1)") {};
+			assertThat(this.sut.outputCount     , is(10L));
+			assertThat(this.sut.value.toString(), is("ADD"));
+		}
+		
+		@Test
+        public void getValue() {
+			assertThat(this.sut.getValue(0L), is("2"));
+        }
+		
+		@Test
+		public void testToString() {
+			assertThat(this.sut.toString(), is("ADD"));
+		}
+	}
 
-	public static class 関数がひとつ定義されている場合＿引数あり extends TestCaseTemplate{
+	public static class 関数がひとつ定義されている場合_引数あり_複数 extends TestCaseTemplate{
 		
 		protected CountSpecify sut ;
 		
@@ -117,6 +139,28 @@ public class CountSpecifyTest {
 		@Test
         public void getValue() {
 			assertThat(this.sut.getValue(0L), is("2"));
+        }
+		
+		@Test
+		public void testToString() {
+			assertThat(this.sut.toString(), is("ADD"));
+		}
+	}
+	
+	public static class 関数がひとつ定義されている場合_引数あり且つ関数_単数 extends TestCaseTemplate{
+		
+		protected CountSpecify sut ;
+		
+		@Before
+		public void init() {
+			this.sut = new CountSpecify(10L, "ADD(ADD(1;1);1)") {};
+			assertThat(this.sut.outputCount     , is(10L));
+			assertThat(this.sut.value.toString(), is("ADD"));
+		}
+		
+		@Test
+        public void getValue() {
+			assertThat(this.sut.getValue(0L), is("3"));
         }
 		
 		@Test

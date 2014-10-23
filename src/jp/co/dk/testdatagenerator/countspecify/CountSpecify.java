@@ -20,13 +20,14 @@ public abstract class CountSpecify {
 		if (outputCount < 0 || value == null) throw new IllegalArgumentException("can't create CountSpecifyType instance.");
 		this.outputCount = outputCount;
 		Deque<Character> formatQue = new LinkedList<Character>();
-		for (char chara : value.toCharArray()) formatQue.offer(new Character(chara));
-		List<Value> values = this.createValues(formatQue);
+		char[] valueArray = value.toCharArray();
+		for (int i=0; i<valueArray.length; i++) formatQue.offer(new Character(i, valueArray[i]));
+		List<Value> values = this.createValues(formatQue, false);
 		if (values.size() > 1) throw new IllegalArgumentException("関数は複数定義できません。");
 		this.value = values.get(0);
 	}
 	
-	protected List<Value> createValues(Deque<Character> formatQue) throws IllegalArgumentException {
+	protected List<Value> createValues(Deque<Character> formatQue, boolean isNest) throws IllegalArgumentException {
 		List<Value>   result           = new ArrayList<Value>();
 		StringBuilder value            = new StringBuilder();
 		boolean       isEscaped        = false;
@@ -36,15 +37,15 @@ public abstract class CountSpecify {
 		List<Value> childValues = new ArrayList<Value>();
 		
 		while(formatQue.peek() != null) {
-			char chara = formatQue.poll().charValue();
+			char chara = formatQue.poll().getCharacter();
 			if (chara == '(') {
 				isStartFunction = true;
-				childValues = createValues(formatQue);
+				childValues = createValues(formatQue, true);
 				
 			} else if (chara == ')') {
 				isFinishFunction = true;
 				
-				if (isStartFunction == false)formatQue.offerFirst(new Character(')'));
+//				if (isStartFunction == false)formatQue.offerFirst(new Character(')'));
 				
 				if (value.length() == 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(""));
 				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数名が設定されてません。");
@@ -53,23 +54,24 @@ public abstract class CountSpecify {
 				
 				if (value.length() != 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(value.toString()));
 				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数がクローズされてません。");
-				if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数が開始されてません。");
+				if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) result.add(new Value(value.toString()));
 				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == true ) result.add(new FunctionValue(value.toString(), childValues));
 				
 				return result;
 				
-			} else if (chara == ';'){
-//				
-//				if (value.length() == 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(""));
-//				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数名が設定されてません。");
-//				if (value.length() == 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
-//				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
-//				
-//				if (value.length() != 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(value.toString()));
-//				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数がクローズされてません。");
-//				if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数が開始されてません。");
-//				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == true ) result.add(new FunctionValue(value.toString(), childValues));
-//				
+			} 
+			else if (chara == ';'){
+				
+				if (value.length() == 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(""));
+				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数名が設定されてません。");
+				if (value.length() == 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
+				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
+				
+				if (value.length() != 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(value.toString()));
+				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数がクローズされてません。");
+				if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数が開始されてません。");
+				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == true ) result.add(new FunctionValue(value.toString(), childValues));
+				
 				isStartFunction  = false;
 				isFinishFunction = false;
 				
@@ -77,7 +79,8 @@ public abstract class CountSpecify {
 				childValues      = new ArrayList<Value>();
 				
 				
-			} else {
+			} 
+			else {
 				value.append(chara);
 			}
 		}
@@ -106,3 +109,18 @@ public abstract class CountSpecify {
 	
 }
 
+class Character {
+	
+	protected int index;
+	
+	protected char character;
+	
+	public Character(int index, char character){
+		this.index = index;
+		this.character = character;
+	}
+	
+	char getCharacter() {
+		return this.character;
+	}
+}
