@@ -22,10 +22,10 @@ public abstract class AbstractFunction {
 		if (this.arguments == null) {
 			sb.append("[]");
 		} else {
-			sb.append(Arrays.asList(this.arguments).toString());
+			sb.append(this.arguments.toString());
 		}
 		return sb.toString();
 	}
 	protected abstract String getName();
-	protected abstract String getValue(long nowCount);
+	protected abstract String getValue(long nowCount) throws IllegalArgumentException;
 }

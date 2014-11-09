@@ -27,6 +27,33 @@ public abstract class CountSpecify {
 		this.value = values.get(0);
 	}
 	
+//	Values createValues(Deque<Character> formatQue) throws Exception {
+//		StringBuilder sb = new StringBuilder();
+//		List<Values> values = new ArrayList<Values>();
+//		boolean isStart  = false;
+//		boolean isFinish = false;
+//		while(formatQue.peek()!=null) {
+//			Character characterObj = formatQue.poll();
+//			int  index = characterObj.getIndex();
+//			char chara = characterObj.getCharacter();
+//			switch (chara) {
+//				case '(':
+//					isStart = true;
+//					values.add(createValues(formatQue));
+//					break;
+//				case ')':
+//					isFinish = true;
+//					if (isStart == false)formatQue.offerFirst(characterObj);
+//					return new Values(sb.toString(), values);
+//				case ';':
+//					break;
+//				default:
+//					sb.append(chara);
+//			}
+//		}
+//		throw new Exception("aaa");
+//	}
+	
 	protected List<Value> createValues(Deque<Character> formatQue, boolean isNest) throws IllegalArgumentException {
 		List<Value>   result           = new ArrayList<Value>();
 		StringBuilder value            = new StringBuilder();
@@ -37,51 +64,79 @@ public abstract class CountSpecify {
 		List<Value> childValues = new ArrayList<Value>();
 		
 		while(formatQue.peek() != null) {
-			char chara = formatQue.poll().getCharacter();
-			if (chara == '(') {
-				isStartFunction = true;
-				childValues = createValues(formatQue, true);
-				
-			} else if (chara == ')') {
-				isFinishFunction = true;
-				
-//				if (isStartFunction == false)formatQue.offerFirst(new Character(')'));
-				
-				if (value.length() == 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(""));
-				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数名が設定されてません。");
-				if (value.length() == 0 && isStartFunction == false && isFinishFunction == true ) result.add(new Value(""));
-				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
-				
-				if (value.length() != 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(value.toString()));
-				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数がクローズされてません。");
-				if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) result.add(new Value(value.toString()));
-				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == true ) result.add(new FunctionValue(value.toString(), childValues));
-				
-				return result;
-				
-			} 
-			else if (chara == ';'){
-				
-				if (value.length() == 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(""));
-				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数名が設定されてません。");
-				if (value.length() == 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
-				if (value.length() == 0 && isStartFunction == true  && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
-				
-				if (value.length() != 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(value.toString()));
-				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数がクローズされてません。");
-				if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数が開始されてません。");
-				if (value.length() != 0 && isStartFunction == true  && isFinishFunction == true ) result.add(new FunctionValue(value.toString(), childValues));
-				
-				isStartFunction  = false;
-				isFinishFunction = false;
-				
-				value            = new StringBuilder();
-				childValues      = new ArrayList<Value>();
-				
-				
-			} 
-			else {
-				value.append(chara);
+			Character characterObj = formatQue.poll();
+			int  index = characterObj.index;
+			char chara = characterObj.getCharacter();
+			switch (chara) {
+				case '(': 
+					isStartFunction = true;
+					childValues = createValues(formatQue, true);
+					break;
+					
+				case ')' :
+					isFinishFunction = true;
+					
+					if (isNest) {
+						if (value.length() == 0) {
+							if (isStartFunction == false && isFinishFunction == true ) {
+								formatQue.offerFirst(characterObj);
+								result.add(new Value(""));
+							}
+							if (isStartFunction == true  && isFinishFunction == true ) {
+								throw new IllegalArgumentException("関数名が設定されてません。");
+							}
+						} else {
+							if (isStartFunction == false && isFinishFunction == true ) {
+								formatQue.offerFirst(characterObj);
+								result.add(new Value(value.toString()));
+								
+							}
+							if (isStartFunction == true  && isFinishFunction == true ) {
+								result.add(new FunctionValue(value.toString(), childValues));
+							}
+						}
+					} else {
+						if (value.length() == 0) {
+							if (isStartFunction == false && isFinishFunction == true ) {
+								formatQue.offerFirst(characterObj);
+								result.add(new Value(""));
+							}
+							if (isStartFunction == true  && isFinishFunction == true ) {
+								throw new IllegalArgumentException("関数名が設定されてません。");
+							}
+						} else {
+							if (isStartFunction == false && isFinishFunction == true ) {
+								//formatQue.offerFirst(characterObj);
+								//result.add(new Value(value.toString()));
+								throw new IllegalArgumentException("関数が正しく終了してません。");
+							}
+							if (isStartFunction == true  && isFinishFunction == true ) {
+								result.add(new FunctionValue(value.toString(), childValues));
+							}
+						}
+					}
+					
+					
+					return result;
+					
+//				case ';':
+//					if (value.length() == 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(""));
+//					if (value.length() == 0 && isStartFunction == true  && isFinishFunction == false) throw new IllegalArgumentException("関数名が設定されてません。");
+//					if (value.length() == 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
+//					if (value.length() == 0 && isStartFunction == true  && isFinishFunction == true ) throw new IllegalArgumentException("関数名が設定されてません。");
+//
+//					if (value.length() != 0 && isStartFunction == false && isFinishFunction == false) result.add(new Value(value.toString()));
+//					if (value.length() != 0 && isStartFunction == true  && isFinishFunction == false) result.add(childValues.get(0));
+//					if (value.length() != 0 && isStartFunction == false && isFinishFunction == true ) throw new IllegalArgumentException("関数が開始されてません。");
+//					if (value.length() != 0 && isStartFunction == true  && isFinishFunction == true ) result.add(new FunctionValue(value.toString(), childValues));
+//					
+//					isStartFunction  = false;
+//					isFinishFunction = false;
+//					value            = new StringBuilder();
+//					childValues      = new ArrayList<Value>();
+//					break;
+				default:
+					value.append(chara);
 			}
 		}
 		
@@ -120,7 +175,16 @@ class Character {
 		this.character = character;
 	}
 	
+	int getIndex() {
+		return this.index;
+	}
+	
 	char getCharacter() {
 		return this.character;
+	}
+	
+	@Override
+	public String toString() {
+		return String.valueOf(this.character);
 	}
 }

@@ -7,7 +7,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ 
 	AbstractFunctionTest.class,
-	FunctionPatternTest.class,
 	ConcatenateTest.class,
 	RightTest.class,
 	LeftTest.class,

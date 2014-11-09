@@ -1,5 +1,8 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Before;
@@ -17,7 +20,7 @@ public class AbstractFunctionTest {
 		@Test
 		public void 引数がnullの場合() {
 			try {
-        		this.sut = new AbstractFunction((String[])null){
+        		this.sut = new AbstractFunction((List<Value>)null){
 					@Override
 					public String getName() {
 						return "DummyName";
@@ -35,7 +38,7 @@ public class AbstractFunctionTest {
 		@Test
 		public void 引数の配列が空の場合() {
 			try {
-        		this.sut = new AbstractFunction(new String[0]){
+        		this.sut = new AbstractFunction(new ArrayList<Value>()){
 					@Override
 					public String getName() {
 						return "DummyName";
@@ -86,7 +89,9 @@ public class AbstractFunctionTest {
 		@Before
 		public void 引数のデータがnullの場合例外が発生すること() {
 			try {
-        		this.sut = new AbstractFunction("aaa"){
+				List<Value> values = new ArrayList<Value>();
+				values.add(new Value("aaa"));
+        		this.sut = new AbstractFunction(values){
 					@Override
 					public String getName() {
 						return "DummyName";
@@ -95,8 +100,8 @@ public class AbstractFunctionTest {
 					protected String getValue(long nowCount) {
 						return "DummyValue";
 					}};
-				assertThat(this.sut.arguments.length, is(1));
-				assertThat(this.sut.arguments[0]    , is("aaa"));
+				assertThat(this.sut.arguments.size()           , is(1));
+				assertThat(this.sut.arguments.get(0).toString(), is("aaa"));
 				
 			} catch (IllegalArgumentException e) {
 				fail(e);
@@ -116,7 +121,11 @@ public class AbstractFunctionTest {
 		@Before
 		public void 引数のデータがnullの場合例外が発生すること() {
 			try {
-        		this.sut = new AbstractFunction("aaa", "bbb", "ccc"){
+				List<Value> values = new ArrayList<Value>();
+				values.add(new Value("aaa"));
+				values.add(new Value("bbb"));
+				values.add(new Value("ccc"));
+        		this.sut = new AbstractFunction(values){
 					@Override
 					public String getName() {
 						return "DummyName";
@@ -126,10 +135,10 @@ public class AbstractFunctionTest {
 						return "DummyValue";
 					}};
 				
-				assertThat(this.sut.arguments.length, is(3));
-				assertThat(this.sut.arguments[0]    , is("aaa"));
-				assertThat(this.sut.arguments[1]    , is("bbb"));
-				assertThat(this.sut.arguments[2]    , is("ccc"));
+				assertThat(this.sut.arguments.size(), is(3));
+				assertThat(this.sut.arguments.get(0).toString(), is("aaa"));
+				assertThat(this.sut.arguments.get(1).toString(), is("bbb"));
+				assertThat(this.sut.arguments.get(2).toString(), is("ccc"));
 				
 			} catch (IllegalArgumentException e) {
 				fail(e);

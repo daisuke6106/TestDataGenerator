@@ -24,7 +24,7 @@ public class CountSpecifyTest {
         }
 		
 		@Test
-        public void 引数の値がNULL() {
+        public void 引数の値がNULLの場合() {
         	try {
         		new CountSpecify(0L, null) {};
 				fail();
@@ -33,6 +33,85 @@ public class CountSpecifyTest {
 			}
         }
 		
+		@Test
+		public void 不正な引数が定義されている場合() {
+			try {
+				new CountSpecify(10L, "ADD(1)") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("ADDの引数が不正です。"));
+			}
+		}
+		
+		@Test
+		public void 不正な引数が定義されている場合＿() {
+			try {
+				new CountSpecify(10L, "ADD(1))") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("ADDの引数が不正です。"));
+			}
+		}
+		
+		@Test
+		public void 関数が正しく定義されていない場合＿０１() {
+			try {
+				new CountSpecify(10L, "ADD(") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("関数がクローズされてません。"));
+			}
+		}
+		
+		@Test
+		public void 関数が正しく定義されていない場合＿０２() {
+			try {
+				new CountSpecify(10L, "ADD)") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("関数が正しく終了してません。"));
+			}
+		}
+		
+		@Test
+		public void 関数が正しく定義されていない場合＿０３() {
+			try {
+				new CountSpecify(10L, "ADD(test") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("関数がクローズされてません。"));
+			}
+		}
+		
+		@Test
+		public void 関数が正しく定義されていない場合＿０４() {
+			try {
+				new CountSpecify(10L, "ADDtest)") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("関数が正しく終了してません。"));
+			}
+		}
+		
+		@Test
+		public void 関数が正しく定義されていない場合＿０５() {
+			try {
+				new CountSpecify(10L, "COMMA(ROW()") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("関数がクローズされてません。"));
+			}
+		}
+		
+		@Test
+		public void 関数が正しく定義されていない場合＿０６() {
+			try {
+				new CountSpecify(10L, "COMMA(ROW))") {};
+				fail();
+			} catch (IllegalArgumentException e) {
+				assertThat(e.getMessage(), is("関数がクローズされてません。"));
+			}
+		}
 	}
 	
 	
@@ -81,7 +160,7 @@ public class CountSpecifyTest {
 		}
 	}
 	
-	public static class 関数がひとつ定義されている場合＿引数なし extends TestCaseTemplate{
+	public static class 関数がひとつ定義されている場合_引数なし extends TestCaseTemplate{
 		
 		protected CountSpecify sut ;
 		
@@ -103,69 +182,91 @@ public class CountSpecifyTest {
 		}
 	}
 	
-	public static class 関数がひとつ定義されている場合_引数あり_単数 extends TestCaseTemplate{
+	public static class 関数がひとつ定義されている場合_単引数 extends TestCaseTemplate{
 		
 		protected CountSpecify sut ;
 		
 		@Before
 		public void init() {
-			this.sut = new CountSpecify(10L, "ADD(1)") {};
+			this.sut = new CountSpecify(10L, "COMMA(1234)") {};
 			assertThat(this.sut.outputCount     , is(10L));
-			assertThat(this.sut.value.toString(), is("ADD"));
+			assertThat(this.sut.value.toString(), is("COMMA"));
 		}
 		
 		@Test
         public void getValue() {
-			assertThat(this.sut.getValue(0L), is("2"));
+			assertThat(this.sut.getValue(10L), is("1,234"));
         }
 		
 		@Test
 		public void testToString() {
-			assertThat(this.sut.toString(), is("ADD"));
-		}
-	}
-
-	public static class 関数がひとつ定義されている場合_引数あり_複数 extends TestCaseTemplate{
-		
-		protected CountSpecify sut ;
-		
-		@Before
-		public void init() {
-			this.sut = new CountSpecify(10L, "ADD(1;1)") {};
-			assertThat(this.sut.outputCount     , is(10L));
-			assertThat(this.sut.value.toString(), is("ADD"));
-		}
-		
-		@Test
-        public void getValue() {
-			assertThat(this.sut.getValue(0L), is("2"));
-        }
-		
-		@Test
-		public void testToString() {
-			assertThat(this.sut.toString(), is("ADD"));
+			assertThat(this.sut.toString(), is("COMMA"));
 		}
 	}
 	
-	public static class 関数がひとつ定義されている場合_引数あり且つ関数_単数 extends TestCaseTemplate{
+	public static class 関数がネストで定義されている場合 extends TestCaseTemplate{
 		
 		protected CountSpecify sut ;
 		
 		@Before
 		public void init() {
-			this.sut = new CountSpecify(10L, "ADD(ADD(1;1);1)") {};
+			this.sut = new CountSpecify(10L, "COMMA(ROW())") {};
 			assertThat(this.sut.outputCount     , is(10L));
-			assertThat(this.sut.value.toString(), is("ADD"));
+			assertThat(this.sut.value.toString(), is("COMMA"));
 		}
 		
 		@Test
         public void getValue() {
-			assertThat(this.sut.getValue(0L), is("3"));
+			assertThat(this.sut.getValue(1234L), is("1,234"));
         }
 		
 		@Test
 		public void testToString() {
-			assertThat(this.sut.toString(), is("ADD"));
+			assertThat(this.sut.toString(), is("COMMA"));
 		}
 	}
+	
+//	public static class 関数がひとつ定義されている場合_引数あり_複数 extends TestCaseTemplate{
+//		
+//		protected CountSpecify sut ;
+//		
+//		@Before
+//		public void init() {
+//			this.sut = new CountSpecify(10L, "ADD(1;1)") {};
+//			assertThat(this.sut.outputCount     , is(10L));
+//			assertThat(this.sut.value.toString(), is("ADD"));
+//		}
+//		
+//		@Test
+//        public void getValue() {
+//			assertThat(this.sut.getValue(0L), is("2"));
+//        }
+//		
+//		@Test
+//		public void testToString() {
+//			assertThat(this.sut.toString(), is("ADD"));
+//		}
+//	}
+	
+//	public static class 関数がひとつ定義されている場合_引数あり且つ関数_単数 extends TestCaseTemplate{
+//		
+//		protected CountSpecify sut ;
+//		
+//		@Before
+//		public void init() {
+//			this.sut = new CountSpecify(10L, "ADD(ADD(1;1);1)") {};
+//			assertThat(this.sut.outputCount     , is(10L));
+//			assertThat(this.sut.value.toString(), is("ADD"));
+//		}
+//		
+//		@Test
+//        public void getValue() {
+//			assertThat(this.sut.getValue(0L), is("3"));
+//        }
+//		
+//		@Test
+//		public void testToString() {
+//			assertThat(this.sut.toString(), is("ADD"));
+//		}
+//	}
 }

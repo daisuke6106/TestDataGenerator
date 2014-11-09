@@ -18,113 +18,114 @@
     <tr>
       <td class='line'></td><td>&nbsp;</td>
       <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.Arrays;
+import java.util.List;
 </div><span>import ...</span></pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>5</td><td>&nbsp;</td>
+      <td class='line'>6</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>public abstract class AbstractFunction {</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>7</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String[] <span class='instance covered' title='Reads: 5 Writes: 38'>arguments</span>;</pre></td>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected List&lt;Value> <span class='instance uncovered' title='Reads: 0 Writes: 0'>arguments</span>;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>9</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l9s0'>	AbstractFunction() {</pre></td>
+      <td class='line'>10</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l10s0'>	AbstractFunction() {</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>11</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l11s0'>	}</pre></td>
+      <td class='line'>12</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l12s0'>	}</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>46</td>
+      <td></td><td class='count'>0</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 3/3</span>
-        <span class='covered' onclick="showPath(this,'l13s0 l14s0 l14s2')">A: 4</span>
-        <span class='covered' onclick="showPath(this,'l13s0 l14s0 l14s1 l14s2')">B: 4</span>
-        <span class='covered' onclick="showPath(this,'l13s0 l14s0 l14s1 l15s0 l16s0')">C: 38</span>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/3</span>
+        <span class='uncovered' onclick="showPath(this,'l14s0 l15s0 l15s2')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l14s0 l15s0 l15s1 l15s2')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l14s0 l15s0 l15s1 l16s0 l17s0')">C: 0</span>
       </td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>13</td><td class='count'>46</td>
-      <td><pre class='prettyprint covered' id='l13s0'>	AbstractFunction(String... arguments) throws IllegalArgumentException {</pre></td>
+      <td class='line'>14</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l14s0'>	AbstractFunction(List&lt;Value> arguments) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td class='line'>14</td><td class='count'>46</td>
-      <td><pre class='prettyprint jmp'>		<span id='l14s0' title='Executions: 46' class='covered'>if (arguments == null</span> || <span id='l14s1' title='Executions: 42' class='covered'>arguments.length == 0)</span> <span id='l14s2' title='Executions: 4' class='covered'>throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
+      <td class='line'>15</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l15s0' title='Executions: 0' class='uncovered'>if (arguments == null</span> || <span id='l15s1' title='Executions: 0' class='uncovered'>arguments.size() == 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>15</td><td class='count'>38</td>
-      <td><pre class='prettyprint covered' id='l15s0'>		this.arguments = arguments;</pre></td>
+      <td class='line'>16</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l16s0'>		this.arguments = arguments;</pre></td>
     </tr>
     <tr>
-      <td class='line'>16</td><td class='count'>38</td>
-      <td><pre class='prettyprint covered' id='l16s0'>	}</pre></td>
+      <td class='line'>17</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l17s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>18</td><td>&nbsp;</td>
+      <td class='line'>19</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
     </tr>
     <tr>
-      <td class='line'>19</td><td>&nbsp;</td>
+      <td class='line'>20</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	public String toString() {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>3</td>
+      <td></td><td class='count'>0</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
-        <span class='covered' onclick="showPath(this,'l20s0 l21s0 l24s0 l26s0')">A: 2</span>
-        <span class='covered' onclick="showPath(this,'l20s0 l21s0 l22s0 l26s0')">B: 1</span>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
+        <span class='uncovered' onclick="showPath(this,'l21s0 l22s0 l25s0 l27s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l21s0 l22s0 l23s0 l27s0')">B: 0</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>20</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l20s0'>		StringBuilder sb = new StringBuilder(this.getName());</pre></td>
+      <td class='line'>21</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l21s0'>		StringBuilder sb = new StringBuilder(this.getName());</pre></td>
     </tr>
     <tr>
-      <td class='line'>21</td><td class='count'>3</td>
-      <td><pre class='prettyprint jmp'>		<span id='l21s0' title='Executions: 3' class='covered'>if (this.arguments == null)</span> <span id='l21s1' title='Executions: 1' class='covered'>{</span></pre></td>
+      <td class='line'>22</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l22s0' title='Executions: 0' class='uncovered'>if (this.arguments == null)</span> <span id='l22s1' title='Executions: 0' class='uncovered'>{</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>22</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l22s0'>			sb.append("[]");</pre></td>
+      <td class='line'>23</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l23s0'>			sb.append("[]");</pre></td>
     </tr>
     <tr>
-      <td class='line'>23</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l23s0'>		} else {</pre></td>
+      <td class='line'>24</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l24s0'>		} else {</pre></td>
     </tr>
     <tr>
-      <td class='line'>24</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l24s0'>			sb.append(Arrays.asList(this.arguments).toString());</pre></td>
+      <td class='line'>25</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l25s0'>			sb.append(Arrays.asList(this.arguments).toString());</pre></td>
     </tr>
     <tr>
-      <td class='line'>25</td><td>&nbsp;</td>
+      <td class='line'>26</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>		}</pre></td>
     </tr>
     <tr>
-      <td class='line'>26</td><td class='count'>3</td>
-      <td><pre class='prettyprint covered' id='l26s0'>		return sb.toString();</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>27</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	}</pre></td>
+      <td class='line'>27</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l27s0'>		return sb.toString();</pre></td>
     </tr>
     <tr>
       <td class='line'>28</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected abstract String getName();</pre></td>
+      <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr>
       <td class='line'>29</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected abstract String getValue(long nowCount);</pre></td>
+      <td><pre class='prettyprint'>	protected abstract String getName();</pre></td>
     </tr>
     <tr>
       <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected abstract String getValue(long nowCount);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

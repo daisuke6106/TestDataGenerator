@@ -1,5 +1,8 @@
 package jp.co.dk.testdatagenerator.function;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jp.co.dk.test.template.TestCaseTemplate;
 
 import org.junit.Before;
@@ -14,7 +17,7 @@ public class ConcatenateTest {
 		@Test
 		public void 引数がNULLの場合() {
 			try {
-				new Concatenate((String[])null);
+				new Concatenate((List<Value>)null);
 				fail();
 			} catch(IllegalArgumentException e) {
 				assertThat(e.getMessage(), is("CONCATENATEの引数が不正です。"));
@@ -24,7 +27,8 @@ public class ConcatenateTest {
 		@Test
 		public void 引数が空の配列の場合() {
 			try {
-				new Concatenate(new String[0]);
+				List<Value> values = new ArrayList<Value>();
+				new Concatenate(values);
 				fail();
 			} catch(IllegalArgumentException e) {
 				assertThat(e.getMessage(), is("CONCATENATEの引数が不正です。"));
@@ -38,7 +42,10 @@ public class ConcatenateTest {
 		
 		@Before
 		public void init() {
-			this.sut = new Concatenate("ABCDE","FGHIJ");
+			List<Value> values = new ArrayList<Value>();
+			values.add(new Value("ABCDE"));
+			values.add(new Value("FGHIJ"));
+			this.sut = new Concatenate(values);
 		}
 		
 		@Test
@@ -58,7 +65,11 @@ public class ConcatenateTest {
 		
 		@Before
 		public void init() {
-			this.sut = new Concatenate("ABCDE","FGHIJ","KLMNO");
+			List<Value> values = new ArrayList<Value>();
+			values.add(new Value("ABCDE"));
+			values.add(new Value("FGHIJ"));
+			values.add(new Value("KLMNO"));
+			this.sut = new Concatenate(values);
 		}
 		
 		@Test

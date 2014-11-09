@@ -1,10 +1,6 @@
 package jp.co.dk.testdatagenerator.function;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public enum FunctionPattern {
 	
@@ -107,6 +103,16 @@ public enum FunctionPattern {
 		}
 	}),
 	
+	/** 指定の文字列に対して3桁毎にカンマを加えた文字列を返します。 */
+	COMMA("COMMA",
+		"3桁毎にカンマを加えた文字列を返します。",
+		"COMMA(1234)",
+		new FunctionFactory(){
+		@Override
+		public AbstractFunction createFunction(List<Value> arguments) {
+			return new Comma(arguments);
+		}
+	}),
 	;
 	
 	protected FunctionFactory functionFactory;

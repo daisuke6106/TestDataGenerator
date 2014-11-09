@@ -16,79 +16,85 @@
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>3</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>public class Concatenate extends AbstractFunction {</pre></td>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.List;
+</div><span>import ...</span></pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'>5</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	Concatenate(String... arguments) throws IllegalArgumentException {</pre></td>
+      <td><pre class='prettyprint'>public class Concatenate extends AbstractFunction {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	Concatenate(List&lt;Value> arguments) throws IllegalArgumentException {</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>7</td>
+      <td></td><td class='count'>0</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#aa5500' onclick='hidePath()'>Path coverage: 1/3</span>
-        <span class='uncovered' onclick="showPath(this,'l6s0 l7s0 l7s2')">A: 0</span>
-        <span class='uncovered' onclick="showPath(this,'l6s0 l7s0 l7s1 l7s2')">B: 0</span>
-        <span class='covered' onclick="showPath(this,'l6s0 l7s0 l7s1 l8s0')">C: 7</span>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/3</span>
+        <span class='uncovered' onclick="showPath(this,'l8s0 l9s0 l9s2')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l8s0 l9s0 l9s1 l9s2')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l8s0 l9s0 l9s1 l10s0')">C: 0</span>
       </td>
     </tr>
     <tr>
-      <td class='line'>6</td><td class='count'>9</td>
-      <td><pre class='prettyprint covered' id='l6s0'>		super(arguments);</pre></td>
+      <td class='line'>8</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l8s0'>		super(arguments);</pre></td>
     </tr>
     <tr>
-      <td class='line'>7</td><td class='count'>7</td>
-      <td><pre class='prettyprint jmp'>		<span id='l7s0' title='Executions: 7' class='covered'>if (arguments == null</span> || <span id='l7s1' title='Executions: 7' class='covered'>arguments.length == 0)</span> <span id='l7s2' title='Executions: 0' class='uncovered'>throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
+      <td class='line'>9</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l9s0' title='Executions: 0' class='uncovered'>if (arguments == null</span> || <span id='l9s1' title='Executions: 0' class='uncovered'>arguments.size() == 0) throw new IllegalArgumentException(this.getName() + "の引数が不正です。");</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>8</td><td class='count'>7</td>
-      <td><pre class='prettyprint covered' id='l8s0'>	}</pre></td>
+      <td class='line'>10</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l10s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>10</td><td>&nbsp;</td>
+      <td class='line'>12</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>11</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public String getName() {</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>12</td><td class='count'>4</td>
-      <td><pre class='prettyprint covered' id='l12s0'>		return "CONCATENATE";</pre></td>
     </tr>
     <tr>
       <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l14s0'>		return "CONCATENATE";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>15</td><td>&nbsp;</td>
+      <td class='line'>17</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
     </tr>
     <tr>
-      <td class='line'>16</td><td>&nbsp;</td>
+      <td class='line'>18</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	protected String getValue(long nowIndex) {</pre></td>
     </tr>
     <tr>
-      <td class='line'>17</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l17s0'>		StringBuilder sb = new StringBuilder();</pre></td>
+      <td class='line'>19</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l19s0'>		StringBuilder sb = new StringBuilder();</pre></td>
     </tr>
     <tr>
-      <td class='line'>18</td><td class='count'>2</td>
-      <td><pre class='prettyprint jmp'>		<span id='l18s0' title='Executions: 2' class='covered'>for (String argument</span> : <span id='l18s1' title='Executions: 7' class='covered'>this.arguments)</span> </pre></td>
+      <td class='line'>20</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>		<span id='l20s0' title='Executions: 0' class='uncovered'>for (Value argument</span> : <span id='l20s1' title='Executions: 0' class='uncovered'>this.arguments)</span> </pre></td>
     </tr>
     <tr>
-      <td class='line'>19</td><td class='count'>2</td>
-      <td><pre class='prettyprint covered' id='l19s0'>		return sb.toString();</pre></td>
+      <td class='line'>21</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l21s0'>		return sb.toString();</pre></td>
     </tr>
     <tr>
-      <td class='line'>20</td><td>&nbsp;</td>
+      <td class='line'>22</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr>
-      <td class='line'>21</td><td>&nbsp;</td>
+      <td class='line'>23</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>
